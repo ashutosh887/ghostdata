@@ -9,16 +9,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit.dataset import DATASET_DIR, REPO_ROOT, evidence_times, load_requests  # noqa: E402
 from audit.schema import OUTPUT_HEADER, case_number  # noqa: E402
+from audit.resolver import run_cases  # noqa: E402
 from audit.validate import validate_output  # noqa: E402
 
 
-def resolve(request):
-    # Phase 1 placeholder: the resolver replaces this in phase 4.
-    return "NOT_APPLICABLE", "[]"
-
-
 def run(requests) -> list[tuple[str, str, str]]:
-    return [(r.case_id, *resolve(r)) for r in requests]
+    return run_cases(requests)
 
 
 def write_output(path: Path, rows: list[tuple[str, str, str]]) -> None:

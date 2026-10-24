@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import re
 from collections import Counter
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 from ..dataset import DATASET_DIR, parse_time, read_csv
+
 from ..observations import Observation, Snapshot
 from .activity import Claim, link_observations, load_claims
 from .documents import Document, document_evidence, read_document
@@ -57,5 +59,25 @@ def load_corpus(dataset_dir: Path = DATASET_DIR) -> Corpus:
     corpus.claims = load_claims(dataset_dir / "system_activity.csv")
     links = link_observations(corpus.claims)
     corpus.observations += links
-    corpus.stats["activity"] = Counter(claims=len(corpus.claims), identity_links=len(links))
+    shown = documents_for_links(links, corpus.documents)
+    corpus.observations += shown
+    corpus.stats["activity"] = Counter(claims=len(corpus.claims), identity_links=len(links), linked_documents=len(shown))
     return corpus
+
+
+def _squash(text: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def documents_for_links(links: list[Observation], documents: dict[str, Document]) -> list[Observation]:
+    """A catalog link names a display reference; the newest earlier document showing it is about that record."""
+    out = []
+    for link in links:
+        ref = link.where.split("ref=", 1)[1]
+        shown = [d for d in documents.values() if d.captured_at <= link.t and _squash(ref) in _squash(d.text)]
+        if not shown:
+            continue
+        doc = max(shown, key=lambda d: d.captured_at)
+        out.append(replace(link, source_id=doc.file_id, source_at=doc.captured_at, t=doc.captured_at,
+                           kind=doc.kind, present=True, where=f"{doc.kind} {doc.file_id} shows {ref}"))
+    return out

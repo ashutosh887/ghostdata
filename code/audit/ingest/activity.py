@@ -53,6 +53,6 @@ def link_observations(claims: list[Claim]) -> list[Observation]:
             resource_id=m["rid"],
             kind="link",
             keys=frozenset(identifier_keys([m["email"], m["user"]])),
-            where=f"catalog link {m['ref']}",
+            where=f"catalog link ref={m['ref']}",
         ))
     return out
