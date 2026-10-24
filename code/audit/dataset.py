@@ -49,9 +49,6 @@ def load_requests(path: Path) -> list[Request]:
         )
         for r in read_csv(path)
     ]
-    for r in requests:
-        if r.audit_at < r.requested_at:
-            raise ValueError(f"{r.case_id}: audit_at {r.audit_at:%Y-%m-%d %H:%M} is before requested_at")
     return requests
 
 

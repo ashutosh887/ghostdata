@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit.dataset import Request, parse_time  # noqa: E402
 from audit.agent.llm import ModelUnavailable  # noqa: E402
+from audit.ingest.documents import ToolMissing  # noqa: E402
 from audit.resolver import Auditor, all_requests, build_auditor  # noqa: E402
 
 
@@ -36,6 +37,8 @@ def show(auditor: Auditor, r: Request) -> None:
         for c in auditor.claims_by_resource[d.resource_id]:
             late = " AFTER AUDIT" if c.t > r.audit_at else ""
             print(f"      {c.t:%m-%d %H:%M} {c.activity_id:<13} claim {c.event_type} {c.result}{late}")
+    if case.note:
+        print(f"note: {case.note}")
     print(f"status: {case.status}")
     for no, s in enumerate(case.steps, start=1):
         print(f"  {no:>2} {s.phase:<12} {s.operation:<26} {s.system_id:<20} {s.resource_id:<18} {s.evidence_id}")
@@ -78,6 +81,9 @@ def run() -> int:
 def main() -> int:
     try:
         return run()
+    except ToolMissing as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
     except ModelUnavailable as e:
         print(f"error: {e}", file=sys.stderr)
         print("A new request text has no recorded answer: run without --offline (needs the key), or use --no-model.",

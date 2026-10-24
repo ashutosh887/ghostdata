@@ -30,10 +30,14 @@ class Document:
     keys: frozenset
 
 
+class ToolMissing(RuntimeError):
+    pass
+
+
 def _require(tool: str) -> str:
     path = shutil.which(tool)
     if not path:
-        raise RuntimeError(f"{tool} is required to read evidence documents; install it and rerun")
+        raise ToolMissing(f"{tool} is required to read evidence documents; install it and rerun")
     return path
 
 

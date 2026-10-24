@@ -52,7 +52,7 @@ The headline metric is **false COMPLETE**: a case certified as deleted while per
 | Intent probes outside the dataset | tuned set 23/23, held-out set 12/12 (keywords alone: 12/23 and 9/12) |
 | Sequence order on dev | 22/22 cases keep the sample's order for every shared step |
 | Per class on dev | COMPLETE 7/7 precision and recall, INCOMPLETE 15/15 |
-| Unit tests | 46 |
+| Unit tests | 47 |
 | Test predictions (518) | 354 INCOMPLETE, 154 COMPLETE, 10 NOT_APPLICABLE |
 | Offline replay | reproduces `output.csv` byte for byte with no key |
 | Full live run | about $0.17 for all 518 requests |
@@ -127,7 +127,7 @@ Models, prices, timeouts and limits live in `code/audit/config.py`:
 | `python3 -m unittest discover -s code/tests` | Unit tests |
 | `python3 code/evaluation/check.py` | Every release gate in one command: tests, offline replay byte for byte, validator, dev score, custom cases, intent probes. Exits non-zero on any failure |
 
-Times for the CLI are ISO 8601, for example `2026-09-14T04:20:00Z`. An email that matches no identity and an audit time before the request time are rejected with a clear message.
+Times for the CLI are ISO 8601, for example `2026-09-14T04:20:00Z`. For a hand-typed request, an email that matches no identity and an audit time before the request time are rejected with a clear message.
 
 ## Output format
 
@@ -259,8 +259,8 @@ Every mechanism that ships changes at least one answer when it is removed. The s
 - **Retries.** HTTP 429 and 5xx, timeouts and network errors are retried 4 times with backoff. Other client errors fail at once.
 - **Validator.** `code/validate.py` checks every output against the contract: header, row count, sorting, statuses, step numbering, phase order, operation and state pairs, citation rules and evidence ids, and evidence captured after `audit_at`. `code/main.py` runs it after every write.
 - **Determinism.** Temperature 0, cached answers, sorted iteration everywhere, fixed tie-breaking, and compact JSON with fixed field order.
-- **Bad input.** A deletion request whose email matches no identity is written as `NOT_APPLICABLE` with a warning, and the other cases still run (CONTRACT I5). A request whose `audit_at` is before `requested_at` is rejected when loaded (I6). Model and OCR failures end with one message and exit code 2.
-- **Tests** (46, `code/tests/`): validator mutation tests (11 deliberately broken versions of the sample answers), the scorer, every evidence reader, the safety guard, the model client's retry, repair and replay paths, and the bad-input rules.
+- **Bad input.** A deletion request that cannot be audited is written as `NOT_APPLICABLE` with a warning, and the other cases still run. That covers an email that matches no identity (CONTRACT I5) and an `audit_at` before `requested_at` (I6). `code/explain_case.py` prints the reason. A missing model answer or OCR tool ends with one message and exit code 2. Any other error keeps its traceback, so a bug is never dressed up as a known failure.
+- **Tests** (47, `code/tests/`): validator mutation tests (11 deliberately broken versions of the sample answers), the scorer, every evidence reader, the safety guard, the model client's retry, repair and replay paths, and the bad-input rules.
 
 ## Safety and privacy
 
@@ -309,7 +309,7 @@ Each entry in [`code/docs/FAILURES.md`](code/docs/FAILURES.md) gives the wrong b
 | F-004 | A queue-order rule the data does not support | Removed: dev exact 15 to 14, because the rule was a coin flip on known data |
 | F-005 | Corrections and hypotheticals read as deletion | Probes 21/23 to 23/23, held-out 12/12, no test answer changed |
 | F-006 | The evaluation report said "not run" for the custom cases | `report.py` now stops on any scorer failure |
-| F-007 | One unknown email stopped the whole run | Unknown subject becomes NOT_APPLICABLE with a warning; malformed times rejected; no answer changed |
+| F-007 | One unknown email stopped the whole run | Rows that cannot be audited become NOT_APPLICABLE with a warning; no answer changed |
 | F-008 | Most investigations ran out of rounds | 64 to 119 of 121 reach a conclusion, none hit the limit; no answer changed |
 
 ## Known limits
@@ -331,7 +331,7 @@ Each entry in [`code/docs/FAILURES.md`](code/docs/FAILURES.md) gives the wrong b
 | `AWS_BEARER_TOKEN_BEDROCK is not set` | Export the key or put it in `.env` at the repo root, or use `--offline` |
 | `... call to ... failed: HTTP 4xx` | Wrong key, region or model access. 429 and 5xx are already retried |
 | `... matches no identity; written as NOT_APPLICABLE` | The email is in neither identity file, so there is no subject to audit. The other cases still run |
-| `audit_at ... is before requested_at` | The requests file has a malformed row. Fix its times |
+| `audit_at is before requested_at ...; written as NOT_APPLICABLE` | That row has its times reversed. The other cases still run |
 | `validator FAILED` | The output breaks the contract. The lines above it say which rule and which row |
 | `tesseract` or `pdftotext` not found | Only needed to read a new document. Install them or use the cache |
 

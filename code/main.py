@@ -13,6 +13,7 @@ from audit.schema import OUTPUT_HEADER, case_number  # noqa: E402
 from audit.resolver import build_auditor, run_cases  # noqa: E402
 from audit.validate import validate_output  # noqa: E402
 from audit.agent.llm import ModelUnavailable  # noqa: E402
+from audit.ingest.documents import ToolMissing  # noqa: E402
 
 
 def run(requests, use_model: bool = True, offline: bool = False, fresh: bool = False):
@@ -40,11 +41,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.no_model and args.out == REPO_ROOT / "output.csv":
         parser.error("--no-model is an ablation; give it its own --out so it cannot replace output.csv")
 
-    try:
-        requests = load_requests(args.requests)
-    except ValueError as e:
-        print(f"error: {e}", file=sys.stderr)
-        return 2
+    requests = load_requests(args.requests)
     if args.only:
         requests = [r for r in requests if r.case_id in set(args.only)]
 
@@ -54,13 +51,14 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--usage-report describes live calls; run it with --fresh")
     try:
         rows, auditor = run(requests, use_model=not args.no_model, offline=args.offline, fresh=args.fresh)
-    except (ModelUnavailable, RuntimeError) as e:
+    except (ModelUnavailable, ToolMissing) as e:
         print(f"error: {e}", file=sys.stderr)
         return 2
     write_output(args.out, rows)
     for r in requests:
-        if auditor.intent(r.request_text).authorizes_deletion and auditor.identities.resolve(r.email) is None:
-            print(f"warning: {r.case_id}: the request email matches no identity; written as NOT_APPLICABLE", file=sys.stderr)
+        reason = auditor.intent(r.request_text).authorizes_deletion and auditor.unusable(r)
+        if reason:
+            print(f"warning: {r.case_id}: {reason}; written as NOT_APPLICABLE", file=sys.stderr)
     client = auditor.client
     if client is not None:
         investigations = auditor.investigations
@@ -70,10 +68,8 @@ def main(argv: list[str] | None = None) -> int:
             unresolved = sum(x.outcome.startswith("declare_unresolvable") for x in investigations)
             print(f"investigator: {len(investigations)} flagged cases, {unresolved} declared unresolvable, "
                   f"{accepted} proposals accepted, {rejected} rejected")
-        request_flags = getattr(auditor.intent_fn, "flags", {})
-        document_flags = getattr(auditor, "document_flags", {})
-        print(f"injection patterns: {len(request_flags)} request texts and {len(document_flags)} documents flagged; "
-              f"all are fenced as data and none can change a decision")
+        print(f"injection patterns flagged: {len(auditor.request_flags)} request texts, {len(auditor.document_flags)} documents "
+              f"(each is fenced as data in its prompt)")
         if args.usage_report:
             when = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
             args.usage_report.write_text(client.ledger.report(len(requests), auditor.investigations, when), encoding="utf-8")

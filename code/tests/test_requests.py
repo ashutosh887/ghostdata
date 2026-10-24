@@ -36,13 +36,20 @@ class RequestHandlingTest(unittest.TestCase):
         case = self.auditor.audit(request("nobody.here@example.com", "Please send me my invoices."))
         self.assertEqual((case.status, case.steps, case.note), ("NOT_APPLICABLE", [], ""))
 
-    def test_audit_before_request_is_rejected(self):
+    def test_audit_before_request_is_not_applicable(self):
+        known = load_requests(Path(__file__).resolve().parents[2] / "dataset" / "deletion_requests.csv")[0]
+        bad = Request("case_9002", known.email, known.audit_at, "COMPLETE", known.audit_at, known.requested_at,
+                      "Please delete my account.")
+        case = self.auditor.audit(bad)
+        self.assertEqual((case.status, case.steps), ("NOT_APPLICABLE", []))
+        self.assertIn("before requested_at", case.note)
+
+    def test_bad_rows_do_not_stop_the_file(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "requests.csv"
             path.write_text(HEADER + "case_1,a@b.com,2026-09-05T00:00:00Z,COMPLETE,2026-09-06T00:00:00Z,"
                                      "2026-09-01T00:00:00Z,Please delete my account.\n", encoding="utf-8")
-            with self.assertRaises(ValueError):
-                load_requests(path)
+            self.assertEqual(len(load_requests(path)), 1)
 
 
 if __name__ == "__main__":

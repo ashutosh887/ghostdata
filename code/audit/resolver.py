@@ -44,7 +44,7 @@ class Auditor:
     """Decides every case from observations. Models may only feed it readings; they never set a status or a step."""
 
     def __init__(self, corpus: Corpus | None = None, intent_fn=rule_intent, client: ModelClient | None = None,
-                 contradicted: dict | None = None):
+                 contradicted: dict | None = None, document_flags: dict | None = None):
         self.corpus = corpus or load_corpus()
         if ablated("no_replica"):
             self.corpus.observations = [o for o in self.corpus.observations if "replica" not in o.where.split(" ")[-1]]
@@ -53,6 +53,7 @@ class Auditor:
         self.intent_fn = intent_fn
         self.client = client
         self.contradicted = contradicted or {}
+        self.document_flags = document_flags or {}
         self._intents: dict[str, Intent] = {}
 
         self.by_resource = defaultdict(list)
@@ -102,14 +103,27 @@ class Auditor:
         }
         return sorted(cands)
 
+    @property
+    def request_flags(self) -> dict:
+        return getattr(self.intent_fn, "flags", {})
+
+    def unusable(self, r: Request) -> str:
+        """Why a deletion request cannot be audited at all, or an empty string. Such a row is written as
+        NOT_APPLICABLE with a warning, so one bad row never stops the other cases."""
+        if r.audit_at < r.requested_at:
+            return "audit_at is before requested_at, so there is no window to audit"
+        if self.identities.resolve(r.email) is None:
+            return "the request email matches no current or historical identity, so there is no subject to audit"
+        return ""
+
     def assign_accounts(self, requests: list[Request]) -> None:
         """Each deletion case has one account: an identity link if any, else the worker's matching delete."""
         pending: dict[str, tuple[Request, Identity]] = {}
         taken: set[str] = set()
         for r in requests:
-            ident = self.identities.resolve(r.email)
-            if ident is None or not self.intent(r.request_text).authorizes_deletion:
+            if not self.intent(r.request_text).authorizes_deletion or self.unusable(r):
                 continue
+            ident = self.identities.resolve(r.email)
             accounts = sorted(rid for rid in self.linked(r, ident) if rid.startswith("account_"))
             if accounts:
                 self.accounts[r.case_id] = (accounts[0], "identity link")
@@ -205,10 +219,10 @@ class Auditor:
         case = CaseAudit(r, self.intent(r.request_text))
         if not case.intent.authorizes_deletion:
             return case
-        case.identity = ident = self.identities.resolve(r.email)
-        if ident is None:
-            case.note = "the request email matches no current or historical identity, so there is no subject to audit"
+        case.note = self.unusable(r)
+        if case.note:
             return case
+        case.identity = ident = self.identities.resolve(r.email)
         case.resources, case.account, case.account_reason = self.scope(r, ident)
 
         for rid in sorted(case.resources):
@@ -253,9 +267,8 @@ def build_auditor(use_model: bool = True, offline: bool = False, fresh: bool = F
     client = ModelClient(offline=offline, fresh=fresh)
     reader = DocumentReader(client)
     reader.apply(corpus)
-    auditor = Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted)
-    auditor.document_flags = reader.flags
-    return auditor
+    return Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted,
+                   document_flags=reader.flags)
 
 
 def run_cases(requests: list[Request], auditor: Auditor) -> list[tuple[str, str, str]]:

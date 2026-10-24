@@ -20,7 +20,9 @@ def run(*args: str) -> subprocess.CompletedProcess:
 def unit_tests() -> tuple[bool, str]:
     r = subprocess.run([PY, "-m", "unittest", "discover", "-s", str(CODE_DIR / "tests")],
                        capture_output=True, text=True, cwd=REPO_ROOT)
-    return r.returncode == 0, r.stderr.strip().splitlines()[-3] if r.stderr.strip() else "no output"
+    lines = r.stderr.strip().splitlines()
+    ran = next((ln for ln in lines if ln.startswith("Ran ")), "no tests ran")
+    return r.returncode == 0, f"{ran}, {lines[-1] if lines else 'no output'}"
 
 
 def replay() -> tuple[bool, str]:
@@ -43,14 +45,16 @@ def dev_score() -> tuple[bool, str]:
     if r.returncode != 0:
         return False, "scorer failed"
     s = json.loads(r.stdout.strip().splitlines()[-1])
-    ok = s["false_complete"] == 0 and s["status_accuracy"].startswith("22/22")
+    right, total = s["status_accuracy"].split()[0].split("/")
+    ok = s["false_complete"] == 0 and right == total
     return ok, f"false COMPLETE {s['false_complete']}, status {s['status_accuracy']}, exact {s['exact_match']}, step F1 {s['step_prf'][2]:.3f}"
 
 
 def custom_cases() -> tuple[bool, str]:
     r = run(str(CODE_DIR / "evaluation" / "custom.py"), "--offline")
     last = r.stdout.strip().splitlines()[-1] if r.stdout.strip() else "custom.py failed"
-    return r.returncode == 0 and last.startswith("6/6"), last
+    m = re.match(r"(\d+)/(\d+) custom cases exact", last)
+    return r.returncode == 0 and bool(m) and m.group(1) == m.group(2), last
 
 
 def intent_probes() -> tuple[bool, str]:
