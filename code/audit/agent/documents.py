@@ -4,7 +4,7 @@ import base64
 from dataclasses import replace
 from pathlib import Path
 
-from ..config import MODELS, PROMPT_DIR
+from ..config import MODELS, PROMPT_DIR, ablated
 from ..dataset import DATASET_DIR
 from ..ingest import Corpus
 from ..observations import Observation, identifier_keys
@@ -73,11 +73,16 @@ class DocumentReader:
         """
         updated = []
         contradicted = {}
+        shown = [o for o in corpus.observations if o.kind in ("image", "pdf") and "shows" in o.where]
+        swapped = {}
+        if ablated("swap_documents"):
+            readings = [self.read(corpus, o) for o in shown]
+            swapped = {id(o): readings[(i + 1) % len(readings)] for i, o in enumerate(shown)}
         for o in corpus.observations:
             if o.kind not in ("image", "pdf") or "shows" not in o.where:
                 updated.append(o)
                 continue
-            r = self.read(corpus, o)
+            r = swapped.get(id(o)) or self.read(corpus, o)
             shown_ids = identifier_keys(r["emails"]) | identifier_keys(r["phones"])
             exposed = bool(r["names"] or r["emails"] or r["phones"]) and not r["stable_reference_only"]
             active = TRI_VALUE[r["flow_enabled"]]

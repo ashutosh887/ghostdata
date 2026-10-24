@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import importlib.util
 import sys
 from datetime import datetime, timezone
@@ -70,6 +71,7 @@ def main() -> int:
     parser.add_argument("--split", default="dev", choices=["dev", "holdout", "all"])
     parser.add_argument("--show", action="store_true", help="print missing and extra steps per case")
     parser.add_argument("--record", metavar="LABEL", help="append the result to history.md")
+    parser.add_argument("--json", action="store_true", help="print the summary as one JSON line")
     args = parser.parse_args()
 
     gold = parse_rows(read_csv(DATASET_DIR / "sample_output.csv"))
@@ -97,6 +99,9 @@ def main() -> int:
                 print(f"   extra   {k}")
 
     summary = summarize(results)
+    if args.json:
+        print(json.dumps(summary))
+        return 0
     print_summary(f"{args.system} on {args.split}", summary)
     if args.record:
         record(args.record, args.system, args.split, summary)

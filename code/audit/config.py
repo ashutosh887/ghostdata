@@ -33,6 +33,11 @@ MAX_RETRIES = 4
 INVESTIGATOR_MAX_ROUNDS = 6
 
 
+def ablated(name: str) -> bool:
+    """Ablations switch one mechanism off for measurement only (GHOST_ABLATE=name,name)."""
+    return name in os.environ.get("GHOST_ABLATE", "").split(",")
+
+
 def load_env(path: Path = REPO_ROOT / ".env") -> None:
     """Read KEY=VALUE lines from an uncommitted .env file without overriding the real environment."""
     if not path.exists():

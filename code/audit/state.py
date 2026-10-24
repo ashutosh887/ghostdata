@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 
+from .config import ablated
 from .ingest.activity import Claim
 from .observations import Observation, Snapshot
 
@@ -67,7 +68,8 @@ def latest(events: list[tuple[datetime, bool, Proof]]) -> tuple[bool | None, lis
 def state_at(resource_id: str, system_id: str, observations: list[Observation], snapshots: list[Snapshot],
              claims: list[Claim], keys: frozenset, reported_at: datetime, audit_at: datetime) -> ResourceState:
     st = ResourceState(resource_id, system_id)
-    seen = [o for o in observations if o.t <= audit_at and o.kind != "link"]
+    horizon = datetime.max.replace(tzinfo=audit_at.tzinfo) if ablated("no_time_filter") else audit_at
+    seen = [o for o in observations if o.t <= horizon and o.kind != "link"]
 
     presence = [(o.t, o.present, proof(o)) for o in seen if o.present is not None]
     snap, linked = best_omission(snapshots, system_id, resource_id, keys, reported_at, audit_at)

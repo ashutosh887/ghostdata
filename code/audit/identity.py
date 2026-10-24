@@ -4,6 +4,7 @@ import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 
+from .config import ablated
 from .dataset import DATASET_DIR, read_csv
 from .observations import phone_key
 
@@ -36,6 +37,10 @@ class IdentityIndex:
         for r in read_csv(dataset_dir / "user_audit_log.csv"):
             for value in (r["old_value"], r["new_value"]):
                 self._add(r["user_id"], r["field_name"], value, r["audit_id"])
+        if ablated("no_history"):
+            current = {uid: {uid, r["email"].lower(), email_hash(r["email"]), phone_key(r["phone"])}
+                       for uid, r in self.users.items()}
+            self.keys = current
         self.owner = {k: uid for uid, ks in self.keys.items() for k in ks}
 
     def _add(self, uid: str, field: str, value: str, source: str) -> None:

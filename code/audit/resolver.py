@@ -2,8 +2,9 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass, field
-from datetime import timedelta
+from datetime import datetime, timedelta
 
+from .config import ablated
 from .dataset import DATASET_DIR, Request, load_requests
 from .identity import Identity, IdentityIndex
 from .ingest import Corpus, load_corpus
@@ -36,6 +37,8 @@ class CaseAudit:
 class Auditor:
     def __init__(self, corpus: Corpus | None = None, intent_fn=rule_intent):
         self.corpus = corpus or load_corpus()
+        if ablated("no_replica"):
+            self.corpus.observations = [o for o in self.corpus.observations if "replica" not in o.where.split(" ")[-1]]
         self.identities = IdentityIndex()
         self.policy = Policy()
         self.intent_fn = intent_fn
@@ -65,7 +68,8 @@ class Auditor:
         for key in identity.keys:
             for rid in self.by_key.get(key, ()):
                 for o in self.by_resource[rid]:
-                    if key in o.keys and request.requested_at <= o.t <= request.audit_at:
+                    since = datetime.min.replace(tzinfo=request.audit_at.tzinfo) if ablated("no_lower_bound") else request.requested_at
+                    if key in o.keys and since <= o.t <= request.audit_at:
                         found.setdefault(rid, o.source_id)
         return found
 
