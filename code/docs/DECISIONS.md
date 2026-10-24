@@ -29,3 +29,17 @@ The af_south export has 300 `profile_service` lookups of five-digit `account_*` 
 ## D-007. Absence by omission is limited to what a capture covered
 
 Inventory exports list their systems in `snapshot_scope`. Bundles hold one store per inner snapshot. A replica dump covers the systems that appear in its tables. A record missing from a capture is evidence of absence only for those systems. `customer_data_inventory_20260905.sql` covers `account_service` alone, so it says nothing about a user's search or support records.
+
+## D-008. Intent model: qwen3-235b over qwen3-32b
+
+Both models read all 398 distinct request texts (the 518 test requests plus the 32 samples) with the same prompt and schema. Both found the same 10 non-deletion requests (case_533 to case_542) and agreed with the keyword rules everywhere. qwen3-32b quoted words that are not in the text once, so code fell back to the rules; qwen3-235b grounded all 398. Cost: $0.056 for 235b against $0.039 for 32b. The difference is under two cents, so I took the model that never needed the fallback. Code accepts the model's verdict only when its `quoted_span` is really in the request, which is how a hallucinated or injected answer gets caught.
+
+## D-009. Documents are read by a vision model; a contradicted catalog link is dropped
+
+Tesseract garbles the screenshots (`areedi433@gmail.com` for `areed1433@gmail.com`) and cannot read state, such as whether a connector is healthy or a restore is blocked. qwen3-vl read all 12 linked documents correctly against a hand check ($0.017). The model reports what the page shows; code turns that into present, exposed and active.
+
+`marketing_001` is linked to user_09 (Kwame Mensah) by catalog row activity_4008, but the screenshot shows Soo-jin Park with her own email and phone. The catalog row is an activity, so it is a claim, and the screenshot is evidence that contradicts it. Deleting a record the evidence ties to another person would destroy that person's data. Code drops a link when the linked document shows identifiers and none of them belong to the subject. Alternative considered: the record was recreated with another person's data after the deletion, so it should be reported. That reading flips case_63 from COMPLETE to INCOMPLETE. One case rides on this, and the safer error is not deleting someone else's record.
+
+## D-010. Arm A (rules only) against arm B (rules plus model)
+
+On the 22 dev samples both arms score the same (15/22 exact, step F1 0.966), because no sample has a screenshot and no sample text defeats the patched keywords. On the 518 test cases they differ in 5 cases. Arm A certifies case_39, case_50, case_53 and case_55 as COMPLETE; arm B reads the screens (connector Healthy, analytics profile showing the user's name and email, export Ready, backup restorable) and reports them INCOMPLETE. Arm A's output also fails the validator, with 2 uncited COMPLETE checks. Arm B drops the contradicted marketing link in case_63 (D-009). The model ships where it changed an answer: intent and documents.

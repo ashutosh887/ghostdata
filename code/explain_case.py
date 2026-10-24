@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit.dataset import Request, parse_time  # noqa: E402
-from audit.resolver import Auditor, all_requests  # noqa: E402
+from audit.resolver import Auditor, all_requests, build_auditor  # noqa: E402
 
 
 def show(auditor: Auditor, r: Request) -> None:
@@ -49,10 +49,12 @@ def main() -> int:
     parser.add_argument("--reported-at")
     parser.add_argument("--audit-at")
     parser.add_argument("--text", default="Please delete my account.")
+    parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--no-model", action="store_true")
     args = parser.parse_args()
 
     requests = all_requests()
-    auditor = Auditor()
+    auditor, _ = build_auditor(use_model=not args.no_model, offline=args.offline)
     if args.email:
         r = Request("case_custom", args.email, parse_time(args.requested_at), args.reported_status,
                     parse_time(args.reported_at), parse_time(args.audit_at), args.text)

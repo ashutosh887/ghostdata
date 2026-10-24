@@ -18,7 +18,7 @@ from splits import HOLDOUT, draw_holdout, split_of  # noqa: E402
 HISTORY = CODE_DIR / "evaluation" / "history.md"
 
 
-def predict(system: str, requests) -> dict:
+def predict(system: str, requests, offline: bool = False) -> dict:
     if system in BASELINES:
         fn = BASELINES[system]
         rows = [(r.case_id, *fn(r)) for r in requests]
@@ -26,7 +26,7 @@ def predict(system: str, requests) -> dict:
         spec = importlib.util.spec_from_file_location("solver", CODE_DIR / "main.py")
         solver = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(solver)
-        rows = solver.run(requests)
+        rows, _ = solver.run(requests, use_model=system == "agent", offline=offline)
     return parse_rows([{"case_id": c, "deletion_status": s, "steps_json": j} for c, s, j in rows])
 
 
@@ -65,7 +65,8 @@ def record(label: str, system: str, split: str, summary: dict) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Score predictions against the sample answers")
-    parser.add_argument("--system", default="resolver", choices=["resolver", *BASELINES])
+    parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--system", default="agent", choices=["agent", "rules", *BASELINES])
     parser.add_argument("--split", default="dev", choices=["dev", "holdout", "all"])
     parser.add_argument("--show", action="store_true", help="print missing and extra steps per case")
     parser.add_argument("--record", metavar="LABEL", help="append the result to history.md")
@@ -77,7 +78,7 @@ def main() -> int:
 
     requests = [r for r in load_requests(DATASET_DIR / "sample_deletion_requests.csv")
                 if args.split == "all" or split_of(r.case_id) == args.split]
-    pred = predict(args.system, requests)
+    pred = predict(args.system, requests, args.offline)
 
     results = []
     for r in requests:

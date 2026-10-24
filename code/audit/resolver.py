@@ -8,6 +8,7 @@ from .dataset import DATASET_DIR, Request, load_requests
 from .identity import Identity, IdentityIndex
 from .ingest import Corpus, load_corpus
 from .intent import Intent, rule_intent
+from .observations import system_for
 from .planner import Decision, decide, plan
 from .policy import Policy
 from .schema import Step, serialize_steps
@@ -161,9 +162,7 @@ class Auditor:
 
         for rid in sorted(resources):
             obs = self.by_resource[rid]
-            system = obs[0].system_id if obs else f"{rid.rsplit('_', 1)[0]}_service"
-            from .observations import system_for
-            system = system_for(rid) or system
+            system = system_for(rid)
             claims = [c for c in self.claims_by_resource[rid] if c.t <= r.audit_at]
             category, why = self.policy.category(system, [o for o in obs if o.t <= r.audit_at])
             action, rule = self.policy.action(category, system, claims, explicit=why != "system default")
@@ -178,6 +177,21 @@ class Auditor:
 def all_requests() -> list[Request]:
     return (load_requests(DATASET_DIR / "sample_deletion_requests.csv")
             + load_requests(DATASET_DIR / "deletion_requests.csv"))
+
+
+def build_auditor(use_model: bool = True, offline: bool = False):
+    """The full agent: the model reads intent and documents, code decides everything else."""
+    corpus = load_corpus()
+    if not use_model:
+        return Auditor(corpus), None
+    from .agent.documents import DocumentReader
+    from .agent.intent import ModelIntent
+    from .agent.llm import ModelClient
+    from .config import load_env
+    load_env()
+    client = ModelClient(offline=offline)
+    DocumentReader(client).apply(corpus)
+    return Auditor(corpus, intent_fn=ModelIntent(client)), client
 
 
 def run_cases(requests: list[Request], auditor: Auditor | None = None) -> list[tuple[str, str, str]]:
