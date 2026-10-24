@@ -44,7 +44,7 @@ class DocumentReader:
         self.system = (PROMPT_DIR / "document.md").read_text(encoding="utf-8")
         self.readings: dict[tuple, dict] = {}
         self.flags: dict[str, list[str]] = {}
-        self.contradicted: dict[str, str] = {}
+        self.contradicted: dict[str, tuple] = {}
 
     def read(self, corpus: Corpus, obs: Observation) -> dict:
         doc = corpus.documents[obs.source_id]
@@ -85,7 +85,7 @@ class DocumentReader:
                 active = TRI_VALUE[r["restore_allowed"]]
             present = r["record_shown"] and TRI_VALUE[r["available"]] is not False
             if shown_ids and not shown_ids & o.keys:
-                contradicted[o.resource_id] = o.source_id
+                contradicted[o.resource_id] = (o.source_id, o.keys)
                 updated.append(replace(o, keys=frozenset(), present=present, exposed=exposed,
                                        where=f"{o.where}; shows {', '.join(sorted(shown_ids))}, not the linked subject"))
                 continue
@@ -96,7 +96,7 @@ class DocumentReader:
                       f"{'; ' + r['notes'] if r['notes'] else ''}",
             ))
         corpus.observations = [
-            replace(o, keys=frozenset(), where=f"{o.where} (contradicted by {contradicted[o.resource_id]})")
+            replace(o, keys=frozenset(), where=f"{o.where} (contradicted by {contradicted[o.resource_id][0]})")
             if o.kind == "link" and o.resource_id in contradicted else o
             for o in updated
         ]

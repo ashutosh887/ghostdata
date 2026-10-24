@@ -12,3 +12,4 @@ One row per pinned scorer run on the sample cases.
 | 2026-10-24 14:44 | v3: anonymised analytics by worker queue order when counts match | resolver | dev | 22 | 0 | 22/22 (1.000) | 15/22 (0.682) | 0.966 | 0.966 | 22/22 (1.000) |
 | 2026-10-24 14:50 | v4 agent: model intent + document reading | agent | dev | 22 | 0 | 22/22 (1.000) | 15/22 (0.682) | 0.966 | 0.966 | 22/22 (1.000) |
 | 2026-10-24 14:52 | v5: drop queue-order guess for multi-case batches | agent | dev | 22 | 0 | 22/22 (1.000) | 14/22 (0.636) | 0.958 | 0.958 | 22/22 (1.000) |
+| 2026-10-24 14:56 | v6: investigator on flagged cases (0 accepted) | agent | dev | 22 | 0 | 22/22 (1.000) | 14/22 (0.636) | 0.958 | 0.958 | 22/22 (1.000) |

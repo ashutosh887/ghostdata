@@ -43,6 +43,13 @@ def main(argv: list[str] | None = None) -> int:
     rows, client = run(requests, use_model=not args.no_model, offline=args.offline)
     write_output(args.out, rows)
     if client is not None:
+        investigations = getattr(client, "investigations", [])
+        if investigations:
+            accepted = sum(len(x.accepted) for x in investigations)
+            rejected = sum(len(x.rejected) for x in investigations)
+            unresolved = sum(x.outcome.startswith("declare_unresolvable") for x in investigations)
+            print(f"investigator: {len(investigations)} flagged cases, {unresolved} declared unresolvable, "
+                  f"{accepted} proposals accepted, {rejected} rejected")
         for model, st in client.ledger.by_model.items():
             print(f"{model}: {st.calls} calls, {st.cache_hits} cache hits, "
                   f"{st.input_tokens} in / {st.output_tokens} out tokens, ${client.ledger.cost(model):.4f}")

@@ -5,3 +5,4 @@ __pycache__/
 code.zip
 .DS_Store
 output.csv
+log.txt
