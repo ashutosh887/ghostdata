@@ -47,3 +47,15 @@ On the 22 dev samples both arms score the same (15/22 exact, step F1 0.966), bec
 ## D-011. Account ties are broken by a fixed order, and labelled as ties
 
 Each deletion case owns one account. 249 cases find it through an identity link. 167 more get it by elimination: exactly one in-window account delete by the worker, with a result matching the reported status, is still free. In 109 cases two or more candidates remain and no evidence separates them (case_28 and case_29 on dev are one such pair). Request time predicts the right account in 27 of 54 known pairs, so it carries no signal. The resolver breaks these ties by request time and then case id, only to stay deterministic, and records "tie" as the reason so `explain_case.py` shows it and the investigator gets the case. The alternative, a recurring seconds offset between worker operations, does separate them, but it is a quirk of how the dataset was produced rather than a property of a deletion system, and AGENTS.md §6.7 rules out shortcuts of that kind.
+
+## D-012. What each mechanism is worth (ablations)
+
+`code/evaluation/ablations.py` switches off one mechanism at a time and reruns the dev samples, the 6 custom cases and all 518 test cases (table in `code/evaluation/ablations.md`). Ranked by the ghosts each one stops:
+
+- **Historical identifiers** matter most. With current identifiers only, dev certifies 2 ghosts (false COMPLETE), exact match drops 14 to 12, custom case_901 fails, and 49 test cases flip to COMPLETE that the full agent reports as INCOMPLETE.
+- **The audit_at cut**: dev status drops to 21/22, custom case_906 fails (late evidence flips it), and 15 test rows change.
+- **Document reading**: with the readings swapped between screenshots, 6 test cases flip to COMPLETE and the validator rejects the file. With no model at all, 4 flip. The model reads the screens, and the answers depend on what it reads.
+- **Replica tables**: ignoring them loses one dev case (a ghost row in a read replica) and adds 2 false COMPLETEs on the test set.
+- **The request-time lower bound** on discovery: one dev case gains a record from an earlier, separate request; 2 test rows change.
+
+Every mechanism that ships changes at least one answer when removed.
