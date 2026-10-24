@@ -30,4 +30,6 @@ python3 code/evaluation/main.py --offline          # dev score must not regress
 python3 code/main.py --offline --out /tmp/o.csv && cmp output.csv /tmp/o.csv
 ```
 
+The root `README.md` is the full `code/README.md` with paths from the repo root. Change both together.
+
 Commit only source, tests, prompts and docs, by explicit path. `log.txt`, `output.csv` and `code/cache/` stay out of git. Commit messages are short conventional commits with no trailers. Record a new rule in `CONTRACT.md`, a choice in `DECISIONS.md` and a fix in `FAILURES.md` with its before and after numbers.
