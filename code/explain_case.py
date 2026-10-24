@@ -58,6 +58,10 @@ def main() -> int:
     if args.email:
         r = Request("case_custom", args.email, parse_time(args.requested_at), args.reported_status,
                     parse_time(args.reported_at), parse_time(args.audit_at), args.text)
+        if not r.requested_at <= r.audit_at:
+            parser.error("--audit-at must not be before --requested-at")
+        if auditor.identities.resolve(r.email) is None:
+            parser.error(f"{args.email} matches no current or historical identity; nothing to audit")
         requests.append(r)
     else:
         r = next((x for x in requests if x.case_id == args.case_id), None)
