@@ -1,10 +1,15 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
-from .config import ablated
+from .agent.documents import DocumentReader
+from .agent.intent import ModelIntent
+from .agent.investigator import Investigation, Investigator
+from .agent.llm import ModelClient
+from .config import ablated, load_env
 from .dataset import DATASET_DIR, Request, load_requests
 from .identity import Identity, IdentityIndex
 from .ingest import Corpus, load_corpus
@@ -35,13 +40,20 @@ class CaseAudit:
 
 
 class Auditor:
-    def __init__(self, corpus: Corpus | None = None, intent_fn=rule_intent):
+    """Decides every case from observations. Models may only feed it readings; they never set a status or a step."""
+
+    def __init__(self, corpus: Corpus | None = None, intent_fn=rule_intent, client: ModelClient | None = None,
+                 contradicted: dict | None = None):
         self.corpus = corpus or load_corpus()
         if ablated("no_replica"):
             self.corpus.observations = [o for o in self.corpus.observations if "replica" not in o.where.split(" ")[-1]]
         self.identities = IdentityIndex()
         self.policy = Policy()
         self.intent_fn = intent_fn
+        self.client = client
+        self.contradicted = contradicted or {}
+        self._intents: dict[str, Intent] = {}
+
         self.by_resource = defaultdict(list)
         self.by_key = defaultdict(set)
         for o in self.corpus.observations:
@@ -53,67 +65,71 @@ class Auditor:
             self.claims_by_resource[c.resource_id].append(c)
         self.account_deletes = [c for c in self.corpus.claims
                                 if c.event_type == "DELETE_RECORD" and c.target_system == "account_service"]
+
         self.accounts: dict[str, tuple[str, str]] = {}
-        self.unlinked: dict[str, list[tuple[str, str]]] = defaultdict(list)
         self.candidates: dict[str, list[str]] = {}
-        self.contradicted: dict[str, tuple] = {}
+        self.unlinked: dict[str, list[tuple[str, str]]] = defaultdict(list)
         self.overrides: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
+        self.investigations: list[Investigation] = []
+
+    def intent(self, text: str) -> Intent:
+        if text not in self._intents:
+            self._intents[text] = self.intent_fn(text)
+        return self._intents[text]
 
     def owners(self, resource_id: str) -> set[str]:
         return {u for o in self.by_resource[resource_id] for u in self.identities.owners(o.keys)}
 
     def linked(self, request: Request, identity: Identity) -> dict[str, str]:
         """Resources an observation ties to the user between the request and the audit."""
+        since = datetime.min.replace(tzinfo=request.audit_at.tzinfo) if ablated("no_lower_bound") else request.requested_at
         found = {}
         for key in identity.keys:
             for rid in self.by_key.get(key, ()):
                 for o in self.by_resource[rid]:
-                    since = datetime.min.replace(tzinfo=request.audit_at.tzinfo) if ablated("no_lower_bound") else request.requested_at
                     if key in o.keys and since <= o.t <= request.audit_at:
                         found.setdefault(rid, o.source_id)
         return found
 
+    def _delete_candidates(self, r: Request, ident: Identity) -> list[str]:
+        """Account deletes by the worker in the processing window whose result matches the reported status."""
+        want = STATUS_RESULT.get(r.reported_status)
+        cands = {
+            c.resource_id for c in self.account_deletes
+            if r.reported_at - WINDOW_BEFORE <= c.t <= r.reported_at + WINDOW_AFTER and c.t <= r.audit_at
+            and c.result == want and not self.owners(c.resource_id) - {ident.user_id}
+        }
+        return sorted(cands)
+
     def assign_accounts(self, requests: list[Request]) -> None:
-        """Each deletion case has one account; match the deletion worker's account delete to the request."""
-        pending = {}
-        taken = set()
+        """Each deletion case has one account: an identity link if any, else the worker's matching delete."""
+        pending: dict[str, tuple[Request, Identity]] = {}
+        taken: set[str] = set()
         for r in requests:
-            if not self.intent_fn(r.request_text).authorizes_deletion:
-                continue
             ident = self.identities.resolve(r.email)
-            if ident is None:
+            if ident is None or not self.intent(r.request_text).authorizes_deletion:
                 continue
             accounts = sorted(rid for rid in self.linked(r, ident) if rid.startswith("account_"))
             if accounts:
                 self.accounts[r.case_id] = (accounts[0], "identity link")
                 taken.update(accounts)
-                continue
-            want = STATUS_RESULT.get(r.reported_status)
-            cands = []
-            for c in self.account_deletes:
-                if not (r.reported_at - WINDOW_BEFORE <= c.t <= r.reported_at + WINDOW_AFTER and c.t <= r.audit_at):
-                    continue
-                if c.result != want:
-                    continue
-                if self.owners(c.resource_id) - {ident.user_id}:
-                    continue
-                cands.append(c.resource_id)
-            pending[r.case_id] = (r, ident, sorted(set(cands)))
-            self.candidates[r.case_id] = sorted(set(cands))
+            else:
+                self.candidates[r.case_id] = self._delete_candidates(r, ident)
+                pending[r.case_id] = (r, ident)
 
-        while True:
+        progress = True
+        while progress:
             progress = False
-            for case_id, (r, ident, cands) in list(pending.items()):
-                free = [c for c in cands if c not in taken]
+            for case_id in list(pending):
+                free = [c for c in self.candidates[case_id] if c not in taken]
                 if len(free) == 1:
                     self.accounts[case_id] = (free[0], "only free deletion-worker candidate")
                     taken.add(free[0])
                     del pending[case_id]
                     progress = True
-            if not progress:
-                break
-        for case_id, (r, ident, cands) in sorted(pending.items(), key=lambda kv: (kv[1][0].requested_at, kv[0])):
-            free = [c for c in cands if c not in taken]
+
+        for case_id, (r, ident) in sorted(pending.items(), key=lambda kv: (kv[1][0].requested_at, kv[0])):
+            free = [c for c in self.candidates[case_id] if c not in taken]
             if free:
                 self.accounts[case_id] = (free[0], f"tie among {len(free)} candidates, earliest request first")
                 taken.add(free[0])
@@ -134,23 +150,14 @@ class Auditor:
             if r.case_id in self.accounts:
                 batches[r.reported_at].append(r)
         for reported_at, batch in batches.items():
-            eligible = []
-            for r in batch:
-                ident = self.identities.resolve(r.email)
-                if any(rid.startswith("analytics_") for rid in self.linked(r, ident)):
-                    continue
-                account = self.accounts[r.case_id][0]
-                deletes = [c.t for c in self.claims_by_resource[account] if c.event_type == "DELETE_RECORD"]
-                eligible.append((min(deletes) if deletes else r.reported_at, r))
-            ops = sorted(
-                (c for c in self.corpus.claims
-                 if c.event_type == "ANONYMIZE_RECORD" and c.result == "SUCCESS"
-                 and reported_at - POLICY_WINDOW <= c.t <= reported_at and not self.owners(c.resource_id)),
-                key=lambda c: c.t,
-            )
-            if len(ops) != 1 or len(eligible) != 1:
-                continue
-            self.unlinked[eligible[0][1].case_id].append((ops[0].resource_id, f"only unowned anonymisation in its batch, {ops[0].activity_id}"))
+            eligible = [r for r in batch
+                        if not any(rid.startswith("analytics_") for rid in self.linked(r, self.identities.resolve(r.email)))]
+            ops = [c for c in self.corpus.claims
+                   if c.event_type == "ANONYMIZE_RECORD" and c.result == "SUCCESS"
+                   and reported_at - POLICY_WINDOW <= c.t <= reported_at and not self.owners(c.resource_id)]
+            if len(ops) == 1 and len(eligible) == 1:
+                self.unlinked[eligible[0].case_id].append(
+                    (ops[0].resource_id, f"only unowned anonymisation in its batch, {ops[0].activity_id}"))
 
     def account_candidates(self, r: Request) -> list[dict]:
         out = []
@@ -178,14 +185,8 @@ class Auditor:
             return False, f"{evidence_id} ties {resource_id} to {ident.user_id} only outside the request-to-audit window"
         return False, f"{evidence_id} shows none of {ident.user_id}'s identifiers on {resource_id}"
 
-    def audit(self, r: Request) -> CaseAudit:
-        case = CaseAudit(r, self.intent_fn(r.request_text))
-        if not case.intent.authorizes_deletion:
-            return case
-        case.identity = ident = self.identities.resolve(r.email)
-        if ident is None:
-            raise ValueError(f"{r.case_id}: request email matches no current or historical identity")
-
+    def scope(self, r: Request, ident: Identity) -> tuple[dict[str, str], str | None, str]:
+        """Every record in scope with the reason it was found, plus the account and why it was chosen."""
         resources = dict(self.linked(r, ident))
         account, reason = self.accounts.get(r.case_id, (None, ""))
         for kind, rid, why in self.overrides.get(r.case_id, ()):
@@ -194,13 +195,21 @@ class Auditor:
             else:
                 resources.setdefault(rid, why)
         if account:
-            case.account, case.account_reason = account, reason
             resources.setdefault(account, reason)
         for rid, why in self.unlinked.get(r.case_id, ()):
             resources.setdefault(rid, why)
-        case.resources = resources
+        return resources, account, reason
 
-        for rid in sorted(resources):
+    def audit(self, r: Request) -> CaseAudit:
+        case = CaseAudit(r, self.intent(r.request_text))
+        if not case.intent.authorizes_deletion:
+            return case
+        case.identity = ident = self.identities.resolve(r.email)
+        if ident is None:
+            raise ValueError(f"{r.case_id}: request email matches no current or historical identity")
+        case.resources, case.account, case.account_reason = self.scope(r, ident)
+
+        for rid in sorted(case.resources):
             obs = self.by_resource[rid]
             system = system_for(rid)
             claims = [c for c in self.claims_by_resource[rid] if c.t <= r.audit_at]
@@ -213,59 +222,46 @@ class Auditor:
         case.status, case.steps = plan(case.decisions, r.audit_at)
         return case
 
+    def investigate(self, requests: list[Request], workers: int = 8) -> None:
+        """Run the investigator on flagged cases and apply only the proposals code accepted."""
+        if self.client is None:
+            return
+        investigator = Investigator(self, self.client)
+        deletion = [r for r in requests if self.intent(r.request_text).authorizes_deletion]
+        with ThreadPoolExecutor(workers) as pool:
+            results = list(pool.map(investigator.run, deletion))
+        self.investigations = [x for x in results if x.flags]
+        for x in self.investigations:
+            for name, rid, evidence, why in x.accepted:
+                kind = "account" if name == "propose_account" else "resource"
+                self.overrides[x.case_id].append((kind, rid, f"investigator: {evidence} ({why})"))
+
 
 def all_requests() -> list[Request]:
     return (load_requests(DATASET_DIR / "sample_deletion_requests.csv")
             + load_requests(DATASET_DIR / "deletion_requests.csv"))
 
 
-def build_auditor(use_model: bool = True, offline: bool = False):
+def build_auditor(use_model: bool = True, offline: bool = False) -> Auditor:
     """The full agent: the model reads intent and documents, code decides everything else."""
     corpus = load_corpus()
     if not use_model:
-        return Auditor(corpus), None
-    from .agent.documents import DocumentReader
-    from .agent.intent import ModelIntent
-    from .agent.llm import ModelClient
-    from .config import load_env
+        return Auditor(corpus)
     load_env()
     client = ModelClient(offline=offline)
     reader = DocumentReader(client)
     reader.apply(corpus)
-    auditor = Auditor(corpus, intent_fn=ModelIntent(client))
-    auditor.contradicted = reader.contradicted
-    auditor.client = client
-    return auditor, client
+    return Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted)
 
 
-def run_cases(requests: list[Request], auditor: Auditor | None = None) -> list[tuple[str, str, str]]:
-    auditor = auditor or Auditor()
+def run_cases(requests: list[Request], auditor: Auditor) -> list[tuple[str, str, str]]:
     known = {r.case_id for r in requests}
     everyone = requests + [r for r in all_requests() if r.case_id not in known]
     auditor.assign_accounts(everyone)
     auditor.assign_unlinked_ops(everyone)
-    if getattr(auditor, "client", None) is not None:
-        investigate(auditor, requests)
+    auditor.investigate(requests)
     rows = []
     for r in requests:
         case = auditor.audit(r)
         rows.append((r.case_id, case.status, serialize_steps(case.steps) if case.steps else "[]"))
     return rows
-
-
-def investigate(auditor: Auditor, requests: list[Request], workers: int = 8) -> None:
-    """Run the investigator on flagged cases and apply only the proposals code accepted."""
-    from concurrent.futures import ThreadPoolExecutor
-
-    from .agent.investigator import Investigator
-
-    inv = Investigator(auditor, auditor.client)
-    deletion = [r for r in requests if auditor.intent_fn(r.request_text).authorizes_deletion]
-    with ThreadPoolExecutor(workers) as pool:
-        results = list(pool.map(inv.run, deletion))
-    auditor.investigations = [x for x in results if x.flags]
-    auditor.client.investigations = auditor.investigations
-    for x in auditor.investigations:
-        for name, rid, evidence, why in x.accepted:
-            kind = "account" if name == "propose_account" else "resource"
-            auditor.overrides[x.case_id].append((kind, rid, f"investigator: {evidence} ({why})"))

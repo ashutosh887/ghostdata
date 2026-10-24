@@ -14,8 +14,8 @@ from audit.validate import validate_output  # noqa: E402
 
 
 def run(requests, use_model: bool = True, offline: bool = False):
-    auditor, client = build_auditor(use_model=use_model, offline=offline)
-    return run_cases(requests, auditor), client
+    auditor = build_auditor(use_model=use_model, offline=offline)
+    return run_cases(requests, auditor), auditor
 
 
 def write_output(path: Path, rows: list[tuple[str, str, str]]) -> None:
@@ -40,10 +40,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.only:
         requests = [r for r in requests if r.case_id in set(args.only)]
 
-    rows, client = run(requests, use_model=not args.no_model, offline=args.offline)
+    rows, auditor = run(requests, use_model=not args.no_model, offline=args.offline)
     write_output(args.out, rows)
+    client = auditor.client
     if client is not None:
-        investigations = getattr(client, "investigations", [])
+        investigations = auditor.investigations
         if investigations:
             accepted = sum(len(x.accepted) for x in investigations)
             rejected = sum(len(x.rejected) for x in investigations)

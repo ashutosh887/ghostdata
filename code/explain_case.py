@@ -54,7 +54,7 @@ def main() -> int:
     args = parser.parse_args()
 
     requests = all_requests()
-    auditor, _ = build_auditor(use_model=not args.no_model, offline=args.offline)
+    auditor = build_auditor(use_model=not args.no_model, offline=args.offline)
     if args.email:
         r = Request("case_custom", args.email, parse_time(args.requested_at), args.reported_status,
                     parse_time(args.reported_at), parse_time(args.audit_at), args.text)
@@ -65,6 +65,7 @@ def main() -> int:
             parser.error(f"unknown case {args.case_id}")
     auditor.assign_accounts(requests)
     auditor.assign_unlinked_ops(requests)
+    auditor.investigate([r])
     show(auditor, r)
     return 0
 
