@@ -43,3 +43,17 @@ Each entry: wrong behaviour, root cause, fix, and the measured effect.
 - Cause: the custom-case texts had no cached intent answer under the new prompt, so `custom.py --offline` stopped, and `report.py` ran it without checking the exit code, so the failure became a sentence in the report.
 - Fix: run the custom cases live once to record their answers, and run every scorer in `report.py` with `check=True`, so a failed scorer stops the report.
 - Effect: report back to 6/6 exact. Found by the end-to-end checklist in the session notes.
+
+## F-007. One unknown email stopped the whole run
+
+- Wrong: a deletion request whose email matched no identity raised an error in the resolver, so no output was written for any of the other cases. An `audit_at` before the request produced a COMPLETE whose check cited nothing. Found by the independent review with hand-made requests. No dataset request does either.
+- Cause: the resolver treated a missing subject as a crash, and nothing checked that a request's times were in order.
+- Fix: an unknown subject is written as `NOT_APPLICABLE` with a warning (CONTRACT I5). Requests with `audit_at` before `requested_at` are rejected when loaded (I6). Model and OCR failures end with one clear message and exit code 2, not a traceback. Four tests in `tests/test_requests.py`.
+- Effect: none of the 518 answers changed. An adversarial file with one unknown email now yields its row and a warning instead of no file.
+
+## F-008. Most investigations ran out of rounds
+
+- Wrong: 57 of the 121 flagged investigations used all 6 rounds without concluding.
+- Cause: the prompt said when to declare a case unresolvable but not when to stop, so the model kept repeating lookups on account ties.
+- Fix: a stop rule in `investigator.md`: stop once the flag is settled, declare a tie with no identifier evidence unresolvable, and never repeat a call.
+- Effect: 64 to 119 of 121 investigations reach a conclusion, 0 hit the round limit, and 0 of 518 answers changed.

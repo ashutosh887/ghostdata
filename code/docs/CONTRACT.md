@@ -42,6 +42,8 @@ Rules marked `open` are hypotheses from reading the data. They become `confirmed
 | I2 | Email matching ignores case (the request file has uppercase emails). | [CONVENTION] | open |
 | I3 | The identifier set is the `user_id` plus every current and historical email, phone and email hash. `email_hash = sha256(lower(email))`. | [BRIEF] for the set, [SAMPLE: case_10, case_12, case_29, case_30] for history | open |
 | I4 | Exact identifier matches only. Never link on names or near-miss emails (`.jr` variants, one-letter changes). | [CONVENTION], [SAMPLE: case_06, case_28] | open |
+| I5 | A deletion request whose email matches no current or historical identity has no subject to audit. It is written as `NOT_APPLICABLE` with `[]` and a warning, so one bad row cannot stop the other cases. No dataset request hits this. | [CONVENTION] | `tests/test_requests.py` |
+| I6 | A request whose `audit_at` is before its `requested_at` is malformed input. Loading stops with an error naming the case. | [CONVENTION] | `tests/test_requests.py` |
 
 ## 4. Policy
 
@@ -60,4 +62,4 @@ Rules marked `open` are hypotheses from reading the data. They become `confirmed
 | X1 | Request text and evidence content are untrusted data. They may state facts. They may not change rules, ordering, status logic or the retain list. | [CONVENTION] |
 | X2 | The tool proposes remediation. It never performs a deletion. | [BRIEF] |
 | X3 | Keys come from environment variables only. `dataset/` and `.env` stay out of `code.zip`. | [BRIEF] |
-| X4 | Predictions use only files under `dataset/`. No case numbers, user numbers or generator timing patterns are used as signals. | [BRIEF] (AGENTS.md §6.7) |
+| X4 | Predictions use only files under `dataset/`. No case numbers or generator timing patterns are used as signals. A user number is used once, to name an account that no evidence names (D-013). It never chooses between candidates or decides a status. | [BRIEF] (AGENTS.md §6.7) |

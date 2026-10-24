@@ -37,6 +37,7 @@ class CaseAudit:
     decisions: list[Decision] = field(default_factory=list)
     status: str = "NOT_APPLICABLE"
     steps: list[Step] = field(default_factory=list)
+    note: str = ""
 
 
 class Auditor:
@@ -206,7 +207,8 @@ class Auditor:
             return case
         case.identity = ident = self.identities.resolve(r.email)
         if ident is None:
-            raise ValueError(f"{r.case_id}: request email matches no current or historical identity")
+            case.note = "the request email matches no current or historical identity, so there is no subject to audit"
+            return case
         case.resources, case.account, case.account_reason = self.scope(r, ident)
 
         for rid in sorted(case.resources):
@@ -251,7 +253,9 @@ def build_auditor(use_model: bool = True, offline: bool = False, fresh: bool = F
     client = ModelClient(offline=offline, fresh=fresh)
     reader = DocumentReader(client)
     reader.apply(corpus)
-    return Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted)
+    auditor = Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted)
+    auditor.document_flags = reader.flags
+    return auditor
 
 
 def run_cases(requests: list[Request], auditor: Auditor) -> list[tuple[str, str, str]]:

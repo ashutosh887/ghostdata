@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit.dataset import Request, parse_time  # noqa: E402
+from audit.agent.llm import ModelUnavailable  # noqa: E402
 from audit.resolver import Auditor, all_requests, build_auditor  # noqa: E402
 
 
@@ -40,7 +41,7 @@ def show(auditor: Auditor, r: Request) -> None:
         print(f"  {no:>2} {s.phase:<12} {s.operation:<26} {s.system_id:<20} {s.resource_id:<18} {s.evidence_id}")
 
 
-def main() -> int:
+def run() -> int:
     parser = argparse.ArgumentParser(description="Trace how one case is decided")
     parser.add_argument("case_id", nargs="?")
     parser.add_argument("--email")
@@ -72,6 +73,16 @@ def main() -> int:
     auditor.investigate([r])
     show(auditor, r)
     return 0
+
+
+def main() -> int:
+    try:
+        return run()
+    except ModelUnavailable as e:
+        print(f"error: {e}", file=sys.stderr)
+        print("A new request text has no recorded answer: run without --offline (needs the key), or use --no-model.",
+              file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
