@@ -97,6 +97,8 @@ Full entries, each with cause, fix and before-and-after numbers, are in `code/do
 - F-004. A queue-order rule that the data does not support
 - F-005. Corrections and hypotheticals read as deletion
 - F-006. The evaluation report said "not run" for the custom cases
+- F-007. One unknown email stopped the whole run
+- F-008. Most investigations ran out of rounds
 
 ## Score history on the development split
 
