@@ -123,6 +123,7 @@ Models, prices, timeouts and limits live in `audit/config.py`:
 | `python3 code/evaluation/ablations.py` | Switch each mechanism off in turn and rewrite `evaluation/ablations.md` |
 | `python3 code/evaluation/report.py --offline` | Rerun every scorer and rewrite `evaluation/evaluation_report.md` |
 | `python3 -m unittest discover -s code/tests` | Unit tests |
+| `python3 code/evaluation/check.py` | Every release gate in one command: tests, offline replay byte for byte, validator, dev score, custom cases, intent probes. Exits non-zero on any failure |
 
 Times for the CLI are ISO 8601, for example `2026-09-14T04:20:00Z`. An email that matches no identity and an audit time before the request time are rejected with a clear message.
 
@@ -337,9 +338,7 @@ Each entry in `docs/FAILURES.md` gives the wrong behaviour, the cause, the fix a
 Before every commit:
 
 ```bash
-python3 -m unittest discover -s code/tests
-python3 code/evaluation/main.py --offline          # dev score must not regress
-python3 code/main.py --offline --out /tmp/o.csv && cmp output.csv /tmp/o.csv
+python3 code/evaluation/check.py     # all six gates, about 2 seconds
 ```
 
 A new rule goes in `docs/CONTRACT.md`, a choice in `docs/DECISIONS.md`, and a fix in `docs/FAILURES.md` with its before and after numbers. No case ids, user ids or labels are hardcoded, and the holdout is never used for tuning.

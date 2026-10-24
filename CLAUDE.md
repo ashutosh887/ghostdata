@@ -25,6 +25,7 @@ AGENTS.md owns the challenge contract and the log format. These are the conventi
 ## Before committing
 
 ```bash
+python3 code/evaluation/check.py                   # runs every gate below plus custom cases and probes
 python3 -m unittest discover -s code/tests
 python3 code/evaluation/main.py --offline          # dev score must not regress
 python3 code/main.py --offline --out /tmp/o.csv && cmp output.csv /tmp/o.csv
