@@ -17,6 +17,10 @@ def resolve(request):
     return "NOT_APPLICABLE", "[]"
 
 
+def run(requests) -> list[tuple[str, str, str]]:
+    return [(r.case_id, *resolve(r)) for r in requests]
+
+
 def write_output(path: Path, rows: list[tuple[str, str, str]]) -> None:
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, lineterminator="\n")
@@ -35,7 +39,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.only:
         requests = [r for r in requests if r.case_id in set(args.only)]
 
-    rows = [(r.case_id, *resolve(r)) for r in requests]
+    rows = run(requests)
     write_output(args.out, rows)
 
     report = validate_output(args.out, requests, evidence_times())
