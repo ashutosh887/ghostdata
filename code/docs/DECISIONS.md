@@ -17,3 +17,15 @@ The brief says to sort by `case_id`. The ids are not zero padded, so a string so
 ## D-004. The headline metric is false COMPLETEs, then accuracy
 
 A false COMPLETE certifies a ghost as gone. That is the failure the brief is about, and the expensive one. Steps emitted for a NOT_APPLICABLE request (deletion work nobody authorised) come second. Accuracy comes after both. On dev, trusting the workflow's own claim gets 14/22 statuses right and certifies 5 ghosts. Always answering INCOMPLETE gets 15/22 and certifies none, but gets every real COMPLETE wrong. The resolver has to beat both on both counts.
+
+## D-005. Activity rows are claims, kept apart from observations
+
+`system_activity.csv` is loaded as `Claim` objects, never as observations of state. The brief says workflow results are claims, and the samples prove it: support_002 is reported deleted on 2 Sep, yet the support replica still returns it on 7 Sep with no deletion marker. A claim can say that an event happened (a sync ran, a restore ran, a flow check found a connector enabled). It cannot overrule a read-back. The one exception is the 12 `LINK_RESOURCE_IDENTITY` rows, which are catalog facts that tie a screenshot or PDF resource to a user. They become identity links, not state.
+
+## D-006. A lookup counts only when the service that ran it owns the resource
+
+The af_south export has 300 `profile_service` lookups of five-digit `account_*` ids, each carrying a real user's current email. No other file mentions those ids, and `profile_service` is not the account system. Accepting them would link 300 users to accounts that exist nowhere else. The reader drops any log observation whose reporting service is not the owner of the resource's id prefix (lookup lines that name their `system=` explicitly are judged by that field). 300 lines dropped, 770 kept.
+
+## D-007. Absence by omission is limited to what a capture covered
+
+Inventory exports list their systems in `snapshot_scope`. Bundles hold one store per inner snapshot. A replica dump covers the systems that appear in its tables. A record missing from a capture is evidence of absence only for those systems. `customer_data_inventory_20260905.sql` covers `account_service` alone, so it says nothing about a user's search or support records.
