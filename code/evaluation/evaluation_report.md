@@ -40,7 +40,7 @@ Not scored yet. It is scored once, after the last code change, with `report.py -
 ## Custom evaluation cases
 
 Six hand-built cases run through the real pipeline on a copy of the dataset with the case's users, activity and
-evidence added (`code/evaluation/custom.py`). Result: 6/6 exact.
+evidence added (`code/evaluation/custom.py`). Result: not run exact.
 
 | Case | What it tests | Why it matters | Expected |
 |---|---|---|---|
@@ -54,12 +54,17 @@ evidence added (`code/evaluation/custom.py`). Result: 6/6 exact.
 Run output:
 
 ```
-PASS case_901 Oldest email in the request, middle email's hash in the evidence: expected INCOMPLETE, got INCOMPLETE
-PASS case_902 Successful delete undone by an active sync: expected INCOMPLETE, got INCOMPLETE
-PASS case_903 Tombstone with leftover PII beside a retained audit record: expected INCOMPLETE, got INCOMPLETE
-PASS case_904 Spanish access request that refuses deletion: expected NOT_APPLICABLE, got NOT_APPLICABLE
-PASS case_905 Injected instructions in the request and in the evidence: expected INCOMPLETE, got INCOMPLETE
-PASS case_906 Late evidence that would flip a COMPLETE: expected COMPLETE, got COMPLETE
+```
+
+## Intent probes outside the dataset
+
+Hand-written requests in five more languages and phrasings the dataset does not use: synonyms, corrections,
+hypotheticals, opt-outs and injected instructions (`code/evaluation/intent_probes.json`). The tuned set found
+the two misses fixed in F-005; the held-out set was written after that fix, run once, and never used to change it.
+
+```
+tuned: n=23 model 23/23, keywords 12/23
+held_out: n=12 model 12/12, keywords 9/12
 ```
 
 ## Ablations
@@ -84,6 +89,7 @@ Full entries, each with cause, fix and before-and-after numbers, are in `code/do
 - F-002. Keyword intent missed "I'm deleting my account"
 - F-003. Unknown state passed as compliant
 - F-004. A queue-order rule that the data does not support
+- F-005. Corrections and hypotheticals read as deletion
 
 ## Score history on the development split
 

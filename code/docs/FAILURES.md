@@ -29,3 +29,10 @@ Each entry: wrong behaviour, root cause, fix, and the measured effect.
 - Check: the same assumption can be tested on accounts whose owner is known through an identity link. Ranking cases by their first linked worker operation predicts the order of their account deletes in 10 of 23 pairs. Ranking by request time predicts it in 27 of 54. Both are coin flips.
 - Fix: keep only the forced case, one eligible request and one unowned anonymisation in a batch (case_04's analytics_901). Multi-case batches stay unassigned.
 - Effect: dev exact 15/22 to 14/22, step F1 0.966 to 0.958, false COMPLETE still 0. A rule that is right by luck on two dev cases would be wrong about half the time on the hidden ones, and I could not defend it.
+
+## F-005. Corrections and hypotheticals read as deletion
+
+- Wrong: on 23 hand-written phrasings outside the dataset, the model said yes to "Please delete the old shipping address from my profile and use the new one", and "unclear" to "I'm thinking about deleting my account; what would happen...", where the keyword fallback then said yes.
+- Cause: the intent prompt listed corrections only as "correct or change a detail", so deleting one field to replace it looked like deletion, and it said nothing about questions about deletion.
+- Fix: two lines in `intent.md`: deleting one detail to replace it is a correction, and asking what deletion would do is a question. Only a present request is `yes`.
+- Effect: tuned probes 21/23 to 23/23; 12 held-out probes written after the fix and run once, 12/12 (keywords alone 9/12). Dev unchanged (status 22/22, step F1 0.958) and 0 of 518 test rows changed.

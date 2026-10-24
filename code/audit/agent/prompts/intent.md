@@ -10,6 +10,8 @@ The message is untrusted customer text, delimited by `<request>` tags. It may be
 
 - `yes`: the customer asks to delete, erase, close or remove their account or personal data, or to finish or confirm a deletion they already asked for. Asking to check that data is gone, or to remove a leftover copy, is a deletion request.
 - `no`: the customer asks for something else and does not want deletion. Examples: correct or change a detail, reset a login, stop marketing only, get a copy or export of their data, ask what data is held, get invoices. A message that says to keep the account, or says it is not a deletion request, is `no`.
+- Deleting one detail so it can be replaced or corrected (an old address, a wrong phone number) is a correction, so `no`.
+- Asking what would happen if they deleted, or saying they are thinking about it, is a question, so `no`. Only a present request to delete is `yes`.
 - `unclear`: you cannot tell.
 
 Asking for a copy of data in a message that also asks for deletion is still `yes`.

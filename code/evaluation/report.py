@@ -103,6 +103,18 @@ def main() -> int:
         lines.append(f"| {c['case_id']} | {c['title']} | {c['why']} | {status}, {len(steps)} step{'s' if len(steps) != 1 else ''} |")
     lines += ["", "Run output:", "", "```", *custom_lines, "```", ""]
 
+    probes = subprocess.run([sys.executable, str(EVAL / "intent_probes.py"), *(["--offline"] if args.offline else [])],
+                            capture_output=True, text=True, check=True).stdout.strip().splitlines()
+    lines += [
+        "## Intent probes outside the dataset",
+        "",
+        "Hand-written requests in five more languages and phrasings the dataset does not use: synonyms, corrections,",
+        "hypotheticals, opt-outs and injected instructions (`code/evaluation/intent_probes.json`). The tuned set found",
+        "the two misses fixed in F-005; the held-out set was written after that fix, run once, and never used to change it.",
+        "",
+        "```", *probes, "```", "",
+    ]
+
     lines += ["## Ablations", ""]
     ablations = (EVAL / "ablations.md").read_text(encoding="utf-8").splitlines()
     lines += [ln for ln in ablations if ln.startswith("|")]
