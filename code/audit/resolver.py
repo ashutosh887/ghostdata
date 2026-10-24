@@ -114,10 +114,12 @@ class Auditor:
                 self.accounts[case_id] = (f"account_{number:03d}", "convention: no candidate in the evidence")
 
     def assign_unlinked_ops(self, requests: list[Request]) -> None:
-        """Anonymised analytics records carry no identifier; tie each to its request through the worker queue.
+        """Anonymised analytics records carry no identifier; tie one to its request only when nothing else could own it.
 
-        Within one reporting batch (same reported_at), the deletion worker anonymises records in the same
-        order as it deletes accounts. Assign only when the counts match, so nothing is guessed.
+        In one reporting batch (same reported_at), an unowned anonymisation by the deletion worker in the 31 minutes
+        before the report belongs to the batch. With one eligible case and one such operation, the match is forced.
+        With more, the worker's queue order would have to decide, and on accounts whose owner is known that order
+        holds in only 10 of 23 pairs, so those batches stay unassigned.
         """
         batches = defaultdict(list)
         for r in requests:
@@ -138,10 +140,9 @@ class Auditor:
                  and reported_at - POLICY_WINDOW <= c.t <= reported_at and not self.owners(c.resource_id)),
                 key=lambda c: c.t,
             )
-            if not ops or len(ops) != len(eligible):
+            if len(ops) != 1 or len(eligible) != 1:
                 continue
-            for (_, r), op in zip(sorted(eligible, key=lambda e: e[0]), ops):
-                self.unlinked[r.case_id].append((op.resource_id, f"worker queue order, {op.activity_id}"))
+            self.unlinked[eligible[0][1].case_id].append((ops[0].resource_id, f"only unowned anonymisation in its batch, {ops[0].activity_id}"))
 
     def audit(self, r: Request) -> CaseAudit:
         case = CaseAudit(r, self.intent_fn(r.request_text))
