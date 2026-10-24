@@ -40,7 +40,7 @@ python3 code/evaluation/main.py --offline              # score the dev samples
 python3 code/evaluation/custom.py --offline            # the 6 hand-built cases
 python3 code/evaluation/ablations.py                   # switch each mechanism off and measure
 python3 code/validate.py output.csv                    # check any output file against the contract
-python3 -m unittest discover -s code/tests             # 27 tests
+python3 -m unittest discover -s code/tests             # 33 tests
 ```
 
 ## How it works
@@ -107,5 +107,5 @@ Models (Amazon Bedrock, OpenAI-compatible endpoint): `qwen.qwen3-235b-a22b-2507`
 | `evaluation/` | Scorer, baselines, holdout split, custom cases, ablations, reports |
 | `docs/CONTRACT.md` | Every rule, tagged by source |
 | `docs/DECISIONS.md`, `docs/FAILURES.md` | Choices with their numbers; what broke and how it was fixed |
-| `tests/` | Validator mutation tests, scorer tests, reader tests |
+| `tests/` | Validator mutation tests, scorer, reader and safety tests |
 | `cache/` | Recorded model and OCR answers for offline replay |
