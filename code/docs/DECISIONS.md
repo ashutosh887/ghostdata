@@ -14,7 +14,7 @@ The brief says to sort by `case_id`. The ids are not zero padded, so a string so
 
 `code/evaluation/splits.py` draws 3 of the 10 COMPLETE and 7 of the 22 INCOMPLETE samples with seed 20261024, before any resolver code existed. Tuning uses the other 22 (dev). The holdout is scored once, after the last change, and that is the number quoted as the result. The scorer refuses to run if the frozen list stops matching its seeded draw. One caveat: my notes on the data were written after reading all 32 answers, so the holdout is held out from tuning, not from my eyes.
 
-On 25 Oct at 02:01 IST, after the F-008 prompt change, I ran the scorer with `--split all` to record the cached answers for every sample, and it printed one combined line for all 32: 0 false COMPLETE, status 32/32, exact 22/32. With dev at 14/22, that puts the holdout at 10/10 status and 8/10 exact. That was its first look, unplanned. The decision logic was frozen from then on, and later changes are packaging and documents only.
+Shortly before 02:01 IST on 25 Oct, after the F-008 prompt change, I ran the scorer with `--split all` to record the cached answers for every sample, and it printed one combined line for all 32: 0 false COMPLETE, status 32/32, exact 22/32. With dev at 14/22, that puts the holdout at 10/10 status and 8/10 exact. That was its first look, and it was unplanned. Since then no change has altered any answer on the 550 requests: later commits only handle malformed input (F-007), tooling and documents. The final `report.py --holdout` run is therefore its second look, and it reports the same numbers unless the fresh model run changes an answer.
 
 ## D-004. The headline metric is false COMPLETEs, then accuracy
 

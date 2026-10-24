@@ -45,7 +45,7 @@ The headline metric is **false COMPLETE**: a case certified as deleted while per
 
 | Other checks | Result |
 |---|---|
-| Holdout (10 samples, frozen before any solving code) | scored once, in the final packaging run, into `evaluation/evaluation_report.md` |
+| Holdout (10 samples, frozen before any solving code) | 10/10 status and 8/10 exact. It was first seen by accident while recording cached answers (D-003). The final packaging run prints it into `evaluation/evaluation_report.md` |
 | Hand-built custom cases | 6/6 exact |
 | Intent probes outside the dataset | tuned set 23/23, held-out set 12/12 (keywords alone: 12/23 and 9/12) |
 | Sequence order on dev | 22/22 cases keep the sample's order for every shared step |
@@ -123,7 +123,7 @@ Models, prices, timeouts and limits live in `audit/config.py`:
 | `python3 code/evaluation/ablations.py` | Switch each mechanism off in turn and rewrite `evaluation/ablations.md` |
 | `python3 code/evaluation/report.py --offline` | Rerun every scorer and rewrite `evaluation/evaluation_report.md` |
 | `python3 -m unittest discover -s code/tests` | Unit tests |
-| `python3 code/evaluation/check.py` | Every release gate in one command: tests, offline replay byte for byte, validator, dev score, custom cases, intent probes. Exits non-zero on any failure |
+| `python3 code/evaluation/check.py` | Every release gate in one command: tests, offline replay byte for byte, validator, dev score, custom cases, intent probes, and an evaluation report that matches a fresh run of every scorer. Exits non-zero on any failure |
 
 Times for the CLI are ISO 8601, for example `2026-09-14T04:20:00Z`. For a hand-typed request, an email that matches no identity and an audit time before the request time are rejected with a clear message.
 
@@ -221,7 +221,7 @@ On this dataset the loop changes no answer. Its proposals must pass the same exa
 
 All scorers live in `evaluation/`, and `report.py` reruns all of them into `evaluation/evaluation_report.md`.
 
-- **Split.** 22 dev and 10 holdout sample cases, drawn with seed 20261024 and stratified by status before any resolver code existed (`splits.py`, D-003). The holdout is scored once, after the last change.
+- **Split.** 22 dev and 10 holdout sample cases, drawn with seed 20261024 and stratified by status before any resolver code existed (`splits.py`, D-003). Nothing was tuned on the holdout. It was seen once by accident on 25 Oct, after which no answer changed, and the final run prints it.
 - **Metrics.** False COMPLETE, status accuracy, exact `steps_json`, step precision, recall and F1 (multiset on all six fields, and again without `evidence_id`), field accuracy, sequence order and similarity, and per-class precision and recall (`score.py`).
 - **Baselines.** Trust the workflow's own status, and always INCOMPLETE (`baselines.py`).
 - **Custom cases** (`custom_cases/cases.py`, 6/6 exact) run through the real pipeline on a copy of the dataset with each case's users, activity and evidence added:
@@ -338,7 +338,7 @@ Each entry in `docs/FAILURES.md` gives the wrong behaviour, the cause, the fix a
 Before every commit:
 
 ```bash
-python3 code/evaluation/check.py     # all six gates, about 2 seconds
+python3 code/evaluation/check.py     # all seven gates, a few seconds
 ```
 
 A new rule goes in `docs/CONTRACT.md`, a choice in `docs/DECISIONS.md`, and a fix in `docs/FAILURES.md` with its before and after numbers. No case ids, user ids or labels are hardcoded, and the holdout is never used for tuning.

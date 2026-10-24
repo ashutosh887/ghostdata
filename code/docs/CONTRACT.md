@@ -42,7 +42,7 @@ Rules marked `open` are hypotheses from reading the data. They become `confirmed
 | I2 | Email matching ignores case (the request file has uppercase emails). | [CONVENTION] | open |
 | I3 | The identifier set is the `user_id` plus every current and historical email, phone and email hash. `email_hash = sha256(lower(email))`. | [BRIEF] for the set, [SAMPLE: case_10, case_12, case_29, case_30] for history | open |
 | I4 | Exact identifier matches only. Never link on names or near-miss emails (`.jr` variants, one-letter changes). | [CONVENTION], [SAMPLE: case_06, case_28] | open |
-| I5 | A deletion request whose email matches no current or historical identity has no subject to audit. It is written as `NOT_APPLICABLE` with `[]` and a warning, so one bad row cannot stop the other cases. No dataset request hits this. | [CONVENTION] | `tests/test_requests.py` |
+| I5 | A deletion request whose email matches no current or historical identity has no subject to audit. It is written as `NOT_APPLICABLE` with `[]` and a warning, so one bad row cannot stop the other cases. This is a trade-off. The brief defines NOT_APPLICABLE as "does not authorize deletion", and that is not quite the case here. But COMPLETE would certify what nobody checked, and INCOMPLETE needs cited findings that cannot exist without a subject. No dataset request hits this. | [CONVENTION] | `tests/test_requests.py` |
 | I6 | A deletion request whose `audit_at` is before its `requested_at` has no window to audit. It is handled like I5: `NOT_APPLICABLE` with `[]`, a warning, and the reason in the case note that `explain_case.py` prints. No dataset request hits this. | [CONVENTION] | `tests/test_requests.py` |
 
 ## 4. Policy

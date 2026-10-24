@@ -22,6 +22,22 @@ AGENTS.md owns the challenge contract and the log format. These are the conventi
 - Read keys from the environment or an uncommitted `.env`. Never print or log them.
 - Python 3.9+, standard library only. No comments unless the code cannot say it.
 
+## What goes where
+
+| Path | Git | In `code.zip` | Why |
+|---|---|---|---|
+| `code/` except `code/cache/` | committed | yes | the solution |
+| `code/cache/` | ignored | yes | recorded model and OCR answers; `--offline` cannot run without them |
+| `README.md`, `CLAUDE.md`, `.gitignore` | committed | no | the root README mirrors `code/README.md` |
+| `AGENTS.md`, `problem_statement.md`, `agent_trace_instructions.md`, `dataset/` | committed, never edited | no | organisers' files |
+| `output.csv` | ignored | no | uploaded on its own |
+| `log.txt` | ignored | no | uploaded on its own as the chat transcript |
+| `notes/` | ignored | no | private working notes: session summaries, reviews, interview prep, decision trail |
+| `.env` | ignored | no | the key; never printed, logged, committed or zipped |
+| `code.zip`, `__pycache__/`, `.venv/` | ignored | no | build output |
+
+Scratch output goes to `/tmp` or the session scratchpad. Anything worth keeping goes to `notes/`, never to a folder outside the repo. Before every commit, `git status --short` must show only files you meant to add; a `??` file under `code/` is either committed on purpose or deleted.
+
 ## Before committing
 
 ```bash
