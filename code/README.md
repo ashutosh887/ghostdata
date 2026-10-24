@@ -93,6 +93,7 @@ Models (Amazon Bedrock, OpenAI-compatible endpoint): `qwen.qwen3-235b-a22b-2507`
 
 - 109 test cases have two or more equally plausible accounts. No evidence separates them; a fixed order breaks the tie and `explain_case.py` labels it. Expect about half of those account steps to be wrong.
 - Anonymised analytics records carry no identifier; they are tied to a case only when the match is forced. Four dev cases miss one for this reason, and two more need audit-record ids that exist nowhere in the data.
+- The investigator changes no answer on this data. Its proposals must pass the same exact-identifier rule discovery already applies, so it can confirm and label but not add (D-016).
 - A timing pattern between log entries would recover several of these cases. It is an artefact of how the dataset was produced, not a property of a deletion system, so it is not used (D-011).
 
 ## Files
