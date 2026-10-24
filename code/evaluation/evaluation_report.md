@@ -99,6 +99,7 @@ Full entries, each with cause, fix and before-and-after numbers, are in `code/do
 - F-006. The evaluation report said "not run" for the custom cases
 - F-007. One unknown email stopped the whole run
 - F-008. Most investigations ran out of rounds
+- F-009. A same-time tie could keep the state and drop its proof
 
 ## Score history on the development split
 

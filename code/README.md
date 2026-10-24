@@ -50,7 +50,7 @@ The headline metric is **false COMPLETE**: a case certified as deleted while per
 | Intent probes outside the dataset | tuned set 23/23, held-out set 12/12 (keywords alone: 12/23 and 9/12) |
 | Sequence order on dev | 22/22 cases keep the sample's order for every shared step |
 | Per class on dev | COMPLETE 7/7 precision and recall, INCOMPLETE 15/15 |
-| Unit tests | 47 |
+| Unit tests | 51 |
 | Test predictions (518) | 354 INCOMPLETE, 154 COMPLETE, 10 NOT_APPLICABLE |
 | Offline replay | reproduces `output.csv` byte for byte with no key |
 | Full live run | about $0.17 for all 518 requests |
@@ -294,6 +294,7 @@ Full entries, each with its reason and numbers, are in `docs/DECISIONS.md`.
 | D-014 | Scope uses the time inside a file; citations prefer files captured by `audit_at` |
 | D-015 | The deletion worker's action stands only where the category was a system default |
 | D-016 | The investigator can confirm and label, but on this data it adds nothing |
+| D-017 | A quoted "yes" is not checked for negation |
 
 ## Failures found and fixed
 
@@ -309,6 +310,7 @@ Each entry in `docs/FAILURES.md` gives the wrong behaviour, the cause, the fix a
 | F-006 | The evaluation report said "not run" for the custom cases | `report.py` now stops on any scorer failure |
 | F-007 | One unknown email stopped the whole run | Rows that cannot be audited become NOT_APPLICABLE with a warning; no answer changed |
 | F-008 | Most investigations ran out of rounds | 64 to 119 of 121 reach a conclusion, none hit the limit; no answer changed |
+| F-009 | A same-time tie could keep the state and drop its proof | Tie keeps its proof; late citations are an error; no answer changed |
 
 ## Known limits
 
@@ -316,6 +318,7 @@ Each entry in `docs/FAILURES.md` gives the wrong behaviour, the cause, the fix a
 - **Unnamed accounts.** 15 cases have no account in any evidence. They take the user's number, as in the sample answers (D-013).
 - **Anonymised analytics.** These records carry no identifier and are tied to a case only when the match is forced. Four dev cases miss one for this reason, and two more need audit-record ids that exist nowhere in the data.
 - **The investigator** changes no answer on this data (D-016).
+- **Negated quotes.** The intent check confirms the model's quote is in the request but not that it is negated (D-017).
 - **Downstream before source.** Within one operation, records are ordered by system and resource name, which matches the sample answers. There is no explicit dependency graph.
 - **No timing shortcut.** A timing pattern between log entries would recover several of these cases. It is an artefact of how the dataset was produced, not a property of a deletion system, so it is not used (D-011).
 - **Identity history is not cut at `audit_at`.** Every identity change is used, whatever its date. On this data no identity changes after any case's audit, so no answer depends on it, but a stricter build would filter by time.

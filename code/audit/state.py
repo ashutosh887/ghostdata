@@ -61,7 +61,7 @@ def latest(events: list[tuple[datetime, bool, Proof]]) -> tuple[bool | None, lis
         return None, []
     newest = max(t for t, _, _ in events)
     value = any(v for t, v, _ in events if t == newest)
-    changed = max((t for t, v, _ in events if v != value), default=None)
+    changed = max((t for t, v, _ in events if v != value and t < newest), default=None)
     return value, [p for t, v, p in events if v == value and (changed is None or t > changed)]
 
 

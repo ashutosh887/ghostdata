@@ -30,7 +30,7 @@ Rules marked `open` are hypotheses from reading the data. They become `confirmed
 | S2 | `COMPLETE` holds only verification steps, and every one cites evidence that proves the state at `audit_at`. | [BRIEF] | `validate.py` |
 | S3 | `INCOMPLETE` holds findings, then the full remediation plan, then the checks that must pass afterwards. Findings cite evidence. Remediation and verification steps describe future work and use `""`. | [BRIEF], [SAMPLE: all 22 INCOMPLETE samples] | `validate.py` |
 | S4 | A citation is a `file_id` from `evidence_files.csv`, an `activity_id` from `system_activity.csv` or an `audit_id` from `user_audit_log.csv`. | [BRIEF] | `validate.py` |
-| S5 | Never cite evidence captured after the case's `audit_at`. Evidence created later must not change the answer. | [BRIEF] | `validate.py` warns; 0 warnings on the 32 samples |
+| S5 | Never cite evidence captured after the case's `audit_at`. Evidence created later must not change the answer. | [BRIEF] | `validate.py` rejects it; `tests/test_validate.py` |
 | S6 | `reported_status` and `reported_result` are claims. They never prove a resource's state. | [BRIEF] | resolver (phase 4) |
 | S7 | `COMPLETE` only when every relevant copy has its required treatment, every required retained record still exists, and no active sync, import or restore path can recreate the data. Otherwise `INCOMPLETE`. | [BRIEF] | resolver (phase 4) |
 

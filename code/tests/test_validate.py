@@ -47,6 +47,15 @@ class ValidatorTest(unittest.TestCase):
         self.assertEqual(report.errors, [])
         self.assertEqual(report.warnings, [])
 
+    def test_citation_after_audit_is_rejected(self):
+        index = first("COMPLETE")
+        audit_at = REQUESTS[index].audit_at
+        late = next(e for e, t in sorted(EVIDENCE_AT.items()) if t > audit_at)
+
+        def fn(row, steps):
+            steps[0]["evidence_id"] = late
+        self.assert_rejected(self.mutate(index, fn))
+
     def test_missing_row(self):
         self.assert_rejected(GOLD[:-1])
 

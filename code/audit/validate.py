@@ -71,7 +71,7 @@ def check_steps(case_id: str, status: str, steps, audit_at: datetime | None,
             if cited not in evidence_at:
                 err(f"step {i} cites unknown evidence {cited}")
             elif audit_at is not None and evidence_at[cited] > audit_at:
-                report.warnings.append(f"{case_id}: step {i} cites {cited}, which postdates audit_at")
+                err(f"step {i} cites {cited}, which postdates audit_at")
 
     phases = {s["phase"] for s in steps}
     if status == "COMPLETE" and phases != {"VERIFICATION"}:

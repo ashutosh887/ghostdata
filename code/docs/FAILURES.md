@@ -57,3 +57,10 @@ Each entry: wrong behaviour, root cause, fix, and the measured effect.
 - Cause: the prompt said when to declare a case unresolvable but not when to stop, so the model kept repeating lookups on account ties.
 - Fix: a stop rule in `investigator.md`: stop once the flag is settled, declare a tie with no identifier evidence unresolvable, and never repeat a call.
 - Effect: 64 to 119 of 121 investigations reach a conclusion, 0 hit the round limit, and 0 of 518 answers changed.
+
+## F-009. A same-time tie could keep the state and drop its proof
+
+- Wrong: when two sources at the same newest time disagreed, one showing the record and one omitting it, `latest()` in `state.py` correctly chose present but returned no proof, so the finding would have no evidence to cite. The validator also only warned when a step cited evidence captured after `audit_at`. Found by an independent read-only review with a hand-made tie. Neither happens in the dataset.
+- Cause: the last disagreeing time was taken over all events, including the tie itself, so every agreeing proof at that time was filtered out. The late citation check was written as a warning before F-001 made the rule strict.
+- Fix: the last disagreement is taken only from times before the newest, and a citation after `audit_at` is now a validator error. Four tests in `tests/test_state.py` and `tests/test_validate.py`; the tie test fails on the old code.
+- Effect: none of the 518 answers changed; offline replay is byte-identical and the validator still reports 0 errors and 0 warnings.
