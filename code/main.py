@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -13,8 +14,8 @@ from audit.resolver import build_auditor, run_cases  # noqa: E402
 from audit.validate import validate_output  # noqa: E402
 
 
-def run(requests, use_model: bool = True, offline: bool = False):
-    auditor = build_auditor(use_model=use_model, offline=offline)
+def run(requests, use_model: bool = True, offline: bool = False, fresh: bool = False):
+    auditor = build_auditor(use_model=use_model, offline=offline, fresh=fresh)
     return run_cases(requests, auditor), auditor
 
 
@@ -32,6 +33,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--only", nargs="*", help="case ids to run")
     parser.add_argument("--offline", action="store_true", help="replay cached model answers; a cache miss is an error")
     parser.add_argument("--no-model", action="store_true", help="ablation: keyword intent, no document reading")
+    parser.add_argument("--fresh", action="store_true", help="ignore cached answers and call every model live")
+    parser.add_argument("--usage-report", type=Path, help="write the token and cost report for this run")
     args = parser.parse_args(argv)
     if args.no_model and args.out == REPO_ROOT / "output.csv":
         parser.error("--no-model is an ablation; give it its own --out so it cannot replace output.csv")
@@ -40,7 +43,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.only:
         requests = [r for r in requests if r.case_id in set(args.only)]
 
-    rows, auditor = run(requests, use_model=not args.no_model, offline=args.offline)
+    if args.fresh and args.offline:
+        parser.error("--fresh calls the models live; it cannot be combined with --offline")
+    if args.usage_report and not args.fresh:
+        parser.error("--usage-report describes live calls; run it with --fresh")
+    rows, auditor = run(requests, use_model=not args.no_model, offline=args.offline, fresh=args.fresh)
     write_output(args.out, rows)
     client = auditor.client
     if client is not None:
@@ -51,6 +58,10 @@ def main(argv: list[str] | None = None) -> int:
             unresolved = sum(x.outcome.startswith("declare_unresolvable") for x in investigations)
             print(f"investigator: {len(investigations)} flagged cases, {unresolved} declared unresolvable, "
                   f"{accepted} proposals accepted, {rejected} rejected")
+        if args.usage_report:
+            when = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+            args.usage_report.write_text(client.ledger.report(len(requests), auditor.investigations, when), encoding="utf-8")
+            print(f"wrote {args.usage_report}")
         for model, st in client.ledger.by_model.items():
             print(f"{model}: {st.calls} calls, {st.cache_hits} cache hits, "
                   f"{st.input_tokens} in / {st.output_tokens} out tokens, ${client.ledger.cost(model):.4f}")

@@ -57,7 +57,7 @@ def score_case(case_id: str, gold_status: str, gold_steps: list, pred_status: st
     g_seq = [step_key(s) for s in gold_steps]
     p_seq = [step_key(s) for s in pred_steps]
     common = set(g_seq) & set(p_seq)
-    order_ok = [k for k in g_seq if k in common] == [k for k in p_seq if k in common]
+    order_ok = bool(common) and [k for k in g_seq if k in common] == [k for k in p_seq if k in common]
     similarity = 1.0 if positions == 0 else 1 - edit_distance(g_seq, p_seq) / positions
 
     return CaseResult(

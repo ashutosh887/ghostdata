@@ -9,7 +9,7 @@ import urllib.request
 from collections import defaultdict
 from dataclasses import dataclass, field
 
-from ..config import CACHE_DIR, ENDPOINT, KEY_VAR, MAX_RETRIES, PRICES, REGION_VAR, TIMEOUT_SECONDS
+from ..config import CACHE_DIR, ENDPOINT, KEY_VAR, MAX_RETRIES, PRICES, PROVIDER, REGION_VAR, TIMEOUT_SECONDS
 
 
 class ModelUnavailable(RuntimeError):
@@ -33,8 +33,10 @@ class Ledger:
 
     by_model: dict = field(default_factory=lambda: defaultdict(ModelStats))
     by_role: dict = field(default_factory=lambda: defaultdict(ModelStats))
+    role_models: dict = field(default_factory=lambda: defaultdict(set))
 
     def add(self, model: str, role: str, **delta) -> None:
+        self.role_models[role].add(model)
         for stats in (self.by_model[model], self.by_role[role]):
             for k, v in delta.items():
                 setattr(stats, k, getattr(stats, k) + v)
@@ -43,6 +45,61 @@ class Ledger:
         s = self.by_model[model]
         price_in, price_out = PRICES.get(model, (0.0, 0.0))
         return (s.input_tokens * price_in + s.output_tokens * price_out) / 1_000_000
+
+    def report(self, requests: int, investigations: list, when: str) -> str:
+        """usage_report.md for the run that wrote output.csv."""
+        models = sorted(self.by_model)
+        total = ModelStats()
+        for m in models:
+            for k, v in vars(self.by_model[m]).items():
+                setattr(total, k, getattr(total, k) + v)
+        cost = sum(self.cost(m) for m in models)
+        tokens = total.input_tokens + total.output_tokens
+        lines = [
+            "# Token usage and cost",
+            "",
+            f"Final full-dataset run that wrote `output.csv`: {requests} requests, {when}.",
+            f"Provider: {PROVIDER}. Every answer was requested live in this run (cache reads off), then stored in",
+            "`code/cache/` so `python3 code/main.py --offline` replays it with no key and no cost.",
+            "",
+            "## Per model",
+            "",
+            "| Model | Roles | Calls | Input tokens | Output tokens | Total tokens | Est. cost (USD) | Price in / out per 1M |",
+            "|---|---|---|---|---|---|---|---|",
+        ]
+        roles = {m: sorted(r for r, s in self.by_role.items() if s.calls and m in self.role_models.get(r, ())) for m in models}
+        for m in models:
+            s = self.by_model[m]
+            pi, po = PRICES.get(m, (0.0, 0.0))
+            lines.append(f"| `{m}` | {', '.join(roles[m]) or '-'} | {s.calls} | {s.input_tokens:,} | {s.output_tokens:,} | "
+                         f"{s.input_tokens + s.output_tokens:,} | {self.cost(m):.4f} | {pi:.2f} / {po:.2f} |")
+        lines.append(f"| **All models** | | **{total.calls}** | **{total.input_tokens:,}** | **{total.output_tokens:,}** | "
+                     f"**{tokens:,}** | **{cost:.4f}** | |")
+        lines += [
+            "",
+            "## Per role",
+            "",
+            "| Role | Calls | Input tokens | Output tokens | JSON repairs | Failures |",
+            "|---|---|---|---|---|---|",
+        ]
+        for r in sorted(self.by_role):
+            s = self.by_role[r]
+            lines.append(f"| {r} | {s.calls} | {s.input_tokens:,} | {s.output_tokens:,} | {s.repairs} | {s.failures} |")
+        flagged = len(investigations)
+        lines += [
+            "",
+            "## Per request",
+            "",
+            f"- Total tokens: {tokens:,}; average per request: {tokens / requests:,.0f}.",
+            f"- Estimated cost: ${cost:.4f} in total; ${cost / requests:.6f} per request.",
+            f"- Model calls: {total.calls} in total; {total.calls / requests:.2f} per request.",
+            f"- Intent is classified once per distinct request text; documents are read once each; the investigator runs only",
+            f"  on the {flagged} cases the resolver flagged, at most 6 rounds each.",
+            "",
+            "Costs are estimates: the endpoint returns token counts but no price, so the table applies the Amazon Bedrock",
+            "on-demand prices listed in `code/audit/config.py`.",
+        ]
+        return "\n".join(lines) + "\n"
 
 
 def _key(payload: dict) -> str:
@@ -57,8 +114,10 @@ class ModelClient:
     the run never falls back to a rules-only answer without saying so.
     """
 
-    def __init__(self, offline: bool = False, cache_dir=CACHE_DIR / "llm", ledger: Ledger | None = None):
+    def __init__(self, offline: bool = False, fresh: bool = False, cache_dir=CACHE_DIR / "llm",
+                 ledger: Ledger | None = None):
         self.offline = offline
+        self.fresh = fresh
         self.cache_dir = cache_dir
         self.ledger = ledger or Ledger()
 
@@ -74,7 +133,7 @@ class ModelClient:
         }
         key = _key(payload)
         path = self.cache_dir / key[:2] / f"{key}.json"
-        if path.exists():
+        if path.exists() and not self.fresh:
             self.ledger.add(model, role, cache_hits=1)
             return json.loads(path.read_text(encoding="utf-8"))["answer"]
         if self.offline:

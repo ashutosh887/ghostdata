@@ -242,13 +242,13 @@ def all_requests() -> list[Request]:
             + load_requests(DATASET_DIR / "deletion_requests.csv"))
 
 
-def build_auditor(use_model: bool = True, offline: bool = False) -> Auditor:
+def build_auditor(use_model: bool = True, offline: bool = False, fresh: bool = False) -> Auditor:
     """The full agent: the model reads intent and documents, code decides everything else."""
     corpus = load_corpus()
     if not use_model:
         return Auditor(corpus)
     load_env()
-    client = ModelClient(offline=offline)
+    client = ModelClient(offline=offline, fresh=fresh)
     reader = DocumentReader(client)
     reader.apply(corpus)
     return Auditor(corpus, intent_fn=ModelIntent(client), client=client, contradicted=reader.contradicted)
