@@ -36,3 +36,10 @@ Each entry: wrong behaviour, root cause, fix, and the measured effect.
 - Cause: the intent prompt listed corrections only as "correct or change a detail", so deleting one field to replace it looked like deletion, and it said nothing about questions about deletion.
 - Fix: two lines in `intent.md`: deleting one detail to replace it is a correction, and asking what deletion would do is a question. Only a present request is `yes`.
 - Effect: tuned probes 21/23 to 23/23; 12 held-out probes written after the fix and run once, 12/12 (keywords alone 9/12). Dev unchanged (status 22/22, step F1 0.958) and 0 of 518 test rows changed.
+
+## F-006. The evaluation report said "not run" for the custom cases
+
+- Wrong: after F-005 changed the intent prompt, `report.py --offline` wrote "Result: not run exact" for the custom cases and dropped their run output, and that report was committed.
+- Cause: the custom-case texts had no cached intent answer under the new prompt, so `custom.py --offline` stopped, and `report.py` ran it without checking the exit code, so the failure became a sentence in the report.
+- Fix: run the custom cases live once to record their answers, and run every scorer in `report.py` with `check=True`, so a failed scorer stops the report.
+- Effect: report back to 6/6 exact. Found by the end-to-end checklist in the session notes.

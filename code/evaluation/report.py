@@ -44,7 +44,7 @@ def main() -> int:
     dev = [(label, score(system, "dev", args.offline)) for system, label in SYSTEMS]
     agent = dev[0][1]
     custom = subprocess.run([sys.executable, str(EVAL / "custom.py"), *(["--offline"] if args.offline else [])],
-                            capture_output=True, text=True).stdout
+                            capture_output=True, text=True, check=True).stdout
     custom_lines = [ln for ln in custom.splitlines() if ln.startswith(("PASS", "FAIL", "     "))]
     custom_total = re.search(r"(\d+/\d+) custom cases exact", custom)
 
@@ -93,7 +93,7 @@ def main() -> int:
         "## Custom evaluation cases",
         "",
         f"Six hand-built cases run through the real pipeline on a copy of the dataset with the case's users, activity and",
-        f"evidence added (`code/evaluation/custom.py`). Result: {custom_total.group(1) if custom_total else 'not run'} exact.",
+        f"evidence added (`code/evaluation/custom.py`). Result: {custom_total.group(1)} exact.",
         "",
         "| Case | What it tests | Why it matters | Expected |",
         "|---|---|---|---|",

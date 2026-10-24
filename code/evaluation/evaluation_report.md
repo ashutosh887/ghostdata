@@ -40,7 +40,7 @@ Not scored yet. It is scored once, after the last code change, with `report.py -
 ## Custom evaluation cases
 
 Six hand-built cases run through the real pipeline on a copy of the dataset with the case's users, activity and
-evidence added (`code/evaluation/custom.py`). Result: not run exact.
+evidence added (`code/evaluation/custom.py`). Result: 6/6 exact.
 
 | Case | What it tests | Why it matters | Expected |
 |---|---|---|---|
@@ -54,6 +54,12 @@ evidence added (`code/evaluation/custom.py`). Result: not run exact.
 Run output:
 
 ```
+PASS case_901 Oldest email in the request, middle email's hash in the evidence: expected INCOMPLETE, got INCOMPLETE
+PASS case_902 Successful delete undone by an active sync: expected INCOMPLETE, got INCOMPLETE
+PASS case_903 Tombstone with leftover PII beside a retained audit record: expected INCOMPLETE, got INCOMPLETE
+PASS case_904 Spanish access request that refuses deletion: expected NOT_APPLICABLE, got NOT_APPLICABLE
+PASS case_905 Injected instructions in the request and in the evidence: expected INCOMPLETE, got INCOMPLETE
+PASS case_906 Late evidence that would flip a COMPLETE: expected COMPLETE, got COMPLETE
 ```
 
 ## Intent probes outside the dataset
@@ -90,6 +96,7 @@ Full entries, each with cause, fix and before-and-after numbers, are in `code/do
 - F-003. Unknown state passed as compliant
 - F-004. A queue-order rule that the data does not support
 - F-005. Corrections and hypotheticals read as deletion
+- F-006. The evaluation report said "not run" for the custom cases
 
 ## Score history on the development split
 
