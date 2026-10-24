@@ -65,6 +65,18 @@ def intent_probes() -> tuple[bool, str]:
     return ok, "; ".join(lines) if lines else "intent_probes.py failed"
 
 
+def report_current() -> tuple[bool, str]:
+    committed = CODE_DIR / "evaluation" / "evaluation_report.md"
+    with tempfile.TemporaryDirectory() as tmp:
+        fresh = Path(tmp) / "report.md"
+        r = run(str(CODE_DIR / "evaluation" / "report.py"), "--offline", "--out", str(fresh))
+        if r.returncode != 0:
+            return False, "report.py failed"
+        same = fresh.read_text(encoding="utf-8") == committed.read_text(encoding="utf-8")
+        return same, "evaluation_report.md matches a fresh run of every scorer" if same else \
+            "evaluation_report.md is stale; rerun report.py --offline"
+
+
 CHECKS = [
     ("unit tests", unit_tests),
     ("offline replay", replay),
@@ -72,6 +84,7 @@ CHECKS = [
     ("dev score", dev_score),
     ("custom cases", custom_cases),
     ("intent probes", intent_probes),
+    ("evaluation report", report_current),
 ]
 
 

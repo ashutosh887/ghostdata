@@ -39,6 +39,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Write evaluation_report.md from fresh scorer runs")
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--holdout", action="store_true", help="score the frozen holdout; do this once, after the last change")
+    parser.add_argument("--out", type=Path, default=OUT, help="where to write the report")
     args = parser.parse_args()
 
     dev = [(label, score(system, "dev", args.offline)) for system, label in SYSTEMS]
@@ -87,7 +88,8 @@ def main() -> int:
         hold = [(label, score(system, "holdout", args.offline)) for system, label in SYSTEMS]
         lines += headline_table(hold)
     else:
-        lines.append("Not scored yet. It is scored once, after the last code change, with `report.py --holdout`.")
+        lines.append("Not printed here yet. It is printed by `report.py --holdout` in the final packaging run. The holdout was "
+                     "seen once before that, by accident, while recording cached answers (D-003).")
     lines += [
         "",
         "## Custom evaluation cases",
@@ -128,8 +130,8 @@ def main() -> int:
     lines += ["", "## Score history on the development split", ""]
     history = (EVAL / "history.md").read_text(encoding="utf-8").splitlines()
     lines += [ln for ln in history if ln.startswith("|")]
-    OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"wrote {OUT}")
+    args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {args.out}")
     return 0
 
 

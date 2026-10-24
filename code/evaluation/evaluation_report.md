@@ -35,7 +35,7 @@ no evidence separates their two candidates (D-011).
 
 ## Holdout (10 samples, scored once)
 
-Not scored yet. It is scored once, after the last code change, with `report.py --holdout`.
+Not printed here yet. It is printed by `report.py --holdout` in the final packaging run. The holdout was seen once before that, by accident, while recording cached answers (D-003).
 
 ## Custom evaluation cases
 
