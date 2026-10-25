@@ -69,10 +69,12 @@ def report_current() -> tuple[bool, str]:
     committed = CODE_DIR / "evaluation" / "evaluation_report.md"
     with tempfile.TemporaryDirectory() as tmp:
         fresh = Path(tmp) / "report.md"
-        r = run(str(CODE_DIR / "evaluation" / "report.py"), "--offline", "--out", str(fresh))
+        text = committed.read_text(encoding="utf-8")
+        holdout = [] if "Not printed here yet" in text else ["--holdout"]
+        r = run(str(CODE_DIR / "evaluation" / "report.py"), "--offline", *holdout, "--out", str(fresh))
         if r.returncode != 0:
             return False, "report.py failed"
-        same = fresh.read_text(encoding="utf-8") == committed.read_text(encoding="utf-8")
+        same = fresh.read_text(encoding="utf-8") == text
         return same, "evaluation_report.md matches a fresh run of every scorer" if same else \
             "evaluation_report.md is stale; rerun report.py --offline"
 

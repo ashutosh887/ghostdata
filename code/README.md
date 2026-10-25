@@ -53,7 +53,7 @@ The headline metric is **false COMPLETE**: a case certified as deleted while per
 | Unit tests | 51 |
 | Test predictions (518) | 354 INCOMPLETE, 154 COMPLETE, 10 NOT_APPLICABLE |
 | Offline replay | reproduces `output.csv` byte for byte with no key |
-| Full live run | about $0.17 for all 518 requests |
+| Full live run | about $0.19 for all 518 requests |
 
 What the model is worth on the 518 test cases: reading the screenshots turns 4 COMPLETEs that a rules-only run would certify into INCOMPLETE, because the screens show a live connector, a ready export, a restorable backup and a profile still holding the person's name and email; and swapping the readings between screenshots flips 6 answers and makes the validator reject the file. The answers depend on what the model reads.
 
@@ -211,7 +211,7 @@ The investigator is a bounded tool loop (`audit/agent/investigator.py`). On each
 | `propose_account`, `propose_resource` | A proposal that code accepts or rejects with the reason |
 | `declare_unresolvable`, `finish` | End the loop with a stated reason |
 
-On this dataset the loop changes no answer. Its proposals must pass the same exact-identifier rule that discovery already applies, so it confirms and labels but cannot add a record. On the submitted run it settles 119 of 121 flagged cases as unresolvable, with no proposals and none at the round limit (F-008). Widening the rule is how false links get in, so it stays (D-016).
+On this dataset the loop changes no answer. Its proposals must pass the same exact-identifier rule that discovery already applies, so it confirms and labels but cannot add a record. On the submitted run it settles 117 of 121 flagged cases as unresolvable and 4 reach the round limit; its 2 proposals name records already in scope and code rejects both. The model samples, so these counts move a little between live runs (119, 0 and 0 when F-008 was measured). Widening the rule is how false links get in, so it stays (D-016).
 
 ## Prompts
 
@@ -258,7 +258,7 @@ Every mechanism that ships changes at least one answer when it is removed. The s
 - **Validator.** `validate.py` checks every output against the contract: header, row count, sorting, statuses, step numbering, phase order, operation and state pairs, citation rules and evidence ids, and evidence captured after `audit_at`. `main.py` runs it after every write.
 - **Determinism.** Temperature 0, cached answers, sorted iteration everywhere, fixed tie-breaking, and compact JSON with fixed field order.
 - **Bad input.** A deletion request that cannot be audited is written as `NOT_APPLICABLE` with a warning, and the other cases still run. That covers an email that matches no identity (CONTRACT I5) and an `audit_at` before `requested_at` (I6). `explain_case.py` prints the reason. A missing model answer or OCR tool ends with one message and exit code 2. Any other error keeps its traceback, so a bug is never dressed up as a known failure.
-- **Tests** (47, `tests/`): validator mutation tests (11 deliberately broken versions of the sample answers), the scorer, every evidence reader, the safety guard, the model client's retry, repair and replay paths, and the bad-input rules.
+- **Tests** (51, `tests/`): validator mutation tests (12 deliberately broken versions of the sample answers), the scorer, every evidence reader, the state rule at a same-time tie, the safety guard, the model client's retry, repair and replay paths, and the bad-input rules.
 
 ## Safety and privacy
 
@@ -270,7 +270,7 @@ Every mechanism that ships changes at least one answer when it is removed. The s
 
 ## Cost
 
-A full live run reads the 398 distinct request texts, the 12 linked documents and the flagged cases. It costs about $0.17 for all 518 requests, under $0.001 per request. The exact calls, tokens and cost of the final run are in `evaluation/usage_report.md`, written by `main.py --fresh --usage-report`. Prices are the Bedrock on-demand list prices in `audit/config.py`. A cached or offline run costs nothing.
+A full live run reads the 398 distinct request texts, the 12 linked documents and the flagged cases. It costs about $0.19 for all 518 requests, under $0.001 per request. The exact calls, tokens and cost of the final run are in `evaluation/usage_report.md`, written by `main.py --fresh --usage-report`. Prices are the Bedrock on-demand list prices in `audit/config.py`. A cached or offline run costs nothing.
 
 ## Design decisions
 

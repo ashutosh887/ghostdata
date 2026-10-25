@@ -26,7 +26,7 @@ def score(system: str, split: str, offline: bool) -> dict:
 
 
 def headline_table(rows: list[tuple[str, dict]]) -> list[str]:
-    lines = ["| System | False COMPLETE | Steps on NOT_APPLICABLE | Status | Exact steps_json | Step P / R / F1 | F1 ignoring evidence_id | Order agrees | Sequence similarity |",
+    lines = ["| System | False COMPLETE | Steps on NOT_APPLICABLE | Status | Row exact (whole steps_json) | Step P / R / F1 | F1 ignoring evidence_id | Order agrees | Sequence similarity |",
              "|---|---|---|---|---|---|---|---|---|"]
     for label, s in rows:
         p, r, f = s["step_prf"]
@@ -115,7 +115,15 @@ def main() -> int:
         "the two misses fixed in F-005; the held-out set was written after that fix, run once, and never used to change it.",
         "",
         "```", *probes, "```", "",
+        "| Set | Expected | Request text |",
+        "|---|---|---|",
     ]
+    probe_sets = json.loads((EVAL / "intent_probes.json").read_text(encoding="utf-8"))
+    for name, items in probe_sets.items():
+        for item in items:
+            text = " ".join(item["text"].split()).replace("|", "\\|")
+            lines.append(f"| {name} | {'deletion' if item['deletion'] else 'not deletion'} | {text} |")
+    lines.append("")
 
     lines += ["## Ablations", ""]
     ablations = (EVAL / "ablations.md").read_text(encoding="utf-8").splitlines()
@@ -125,11 +133,14 @@ def main() -> int:
     lines += ["## Failures found and improvements made", "",
               "Full entries, each with cause, fix and before-and-after numbers, are in `code/docs/FAILURES.md`.", ""]
     failures = (CODE_DIR / "docs" / "FAILURES.md").read_text(encoding="utf-8")
-    for title in re.findall(r"^## (F-\d+\..+)$", failures, flags=re.M):
-        lines.append(f"- {title}")
+    for title, body in re.findall(r"^## (F-\d+\.[^\n]+)\n(.*?)(?=^## |\Z)", failures, flags=re.M | re.S):
+        effect = re.search(r"^- (Effect[^:\n]*: .+)$", body, flags=re.M)
+        lines.append(f"- {title}. {effect.group(1)}" if effect else f"- {title}")
     lines += ["", "## Score history on the development split", ""]
     history = (EVAL / "history.md").read_text(encoding="utf-8").splitlines()
     lines += [ln for ln in history if ln.startswith("|")]
+    lines += ["", "In this log, Order ok counts a case with no shared steps as agreeing, so the baselines show 22/22. "
+              "The headline table above counts such a case as not agreeing."]
     args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {args.out}")
     return 0

@@ -21,6 +21,7 @@ AGENTS.md owns the challenge contract and the log format. These are the conventi
 - Never use the 10 holdout samples in `code/evaluation/splits.py` for tuning. Score the holdout once, at the end.
 - Read keys from the environment or an uncommitted `.env`. Never print or log them.
 - Python 3.9+, standard library only. No comments unless the code cannot say it.
+- In `log.txt`, copy each user message verbatim, pasted text included. Redact only secrets and names that must stay private; never replace a paste with a summary. Take every timestamp from `date`.
 
 ## What goes where
 
@@ -28,13 +29,15 @@ AGENTS.md owns the challenge contract and the log format. These are the conventi
 |---|---|---|---|
 | `code/` except `code/cache/` | committed | yes | the solution |
 | `code/cache/` | ignored | yes | recorded model and OCR answers; `--offline` cannot run without them |
-| `README.md`, `CLAUDE.md`, `.gitignore` | committed | no | the root README mirrors `code/README.md` |
+| `README.md` | committed | yes | the organisers' zip command bundles it beside `code/`; it mirrors `code/README.md` |
+| `CLAUDE.md`, `.gitignore` | committed | no | repo conventions |
 | `AGENTS.md`, `problem_statement.md`, `agent_trace_instructions.md`, `dataset/` | committed, never edited | no | organisers' files |
 | `output.csv` | ignored | no | uploaded on its own |
 | `log.txt` | ignored | no | uploaded on its own as the chat transcript |
 | `notes/` | ignored | no | private working notes: session summaries, reviews, interview prep, decision trail |
 | `.env` | ignored | no | the key; never printed, logged, committed or zipped |
 | `code.zip`, `__pycache__/`, `.venv/` | ignored | no | build output |
+| `submission/` | ignored | no | the four uploads, built by `notes/build_agent_trace.py`: `code.zip`, `output.csv`, `log.txt`, `agent-trace.zip` |
 
 Scratch output goes to `/tmp` or the session scratchpad. Anything worth keeping goes to `notes/`, never to a folder outside the repo. Before every commit, `git status --short` must show only files you meant to add; a `??` file under `code/` is either committed on purpose or deleted.
 
