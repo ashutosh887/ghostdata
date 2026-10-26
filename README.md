@@ -39,7 +39,7 @@ Measured on 29 synthetic customers in a live S3 bucket. The deletion workflow ha
 | Planted prompt attacks that changed a verdict | | 0 of 7 |
 | Cases proven `COMPLETE` after the proposed deletes ran | | 27 of 27 |
 
-Every number comes from a live run on Amazon Bedrock and S3, committed in [`demo/results/`](demo/results/). [`find.md`](demo/results/find.md) is the audit, [`run_proposed.txt`](demo/results/run_proposed.txt) is the proposed deletes being run, and [`prove.md`](demo/results/prove.md) is the audit after them. [`cloudtrail.json`](demo/results/cloudtrail.json) holds the CloudTrail events for all 1,086 S3 reads.
+Every number comes from a live run on Amazon Bedrock and S3, committed in [`demo/results/`](demo/results/). [`find.md`](demo/results/find.md) is the audit, [`run_proposed.txt`](demo/results/run_proposed.txt) is the proposed deletes being run, and [`prove.md`](demo/results/prove.md) is the audit after them. [`cloudtrail.json`](demo/results/cloudtrail.json) holds the 3,792 CloudTrail events for the S3 reads in those runs, one role session per case.
 
 <p align="center"><img src="docs/assets/before-after.png" alt="Case demo_1. Without the tool the verdict is COMPLETE. With it, INCOMPLETE, with the export version found behind a delete marker and three steps." width="820"></p>
 
