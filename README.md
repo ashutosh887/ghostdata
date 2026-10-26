@@ -14,7 +14,7 @@ A workflow that reports "deleted" is a claim, and Ghost Data doesn't trust it. I
 
 <p align="center"><img src="docs/assets/diagram.png" alt="A deletion request goes to the agent on Amazon Bedrock, which searches evidence files and S3 versions. Code checks the bytes and writes the verdict and steps." width="820"></p>
 
-**[Watch the 64-second demo](https://youtu.be/5rgZfy8bcYA)**
+**[Watch the 64-second demo](https://youtu.be/5rgZfy8bcYA)** · [Read the write-up on AWS Builder Center](https://builder.aws.com/project/3LDl8cdqQUMh8oajft5zMkeLOtJ/ghost-data-one-s3-tool-took-my-deletion-audit-agent-from-16-false-completes-to-0)
 
 ## Features
 
