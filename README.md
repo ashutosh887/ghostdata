@@ -14,6 +14,8 @@ A workflow that reports "deleted" is a claim, and Ghost Data doesn't trust it. I
 
 <p align="center"><img src="docs/assets/diagram.png" alt="A deletion request goes to the agent on Amazon Bedrock, which searches evidence files and S3 versions. Code checks the bytes and writes the verdict and steps." width="820"></p>
 
+**Demo video (64 seconds):** https://youtu.be/5rgZfy8bcYA
+
 ## Features
 
 - **Finds copies hidden behind delete markers.** `find_ghost_copies` lists every object version under a prefix and reads each one.
