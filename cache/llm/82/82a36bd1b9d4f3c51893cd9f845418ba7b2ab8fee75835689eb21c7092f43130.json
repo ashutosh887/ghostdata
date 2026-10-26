@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "no",
+  "quoted_span": "Please take me off your promotional emails.",
+  "language": "en",
+  "reason": "The customer only requests to stop marketing emails and explicitly states they are happy with their account, so it is not a deletion request."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"no\",\n  \"quoted_span\": \"Please take me off your promotional emails.\",\n  \"language\": \"en\",\n  \"reason\": \"The customer only requests to stop marketing emails and explicitly states they are happy with their account, so it is not a deletion request.\"\n}"
+}

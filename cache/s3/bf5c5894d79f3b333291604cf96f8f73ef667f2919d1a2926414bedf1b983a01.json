@@ -1,0 +1,17 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 1,
+ "identifiers": [
+  "owenp.alt@example.org"
+ ],
+ "prefix": "demo/legal-hold/",
+ "request_ids": [
+  "7BP7ZSSFN75DQ67C",
+  "7BP25GRF834Y6JP3",
+  "7BP6GZYM04SK1F0N"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 2
+}

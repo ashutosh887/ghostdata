@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-858de66880b92048",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550122, e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009, and noah.becker@example.org; no copies found.\"}"
+   }
+  ]
+ }
+}

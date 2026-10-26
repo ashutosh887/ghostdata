@@ -1,0 +1,49 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a361f61600ec52d8",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/analytics/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-aa8a9fb65f79d1cd",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8ca60bbc85d2321b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8684b822e6a3c4d0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b99f0beae4b65033",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bb3a7c7a2776829e",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8ce26f716345e6f6",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ac78b5eb6255f454",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   }
+  ]
+ }
+}

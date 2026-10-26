@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "yes",
+  "quoted_span": "Delete my profile and everything linked to it, please.",
+  "language": "en",
+  "reason": "The customer explicitly requests deletion of their profile and associated data."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"yes\",\n  \"quoted_span\": \"Delete my profile and everything linked to it, please.\",\n  \"language\": \"en\",\n  \"reason\": \"The customer explicitly requests deletion of their profile and associated data.\"\n}"
+}

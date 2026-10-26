@@ -1,0 +1,9 @@
+audit_id,user_id,event_time,field_name,old_value,new_value
+audit_01,user_103,2025-06-13T10:15:00Z,email,priya.r.1988@example.org,priya.raman@example.com
+audit_02,user_103,2025-06-13T10:15:00Z,email_hash,5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a,54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3
+audit_03,user_110,2025-07-11T10:15:00Z,email,amara.n.lagos@example.net,amara.nwosu@example.com
+audit_04,user_110,2025-07-11T10:15:00Z,email_hash,55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71,10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821
+audit_05,user_113,2025-04-14T10:15:00Z,email,rmoreno.work@example.com,rafael.moreno@example.org
+audit_06,user_113,2025-04-14T10:15:00Z,email_hash,6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51,6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08
+audit_07,user_114,2025-05-15T10:15:00Z,email,chloe.m.paris@example.org,chloe.martin@example.net
+audit_08,user_114,2025-05-15T10:15:00Z,email_hash,ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5,3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441

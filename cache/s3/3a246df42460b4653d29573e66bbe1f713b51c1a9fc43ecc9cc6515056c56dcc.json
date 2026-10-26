@@ -1,0 +1,30 @@
+{
+ "demo/backups/": {
+  "delete_markers": 3,
+  "versions": 0
+ },
+ "demo/crm-sync/": {
+  "delete_markers": 3,
+  "versions": 2
+ },
+ "demo/exports/": {
+  "delete_markers": 5,
+  "versions": 2
+ },
+ "demo/legal-hold/": {
+  "delete_markers": 1,
+  "versions": 2
+ },
+ "demo/ml-features/": {
+  "delete_markers": 3,
+  "versions": 1
+ },
+ "demo/newsletter/": {
+  "delete_markers": 1,
+  "versions": 0
+ },
+ "demo/support/": {
+  "delete_markers": 4,
+  "versions": 1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b9b9b8bffd991f9c",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched all folders under demo/ (backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all current and historical identifiers; no ghost copies found.\"}"
+   }
+  ]
+ }
+}

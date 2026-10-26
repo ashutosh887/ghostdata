@@ -1,0 +1,40 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/backups/crm/2026-09-30/contacts-snapshot.json",
+   "last_modified": "2026-10-26T04:36:21+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "rmoreno.work@example.com"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "NAME",
+    "PHONE"
+   ],
+   "version_id": "p7pFzTjDRNtKSUFvAkZg98Jv9I7TBr91",
+   "window": " \"contact_id\": \"crm-34960\",\n      \"full_name\": \"Rafael Moreno\",\n      \"email\": \"rmoreno.work@example.com\",\n      \"marketing_opt_in\": true\n    },\n    {\n      \"contact_id\": \"crm-79255\",\n"
+  }
+ ],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550113",
+  "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+  "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+  "rafael.moreno@example.org",
+  "rmoreno.work@example.com"
+ ],
+ "prefix": "demo/backups/crm/2026-09-30/",
+ "request_ids": [
+  "MTKR541494DX74AX",
+  "3NRQN6HE2BPQXX1W"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

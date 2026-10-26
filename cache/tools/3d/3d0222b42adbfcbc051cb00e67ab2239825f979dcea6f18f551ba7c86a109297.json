@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-ba0b3f9006cad618",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all provided identifiers; found one ghost copy in demo/legal-hold/ hidden by a delete marker and under legal hold.\"}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 4,
+ "identifiers": [
+  "owenp.alt@example.org"
+ ],
+ "prefix": "demo/support/",
+ "request_ids": [
+  "52JF5F6PVA83JQFS",
+  "52J3YB61D0DZXKN4",
+  "P90CZS0T3CAH859W",
+  "P905PA9K4GKFWK2X",
+  "P90BYC1AP3R0B878"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 4
+}

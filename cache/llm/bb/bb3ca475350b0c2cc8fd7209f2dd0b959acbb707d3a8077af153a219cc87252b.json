@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "yes",
+  "quoted_span": "Please remove my account and the support conversations about my delivery dispute. I want all of it deleted.",
+  "language": "en",
+  "reason": "The customer explicitly requests deletion of their account and related data."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"yes\",\n  \"quoted_span\": \"Please remove my account and the support conversations about my delivery dispute. I want all of it deleted.\",\n  \"language\": \"en\",\n  \"reason\": \"The customer explicitly requests deletion of their account and related data.\"\n}"
+}

@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-963cdf632538e80a",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one copy in legal-hold/LH-2026-014/ protected by a legal hold.\"}"
+   }
+  ]
+ }
+}

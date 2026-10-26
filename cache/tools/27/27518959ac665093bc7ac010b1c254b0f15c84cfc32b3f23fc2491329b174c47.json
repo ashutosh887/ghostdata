@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8943ef4b8b796500",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv.\"}"
+   }
+  ]
+ }
+}

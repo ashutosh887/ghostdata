@@ -1,0 +1,16 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 1,
+ "identifiers": [
+  "owenp.alt@example.org"
+ ],
+ "prefix": "demo/newsletter/",
+ "request_ids": [
+  "XJW2DPRE3ST06X8E",
+  "XJW07DE3FKVK1J5J"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

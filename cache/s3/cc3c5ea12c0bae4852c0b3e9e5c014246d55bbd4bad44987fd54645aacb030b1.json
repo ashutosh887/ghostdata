@@ -1,0 +1,45 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": false,
+   "is_latest": false,
+   "key": "demo/crm-sync/2026-10/contacts-batch-0412.json",
+   "last_modified": "2026-10-26T04:36:17+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "priya.r.1988@example.org"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "NAME",
+    "PHONE",
+    "USERNAME"
+   ],
+   "version_id": "t2acE7L51UKZlJ6hjPgoqxOF1B6KBhtV",
+   "window": "   \"contact_id\": \"crm-76196\",\n      \"full_name\": \"Priya Raman\",\n      \"email\": \"priya.r.1988@example.org\",\n      \"phone\": null,\n      \"lifecycle_stage\": \"customer\",\n      \"owner\": \"sal"
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550103",
+  "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+  "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+  "priya.r.1988@example.org",
+  "priya.raman@example.com"
+ ],
+ "prefix": "demo/crm-sync/",
+ "request_ids": [
+  "636TE4E2F0XGFBF7",
+  "636YHK0WSBXMPAM1",
+  "C9DVBZ80TDWCT213",
+  "C9DNPBJA37CP53CJ",
+  "C9DHCXA88WNF0AVT",
+  "EJ3DSCP57K8VG8XB"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 5
+}

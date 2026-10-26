@@ -1,0 +1,17 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550129",
+  "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+  "owen.price@example.net"
+ ],
+ "prefix": "demo/backups/",
+ "request_ids": [
+  "48N138BQQY8DSV3T"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 0
+}

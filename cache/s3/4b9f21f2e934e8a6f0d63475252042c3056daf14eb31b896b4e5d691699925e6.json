@@ -1,0 +1,18 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 0,
+ "identifiers": [
+  "lucas.f.gaming@example.net"
+ ],
+ "prefix": "demo/analytics/",
+ "request_ids": [
+  "CZNBPPDXE8GGFJZV",
+  "CZN6HZE0BK62VNB5",
+  "RBT3PD6RTXZB47S1",
+  "RBT9J0753FC5BWEM"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

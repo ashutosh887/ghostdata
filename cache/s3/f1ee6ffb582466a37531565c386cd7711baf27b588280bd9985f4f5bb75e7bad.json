@@ -1,0 +1,19 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550118",
+  "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+  "yuki.morita@example.com"
+ ],
+ "prefix": "demo/legal-hold/",
+ "request_ids": [
+  "SX6Q9PXWHW01ZT4V",
+  "SX6X486M2Z6C1B5M",
+  "SX6QDAHQA899TRZK"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 2
+}

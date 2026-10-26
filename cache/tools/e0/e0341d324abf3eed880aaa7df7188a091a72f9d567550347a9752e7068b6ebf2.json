@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9ffbb9139205cee3",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in legal-hold/LH-2026-019/ containing phone and email, hidden by delete marker and under legal hold.\"}"
+   }
+  ]
+ }
+}

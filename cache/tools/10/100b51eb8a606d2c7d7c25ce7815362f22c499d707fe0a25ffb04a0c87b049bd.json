@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-813963f117f7f3bc",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched all folders (analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all given identifiers (phone +14155550118, email yuki.morita@example.com, email hash dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6); no copies found.\"}"
+   }
+  ]
+ }
+}

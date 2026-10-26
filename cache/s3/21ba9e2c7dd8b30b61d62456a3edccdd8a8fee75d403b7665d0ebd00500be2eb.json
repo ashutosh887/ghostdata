@@ -1,0 +1,38 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/ml-features/2026-10/churn-features-part-0003.jsonl",
+   "last_modified": "2026-10-26T04:36:19+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c"
+   ],
+   "pii_types": [
+    "DATE_TIME"
+   ],
+   "version_id": "3FM3.r6t5.rECIr6emzlMYvdZe_ITRLy",
+   "window": "aov_usd\": 58.39, \"days_since_login\": 49, \"churn_score\": 0.855}}\n{\"entity_key\": \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"snapshot\": \"2026-10-01\", \"features\": {\"orders_90d\": 4, \"aov_usd\": 81.28, \"da"
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550107",
+  "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+  "hiroshi.tanaka@example.com"
+ ],
+ "prefix": "demo/ml-features/",
+ "request_ids": [
+  "8ASFAQT2DNSJN3HJ",
+  "YEA9CWNP3KFK3EX5",
+  "YEAE8CGVEBCSBPXA",
+  "YEABWSVRHXRS0A23"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

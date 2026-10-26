@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b9383fd1846e4d3f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/analytics/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b951bfcc13a48743",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ad514b576be2285c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ac447386efd74027",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-90dce4e46d5aad6f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b0b1cf18f236f71d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a93e62b7e2771d25",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"lucas.f.gaming@example.net\"]}"
+   }
+  ]
+ }
+}

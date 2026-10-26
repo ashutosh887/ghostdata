@@ -1,0 +1,30 @@
+case_id,email,requested_at,reported_status,reported_at,audit_at,request_text
+demo_1,elena.marchetti@example.com,2026-10-04T10:00:00Z,COMPLETE,2026-10-05T16:00:00Z,2026-10-26T23:00:00Z,Please delete my account and all the personal data you hold about me. I also downloaded a data export last month; please make sure that copy is erased too.
+demo_2,tobias.brandt@example.net,2026-10-05T11:00:00Z,COMPLETE,2026-10-06T17:00:00Z,2026-10-26T23:00:00Z,"I'd like my account closed and my personal details deleted, including the export file I requested."
+demo_3,priya.raman@example.com,2026-10-06T12:00:00Z,COMPLETE,2026-10-07T18:00:00Z,2026-10-26T23:00:00Z,"Please erase my account. I changed my email address last year, so please check under my old address too."
+demo_4,maya.lindqvist@example.com,2026-10-07T13:00:00Z,COMPLETE,2026-10-08T19:00:00Z,2026-10-26T23:00:00Z,"Delete my profile and everything linked to it, please. I no longer shop with you."
+demo_5,kwame.mensah@example.net,2026-10-08T09:00:00Z,COMPLETE,2026-10-09T15:00:00Z,2026-10-26T23:00:00Z,Please remove my account and the support conversations about my delivery dispute. I want all of it deleted.
+demo_6,sofia.alvarez@example.org,2026-10-09T10:00:00Z,COMPLETE,2026-10-10T16:00:00Z,2026-10-26T23:00:00Z,"Hola, quiero eliminar mi cuenta y todos mis datos personales, incluido mi número de teléfono. Gracias."
+demo_7,hiroshi.tanaka@example.com,2026-10-10T11:00:00Z,COMPLETE,2026-10-11T17:00:00Z,2026-10-26T23:00:00Z,"Please delete my account and any data derived from it, including whatever your models use."
+demo_8,lena.fischer@example.net,2026-10-11T12:00:00Z,NOT_STARTED,2026-10-12T18:00:00Z,2026-10-26T23:00:00Z,Could you send me a copy of all the personal data you hold about me? This is not a request to delete anything; I just want to review what you have.
+demo_9,oliver.grant@example.org,2026-10-12T13:00:00Z,COMPLETE,2026-10-13T19:00:00Z,2026-10-26T23:00:00Z,Please delete my account along with the export file that was generated for me.
+demo_10,amara.nwosu@example.com,2026-10-03T09:00:00Z,COMPLETE,2026-10-04T15:00:00Z,2026-10-26T23:00:00Z,"Please erase my account and all personal information. I used a different email address before, please remove that too."
+demo_11,mateus.carvalho@example.net,2026-10-04T10:00:00Z,COMPLETE,2026-10-05T16:00:00Z,2026-10-26T23:00:00Z,"Olá, solicito a exclusão da minha conta e de todos os meus dados pessoais, incluindo os anexos que enviei ao suporte."
+demo_12,ingrid.solberg@example.com,2026-10-05T11:00:00Z,COMPLETE,2026-10-06T17:00:00Z,2026-10-26T23:00:00Z,"Please delete my account and any personal data you have about me, including analytics."
+demo_13,rafael.moreno@example.org,2026-10-06T12:00:00Z,COMPLETE,2026-10-07T18:00:00Z,2026-10-26T23:00:00Z,"I want my account deleted and my data erased everywhere, backups included. My old work address was on file earlier."
+demo_14,chloe.martin@example.net,2026-10-07T13:00:00Z,COMPLETE,2026-10-08T19:00:00Z,2026-10-26T23:00:00Z,"Bonjour, je demande la suppression de mon compte et de toutes mes données personnelles, y compris dans vos sauvegardes."
+demo_15,daniel.weiss@example.com,2026-10-08T09:00:00Z,COMPLETE,2026-10-09T15:00:00Z,2026-10-26T23:00:00Z,Please close and delete my account. Remove my phone number and the export you made for me.
+demo_16,aisha.rahman@example.org,2026-10-09T10:00:00Z,COMPLETE,2026-10-10T16:00:00Z,2026-10-26T23:00:00Z,Please delete my account and stop processing my data. I want all my personal information removed.
+demo_17,liam.oconnor@example.net,2026-10-10T11:00:00Z,COMPLETE,2026-10-11T17:00:00Z,2026-10-26T23:00:00Z,Please delete my account and the return-label attachment I sent to support.
+demo_18,yuki.morita@example.com,2026-10-11T12:00:00Z,COMPLETE,2026-10-12T18:00:00Z,2026-10-26T23:00:00Z,Please delete my account. I never placed an order and don't want any records kept.
+demo_19,grace.holloway@example.org,2026-10-12T13:00:00Z,COMPLETE,2026-10-13T19:00:00Z,2026-10-26T23:00:00Z,"I would like my account erased, along with my profile in your customer directory."
+demo_20,jonas.berg@example.com,2026-10-03T09:00:00Z,COMPLETE,2026-10-04T15:00:00Z,2026-10-26T23:00:00Z,Please delete my account and all personal data linked to this email address.
+demo_21,nadia.petrova@example.net,2026-10-04T10:00:00Z,COMPLETE,2026-10-05T16:00:00Z,2026-10-26T23:00:00Z,Please remove my account and erase my personal data from your systems.
+demo_22,noah.becker@example.org,2026-10-05T11:00:00Z,COMPLETE,2026-10-06T17:00:00Z,2026-10-26T23:00:00Z,"Delete my account and the support tickets I opened, please."
+demo_23,clara.jensen@example.com,2026-10-06T12:00:00Z,COMPLETE,2026-10-07T18:00:00Z,2026-10-26T23:00:00Z,Please erase my account and the data export you generated last month.
+demo_24,marcus.hale@example.net,2026-10-07T13:00:00Z,COMPLETE,2026-10-08T19:00:00Z,2026-10-26T23:00:00Z,Please delete my account and personal data. I understand some records may need to be kept for the open chargeback.
+demo_25,fatima.idrissi@example.org,2026-10-08T09:00:00Z,COMPLETE,2026-10-09T15:00:00Z,2026-10-26T23:00:00Z,Please delete my account and all my personal information.
+demo_26,ben.archer@example.com,2026-10-09T10:00:00Z,NOT_STARTED,2026-10-10T16:00:00Z,2026-10-26T23:00:00Z,Please take me off your promotional emails. This is about the marketing lists only; I'm happy with my account.
+demo_27,lucas.ferreira@example.com,2026-10-10T11:00:00Z,COMPLETE,2026-10-11T17:00:00Z,2026-10-26T23:00:00Z,"Please delete my account and every bit of personal data you have on me, including mailing lists."
+demo_28,mira.kapoor@example.org,2026-10-11T12:00:00Z,COMPLETE,2026-10-12T18:00:00Z,2026-10-26T23:00:00Z,"I want my account removed and my data erased, including anything from my old support tickets."
+demo_29,owen.price@example.net,2026-10-12T13:00:00Z,COMPLETE,2026-10-13T19:00:00Z,2026-10-26T23:00:00Z,Please erase my account and the export file you produced for me.

@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9fac946c438396b0",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in ml-features hidden by a delete marker.\"}"
+   }
+  ]
+ }
+}

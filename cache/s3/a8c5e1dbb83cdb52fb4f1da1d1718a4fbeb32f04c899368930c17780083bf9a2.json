@@ -1,0 +1,43 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/exports/2026-10/daniel-weiss-export.csv",
+   "last_modified": "2026-10-26T04:36:22+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "+14155550115"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "NAME",
+    "PHONE"
+   ],
+   "version_id": "c3mZIPAxOHK6tSbFljlaaYLhY3vJnJW0",
+   "window": "mail,alt_email,phone,detail,recorded_at\nprofile,acct-245834,Daniel Weiss,,,+14155550115,account holder,2026-10-02T11:14:00Z\naddress_book,addr-1403,Isabel Quintero,isab"
+  }
+ ],
+ "delete_markers": 5,
+ "identifiers": [
+  "+14155550115",
+  "daniel.weiss@example.com",
+  "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+ ],
+ "prefix": "demo/exports/",
+ "request_ids": [
+  "6ZRZMG1P0PHCVP3F",
+  "NB3PDBABZPE8GZY3",
+  "NB3Q49GC4M980S4D",
+  "NB3ME38MNSKR2MCN",
+  "EC6K2E0GERQRABPR",
+  "EC6WB2RS1DE6DD21",
+  "EC6KJWCG2ZDYV1JR"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 6
+}

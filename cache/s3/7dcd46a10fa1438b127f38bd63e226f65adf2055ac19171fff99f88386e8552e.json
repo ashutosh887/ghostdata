@@ -1,0 +1,38 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/support/attachments/TKT-48377/invoice-question.txt",
+   "last_modified": "2026-10-26T04:36:20+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "mateus.carvalho@example.net"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "LICENSE_PLATE",
+    "NAME"
+   ],
+   "version_id": "cQn1TlGGJE3Z.GCrNWetnFaQGR.UOQHg",
+   "window": "Ticket: TKT-48377\nFrom: Mateus Carvalho <mateus.carvalho@example.net>\nTo: support@example.com\nCc: agent.devon@support.example.com, pedro.saraiva@exa"
+  }
+ ],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550111",
+  "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+  "mateus.carvalho@example.net"
+ ],
+ "prefix": "demo/support/attachments/TKT-48377/",
+ "request_ids": [
+  "ECTZMNZVT67ZKTJ4",
+  "F0XR2450V9QYFDHK"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

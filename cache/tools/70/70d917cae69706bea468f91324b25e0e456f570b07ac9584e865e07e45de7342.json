@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-87aa6d5b4535277c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/2026-10/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   }
+  ]
+ }
+}

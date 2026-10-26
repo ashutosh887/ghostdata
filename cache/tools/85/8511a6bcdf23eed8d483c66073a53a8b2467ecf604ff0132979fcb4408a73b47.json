@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9a66e6edab7f2905",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9246ae20f9e1ef10",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-915da0171586e3d7",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-94008f40ba06894c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9121f93a099eeff4",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a0b140a2e168a352",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-89d1d84b04f61cb0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550117\", \"11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350\", \"liam.oconnor@example.net\"]}"
+   }
+  ]
+ }
+}

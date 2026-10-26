@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9bf1dc739346b4c2",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched all folders: backups, crm-sync, exports, legal-hold, ml-features, newsletter, support; no copies found with identifiers +14155550116, aisha.rahman@example.org, d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622.\"}"
+   }
+  ]
+ }
+}

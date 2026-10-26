@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "no",
+  "quoted_span": "This is not a request to delete anything",
+  "language": "en",
+  "reason": "The customer explicitly states this is not a deletion request."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"no\",\n  \"quoted_span\": \"This is not a request to delete anything\",\n  \"language\": \"en\",\n  \"reason\": \"The customer explicitly states this is not a deletion request.\"\n}"
+}

@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b8f7935e3a953d25",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bda915dae035b07f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-84a2240c3e4c064b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b4994e76a8b4f625",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-be1f512b225c67b8",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b3ddd93c66bdb567",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8eaeca21de2adadd",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   }
+  ]
+ }
+}

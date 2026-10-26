@@ -1,0 +1,41 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/legal-hold/LH-2026-019/fatima-idrissi-warranty-claim.txt",
+   "last_modified": "2026-10-26T04:36:27+00:00",
+   "legal_hold": true,
+   "linked": [],
+   "matched": [
+    "+14155550125",
+    "fatima.idrissi@example.org"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL",
+    "NAME",
+    "PHONE"
+   ],
+   "version_id": "ahSXDynhmY0atYeNJKCs8y3_ju7yNbfd",
+   "window": "ima Idrissi\nEmail on file: fatima.idrissi@example.org\nPhone on file: +1 415-555-0125\n\nOrder ORD-371204, USD 412.80, disputed 2026-09-08. Evidence pack: invoice, del"
+  }
+ ],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550125",
+  "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+  "fatima.idrissi@example.org"
+ ],
+ "prefix": "demo/legal-hold/",
+ "request_ids": [
+  "6T8VDAW8GNMWYYK8",
+  "6T8X3YVE0RHQFTZZ",
+  "6T8VE49FQ2GFJE04"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 2
+}

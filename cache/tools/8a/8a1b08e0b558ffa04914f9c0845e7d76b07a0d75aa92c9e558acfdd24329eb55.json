@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-937c35c1712e96e5",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/2026-09/contacts-batch-0388.json\", \"identifiers\": [\"+14155550110\", \"10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821\", \"55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71\", \"amara.n.lagos@example.net\", \"amara.nwosu@example.com\"]}"
+   }
+  ]
+ }
+}

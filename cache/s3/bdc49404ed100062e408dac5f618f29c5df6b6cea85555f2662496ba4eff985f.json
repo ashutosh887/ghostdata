@@ -1,0 +1,39 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/ml-features/2026-10/ltv-features-part-0011.jsonl",
+   "last_modified": "2026-10-26T04:36:21+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "IP_ADDRESS"
+   ],
+   "version_id": "9vUQLtKGpfEY0ARvWYmcHf.mSsnSbeTS",
+   "window": "ov_usd\": 126.25, \"days_since_login\": 49, \"churn_score\": 0.464}}\n{\"entity_key\": \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"snapshot\": \"2026-10-01\", \"features\": {\"orders_90d\": 2, \"aov_usd\": 104.52, \"d"
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550112",
+  "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+  "ingrid.solberg@example.com"
+ ],
+ "prefix": "demo/ml-features/",
+ "request_ids": [
+  "XD0FMNPTVDZ97VT9",
+  "XD0FZA1EK3JD841J",
+  "YRQG8QCJR627YVWW",
+  "YRQYWGFVJ5M01VRA"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

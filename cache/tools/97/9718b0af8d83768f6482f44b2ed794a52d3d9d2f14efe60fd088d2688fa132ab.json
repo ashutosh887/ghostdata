@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-877ac8e93c5e37de",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/analytics/dumps/2026-10-19/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   }
+  ]
+ }
+}

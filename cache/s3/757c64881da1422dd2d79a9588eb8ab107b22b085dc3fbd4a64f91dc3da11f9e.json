@@ -1,0 +1,38 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": false,
+   "is_latest": true,
+   "key": "demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv",
+   "last_modified": "2026-10-26T04:36:23+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "aisha.rahman@example.org"
+   ],
+   "pii_types": [
+    "ADDRESS",
+    "DATE_TIME",
+    "EMAIL"
+   ],
+   "version_id": "0jnMXGt23.HENOw6LhBZwCI3bvWtBguH",
+   "window": "ik.nystrom@example.com,,US,android,17,browse\nsess-92708183,2026-10-19T11:33:00Z,aisha.rahman@example.org,,GB,android,10,browse\nsess-57220375,2026-10-19T12:42:00Z,tariq.aziz@example.net"
+  }
+ ],
+ "delete_markers": 0,
+ "identifiers": [
+  "+14155550116",
+  "aisha.rahman@example.org",
+  "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+ ],
+ "prefix": "demo/analytics/dumps/2026-10-20/",
+ "request_ids": [
+  "FZH68BWX21AVE4YX",
+  "FZHB3PHBANVAXKVZ"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

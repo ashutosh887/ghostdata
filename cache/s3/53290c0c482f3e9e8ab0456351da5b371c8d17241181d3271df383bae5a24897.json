@@ -1,0 +1,20 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550129",
+  "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+  "owen.price@example.net"
+ ],
+ "prefix": "demo/ml-features/",
+ "request_ids": [
+  "NWC7PS1SH7ZG3VZX",
+  "NWCEDK2MR275M5B7",
+  "NWCFZ0YFREPX9GJ2",
+  "NWC2NZ2AXNRT9SSF"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

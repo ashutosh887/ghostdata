@@ -1,0 +1,38 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/support/attachments/TKT-48213/delivery-dispute.txt",
+   "last_modified": "2026-10-26T04:36:18+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "kwame.mensah@example.net"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "LICENSE_PLATE",
+    "NAME"
+   ],
+   "version_id": "QB41bak4sabdJ0TawjQN3O11ame.y24c",
+   "window": "Ticket: TKT-48213\nFrom: Kwame Mensah <kwame.mensah@example.net>\nTo: support@example.com\nCc: agent.rosa@support.example.com, isabel.quintero@ex"
+  }
+ ],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550105",
+  "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+  "kwame.mensah@example.net"
+ ],
+ "prefix": "demo/support/attachments/TKT-48213/",
+ "request_ids": [
+  "829P783VR389E49F",
+  "829QT3W0M8JT34R4"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

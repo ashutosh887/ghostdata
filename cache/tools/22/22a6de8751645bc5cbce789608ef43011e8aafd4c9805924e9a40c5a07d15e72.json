@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a2291d6722d2126b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"38dc13f77dc9fc3eddaf33d4b6a07546f6b5ca312595e4b8e33e80ff12b504dd\", \"3deb9037a1e8c6f5ba33ba9b0411ec4700137d475dfca77819685020c14d590a\", \"4645fc13aaaf5a68fcf65e3f8c17d4872b68a4f3d7c62382eac5b37a94f9a1d7\", \"5de180f543429e2639d4b133079bb4b11ac0b35ec60fbfb24f06039c1abfa797\", \"725b99a9aad331ebcd543ab54ecfa8de4fbf1756dcf30716d2541dcf899ca8f3\", \"76bf51d0044823c380e023540416974763f3ba92dc558151ac1569d40b87edb1\", \"d3650e32c2b9275679c408e25ae1d2af07f8db1f9ee864374be5905e7ee8e0ae\"]}"
+   }
+  ]
+ }
+}

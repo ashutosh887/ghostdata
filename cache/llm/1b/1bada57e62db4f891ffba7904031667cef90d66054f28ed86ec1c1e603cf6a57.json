@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "yes",
+  "quoted_span": "quiero eliminar mi cuenta y todos mis datos personales",
+  "language": "es",
+  "reason": "The customer explicitly requests deletion of their account and personal data."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"yes\",\n  \"quoted_span\": \"quiero eliminar mi cuenta y todos mis datos personales\",\n  \"language\": \"es\",\n  \"reason\": \"The customer explicitly requests deletion of their account and personal data.\"\n}"
+}

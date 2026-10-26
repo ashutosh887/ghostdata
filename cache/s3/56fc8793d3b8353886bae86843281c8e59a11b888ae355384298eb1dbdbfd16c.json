@@ -1,0 +1,21 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 4,
+ "identifiers": [
+  "+14155550117",
+  "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+  "liam.oconnor@example.net"
+ ],
+ "prefix": "demo/support/",
+ "request_ids": [
+  "DE7RQZGBPQJKN9QX",
+  "DE7N8EQJZNDMSC62",
+  "DE7KZZ2J8NYKRDGZ",
+  "DE7NA47JKA76PM03",
+  "MXT5PG7APW9CESK5"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 4
+}

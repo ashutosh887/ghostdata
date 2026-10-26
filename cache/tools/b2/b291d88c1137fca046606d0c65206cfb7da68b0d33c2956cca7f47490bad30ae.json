@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a059d1f1d3e7b4ec",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9020ece0733b2bb8",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9848ce33ead962e0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-860f7c87b4cce327",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-94498a8fdd809e8b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8134d70dd4425f04",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-829d793fe9bfefd6",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   }
+  ]
+ }
+}

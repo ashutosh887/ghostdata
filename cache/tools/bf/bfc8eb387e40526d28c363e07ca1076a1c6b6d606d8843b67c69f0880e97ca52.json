@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b9bcea6d2b4715ba",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-94fd9ccac2417a11",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b39ab35152b9aa3c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b4b332346c5261c4",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8465d8e289d32d31",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b105f983c52acf96",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a67961a4c9f06aec",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550106\", \"a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa\", \"sofia.alvarez@example.org\"]}"
+   }
+  ]
+ }
+}

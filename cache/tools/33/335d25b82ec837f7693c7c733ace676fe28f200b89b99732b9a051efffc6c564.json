@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-872e4eeaa7b2c94c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a3808f3ee573717c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ba584df6e5ea9f17",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-95ca4937325ea1a8",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8264bdfd91b94962",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9804074cb062bbc4",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9f94c56d071136e9",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550104\", \"2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578\", \"maya.lindqvist@example.com\"]}"
+   }
+  ]
+ }
+}

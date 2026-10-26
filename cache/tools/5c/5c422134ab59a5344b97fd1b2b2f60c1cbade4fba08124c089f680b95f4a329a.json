@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-9b0f72474ed2f265",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-930011704d3075bd",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-92baef6b5a866c4c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8fa576c22cacb340",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a7d8f0f9e4e890ff",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9967411c18637757",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b03a5befb17fbbb7",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550101\", \"elena.marchetti@example.com\", \"fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c\"]}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+rule_id,data_category,condition,required_action
+rule_01,USER_PROFILE,Always,DELETE
+rule_02,SECONDARY_IDENTIFIER,Always,DELETE
+rule_03,SEARCH_INDEX_ENTRY,Always,DELETE
+rule_04,CACHE_ENTRY,Always,DELETE
+rule_05,SUPPORT_MESSAGE,Thread holds order or agent context that must be kept,REDACT
+rule_06,SUPPORT_ATTACHMENT,Attachment belongs only to the deletion subject,DELETE
+rule_07,ANALYTICS_PROFILE,Record can still be tied to a person,ANONYMIZE
+rule_08,PRODUCT_TELEMETRY,Record can still be tied to a person,ANONYMIZE
+rule_09,USER_EXPORT,Always,DELETE
+rule_10,MARKETING_PROFILE,Always,DELETE
+rule_11,EMAIL_DELIVERY_LOG,Log holds an email address,REDACT
+rule_12,SECURITY_AUDIT_LOG,Inside the retention period,RETAIN
+rule_13,LEGAL_HOLD_RECORD,A legal hold is active,RETAIN
+rule_14,BACKUP_ARCHIVE,Restore access can be blocked,RETAIN
+rule_15,ACCOUNT_TOMBSTONE,Account deleted; only the stable user_id is kept for references,REDACT

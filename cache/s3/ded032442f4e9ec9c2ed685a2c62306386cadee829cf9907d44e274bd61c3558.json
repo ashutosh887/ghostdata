@@ -1,0 +1,37 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": false,
+   "is_latest": true,
+   "key": "demo/analytics/dumps/2026-10-18/loyalty-members.csv",
+   "last_modified": "2026-10-26T04:36:31+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "owenp.alt@example.org"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL"
+   ],
+   "version_id": "ShWlNnGpwZY2JdxiTw.b0p8s0gkqQQpN",
+   "window": "bounced,1982\nsamuel.adeyemi@example.net,2026-09-26,weekly_digest,subscribed,311\nowenp.alt@example.org,2026-07-18,weekly_digest,subscribed,928\nkenji.watanabe@example.org,2026-07-16,w"
+  }
+ ],
+ "delete_markers": 0,
+ "identifiers": [
+  "owenp.alt@example.org"
+ ],
+ "prefix": "demo/analytics/",
+ "request_ids": [
+  "XXEF3K9Z5GYH6BJN",
+  "XXE1H3T4D1JSE784",
+  "SCQYFP3YV9JWD5EN",
+  "SCQHGVBKQF4CX2PX"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

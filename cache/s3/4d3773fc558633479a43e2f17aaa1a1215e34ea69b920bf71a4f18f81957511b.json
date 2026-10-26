@@ -1,0 +1,20 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550116",
+  "aisha.rahman@example.org",
+  "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+ ],
+ "prefix": "demo/backups/",
+ "request_ids": [
+  "7RX7WXWKJ1XXDEEJ",
+  "7RX507HN0252FWDR",
+  "7RXFE19Y33J6P1GA",
+  "JWRXNCYTAAAVV8JP"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

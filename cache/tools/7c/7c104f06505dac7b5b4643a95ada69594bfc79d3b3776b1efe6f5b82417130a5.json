@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8c70aa31ad5f6db4",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-adb55f00a3ecb8ff",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b7d0d263cd605737",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a7b4b3f4a1b473fe",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-864ea60a89c85e1d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-99930fe988d17226",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ba1e308f4ca69c7c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550111\", \"007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a\", \"mateus.carvalho@example.net\"]}"
+   }
+  ]
+ }
+}

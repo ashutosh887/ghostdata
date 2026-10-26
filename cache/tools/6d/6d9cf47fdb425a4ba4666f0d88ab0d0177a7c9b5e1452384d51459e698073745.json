@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-844bc4bb67ea3fdc",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550125\", \"3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2\", \"fatima.idrissi@example.org\"]}"
+   }
+  ]
+ }
+}

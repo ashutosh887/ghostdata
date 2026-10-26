@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-bf16e45ca80e2d73",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/analytics/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-96857380bca64bf5",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ab7c5e454dd19d7c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a5d03ebd73b410f1",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b0a7accba8cfcd57",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a970b31df2d68dc9",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9c2746cd7c866e3b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"mk.travels@example.com\"]}"
+   }
+  ]
+ }
+}

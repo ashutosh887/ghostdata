@@ -1,0 +1,40 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": false,
+   "is_latest": true,
+   "key": "demo/legal-hold/LH-2026-014/marcus-hale-chargeback-file.txt",
+   "last_modified": "2026-10-26T04:36:26+00:00",
+   "legal_hold": true,
+   "linked": [],
+   "matched": [
+    "+14155550124",
+    "marcus.hale@example.net"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL",
+    "NAME",
+    "PHONE"
+   ],
+   "version_id": "Tch9dKAM5_1EUps3__ctI_eRap_1ZGBn",
+   "window": "r: Marcus Hale\nEmail on file: marcus.hale@example.net\nPhone on file: +1 415-555-0124\n\nOrder ORD-371204, USD 412.80, disputed 2026-09-08. Evidence pack: invoice, del"
+  }
+ ],
+ "delete_markers": 0,
+ "identifiers": [
+  "+14155550124",
+  "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+  "marcus.hale@example.net"
+ ],
+ "prefix": "demo/legal-hold/LH-2026-014/",
+ "request_ids": [
+  "YST1583KEX9NDT92",
+  "3VY759NRJJ75BM4G"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-ba7d355badb0482f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/2026-10/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   }
+  ]
+ }
+}

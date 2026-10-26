@@ -1,0 +1,20 @@
+deleting s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-18/loyalty-members.csv?versionId=ShWlNnGpwZY2JdxiTw.b0p8s0gkqQQpN
+deleting s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-19/sessions-us-east.csv?versionId=N6qQuYHaYXLNcA5PZx5AlXQXKBxGwmrU
+deleting s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv?versionId=0jnMXGt23.HENOw6LhBZwCI3bvWtBguH
+deleting s3://ghostdata-demo-960149837193/demo/backups/crm/2026-09-30/contacts-snapshot.json?versionId=p7pFzTjDRNtKSUFvAkZg98Jv9I7TBr91
+deleting s3://ghostdata-demo-960149837193/demo/backups/marketing/2026-09-28/audience-hashes.json?versionId=CNbvXIQIvRoz8Mpt4zaPZb0ZSdrvsoec
+deleting s3://ghostdata-demo-960149837193/demo/backups/support/2026-09-29/reply-to-addresses.json?versionId=M3EiV11FuyuWA.RfSlGQfqolJsAONBnm
+deleting s3://ghostdata-demo-960149837193/demo/crm-sync/2026-09/contacts-batch-0388.json?versionId=7i8pr46tc2C_a1EYjwuEKNgbA0IueYng
+deleting s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0412.json?versionId=t2acE7L51UKZlJ6hjPgoqxOF1B6KBhtV
+deleting s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0433.json?versionId=7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA
+deleting s3://ghostdata-demo-960149837193/demo/exports/2026-10/daniel-weiss-export.csv?versionId=c3mZIPAxOHK6tSbFljlaaYLhY3vJnJW0
+deleting s3://ghostdata-demo-960149837193/demo/exports/2026-10/elena-marchetti-export.csv?versionId=OHFqoUG9Efq68MKoLVXkSwe593JXyDYW
+deleting s3://ghostdata-demo-960149837193/demo/exports/2026-10/oliver-grant-export.csv?versionId=FP1VKdxCYLfI5WpH2APAu37.3bM5CiUX
+deleting s3://ghostdata-demo-960149837193/demo/exports/2026-10/owen-price-export.csv?versionId=tyLC2LQhXuveLknMWo2M5ElyKTlDgiug
+deleting s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/churn-features-part-0003.jsonl?versionId=3FM3.r6t5.rECIr6emzlMYvdZe_ITRLy
+deleting s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/ltv-features-part-0011.jsonl?versionId=9vUQLtKGpfEY0ARvWYmcHf.mSsnSbeTS
+deleting s3://ghostdata-demo-960149837193/demo/newsletter/2026-09/weekly-digest-subscribers.csv?versionId=aqaU5mYCDOCn4pZrbm2PmIidsf9.h9p.
+deleting s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48213/delivery-dispute.txt?versionId=QB41bak4sabdJ0TawjQN3O11ame.y24c
+deleting s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48377/invoice-question.txt?versionId=cQn1TlGGJE3Z.GCrNWetnFaQGR.UOQHg
+deleting s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48745/ticket-export.json?versionId=MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV
+19 versions deleted

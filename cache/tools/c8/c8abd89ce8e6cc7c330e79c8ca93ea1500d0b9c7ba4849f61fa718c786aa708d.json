@@ -1,0 +1,24 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-89d969009df7cc8a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/crm/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-99b00ef296bfddc0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/marketing/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-993d425ae57cf63c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/support/\", \"identifiers\": [\"+14155550115\", \"daniel.weiss@example.com\", \"fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd\"]}"
+   }
+  ]
+ }
+}

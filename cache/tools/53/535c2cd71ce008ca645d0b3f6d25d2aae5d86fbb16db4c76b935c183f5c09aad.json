@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-93bceefa9ccbf38f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a591e0b9b69160da",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-955411d66f549ae4",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-85efaa634790ebbf",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9fbff3f5fa716fa3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9390bc7fa70441ef",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ae5d747c44bf883f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550118\", \"dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6\", \"yuki.morita@example.com\"]}"
+   }
+  ]
+ }
+}

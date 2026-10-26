@@ -1,0 +1,11 @@
+{
+ "role": "intent",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "answer": {
+  "authorizes_deletion": "yes",
+  "quoted_span": "Please close and delete my account.",
+  "language": "en",
+  "reason": "The customer explicitly requests to close and delete their account."
+ },
+ "raw": "{\n  \"authorizes_deletion\": \"yes\",\n  \"quoted_span\": \"Please close and delete my account.\",\n  \"language\": \"en\",\n  \"reason\": \"The customer explicitly requests to close and delete their account.\"\n}"
+}

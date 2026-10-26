@@ -1,0 +1,18 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 1,
+ "identifiers": [
+  "+14155550102",
+  "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+  "tobias.brandt@example.net"
+ ],
+ "prefix": "demo/newsletter/",
+ "request_ids": [
+  "S86NW0D8SCH9BKFJ",
+  "S86T8D0ABEJESN98"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b8650817aeb69c3d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9fccb41245039421",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-852c55f2201ef70a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ae302ffb138c84aa",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-acf762369b7b2b6d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9b8b4f10d5c1707c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a869e73c6343833a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550114\", \"3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441\", \"chloe.m.paris@example.org\", \"chloe.martin@example.net\", \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\"]}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b1078094e57fd2f9",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-89764a13c81d8680",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9761d8c206c9f969",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b9bca137df5af973",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b600805a13edb89a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-855595c3fa430605",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550122\", \"e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009\", \"noah.becker@example.org\"]}"
+   }
+  ]
+ }
+}

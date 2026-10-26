@@ -1,0 +1,12 @@
+CUSTOMER PLATFORM - SHIFT HANDOVER
+Snapshot: 2026-10-21T12:00:00Z
+
+Account and downstream checks completed during the shift:
+- 2026-10-21T11:02:00Z | account_service | account_8002 | USER_PROFILE | NOT_FOUND | tobias.brandt@example.net
+- 2026-10-21T11:17:00Z | account_service | account_8017 | USER_PROFILE | NOT_FOUND | liam.oconnor@example.net
+- 2026-10-21T11:18:00Z | account_service | account_8018 | USER_PROFILE | NOT_FOUND | yuki.morita@example.com
+- 2026-10-21T11:19:00Z | account_service | account_8019 | USER_PROFILE | NOT_FOUND | grace.holloway@example.org
+- 2026-10-21T10:24:00Z | legal_service | legal_hold_8624 | LEGAL_HOLD_RECORD | FOUND | user_124
+- 2026-10-21T10:25:00Z | legal_service | legal_hold_8625 | LEGAL_HOLD_RECORD | FOUND | user_125
+
+No open escalations at handover.

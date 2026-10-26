@@ -1,0 +1,43 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/exports/2026-10/oliver-grant-export.csv",
+   "last_modified": "2026-10-26T04:36:19+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "oliver.grant@example.org"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL",
+    "NAME"
+   ],
+   "version_id": "FP1VKdxCYLfI5WpH2APAu37.3bM5CiUX",
+   "window": ",name,email,alt_email,phone,detail,recorded_at\nprofile,acct-305710,Oliver Grant,oliver.grant@example.org,,,account holder,2026-10-02T11:14:00Z\naddress_book,addr-6227,Erik Nystr\u00f6m,erik."
+  }
+ ],
+ "delete_markers": 5,
+ "identifiers": [
+  "+14155550109",
+  "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+  "oliver.grant@example.org"
+ ],
+ "prefix": "demo/exports/",
+ "request_ids": [
+  "HE5B1NEAA9ZF8X0T",
+  "HE5F4SXG6WTH9HRJ",
+  "HE57BSC093EQS4M1",
+  "F3BJX7550S4H96HB",
+  "F3BN21816S4R896W",
+  "F3BG9QKVBR7622TJ",
+  "291RT8XXECXQD899"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 6
+}

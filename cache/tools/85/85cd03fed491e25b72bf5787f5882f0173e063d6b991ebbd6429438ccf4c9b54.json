@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-b67669fa6311cbbd",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a975934349f49218",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-94e6bd07fe04c545",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-91d8308f6b989475",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a39920fc59a0a74b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8785db84739f4389",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-85f288f0573b5c84",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550112\", \"d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4\", \"ingrid.solberg@example.com\"]}"
+   }
+  ]
+ }
+}

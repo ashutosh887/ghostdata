@@ -1,0 +1,14 @@
+{
+ "demo/backups/crm/": {
+  "delete_markers": 1,
+  "versions": 0
+ },
+ "demo/backups/marketing/": {
+  "delete_markers": 1,
+  "versions": 0
+ },
+ "demo/backups/support/": {
+  "delete_markers": 1,
+  "versions": 0
+ }
+}

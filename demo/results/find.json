@@ -1,0 +1,4827 @@
+{
+ "audit_at": null,
+ "hunts": {
+  "demo_1": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all current identifiers; found one ghost copy of elena.marchetti@example.com in demo/exports/2026-10/elena-marchetti-export.csv hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/elena-marchetti-export.csv?versionId=OHFqoUG9Efq68MKoLVXkSwe593JXyDYW"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all current identifiers; found one ghost copy of elena.marchetti@example.com in demo/exports/2026-10/elena-marchetti-export.csv hidden by a delete marker.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550101",
+       "elena.marchetti@example.com",
+       "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+      ],
+      "prefix": "demo/exports/"
+     },
+     "repeated call"
+    ]
+   ],
+   "request_ids": [
+    "WN3XCF9RX4AZH4GH",
+    "WN3M4A9M1P9QSVHH",
+    "PBQE2ENTDHRDHPCJ",
+    "PBQ49ASRXKBMAPHE",
+    "996121TPDQBQWC75",
+    "996ECCAZDDXX29ZY",
+    "C35J3XSRCWBSEQQY",
+    "C35YJ1H4B6SYN8EV",
+    "A4WYVNSR2NK1WN4R",
+    "A4WNBG6CZ50MJ7RD",
+    "A4WRJDNJDV14J41K",
+    "JGHB7WY61PJG4R6Z",
+    "JGHE047BCJ95H4EX",
+    "JGHEYMEHA0FMJRRA",
+    "S8NB48WCHCAK2BYJ",
+    "DR7TKWCP3X9DX3V9",
+    "DR7S9QTGRPTZVT48",
+    "DR7JEG9W506HR5FH",
+    "5D7EGVHHB2DC1YR0",
+    "5D7AJAZ31SJF65BD",
+    "5D75FQ2009Q2QF16",
+    "C7DTWHN0CY85YNMK",
+    "C7DK0P13B7B7VA61",
+    "C7DS2PC48XN4M3GT",
+    "50CDSGMH0BBBSPQW",
+    "50C8Z5J134GQNKJZ",
+    "50C0HYQ4EMVYAT35",
+    "50C298RFF6DCAR2A",
+    "4KVJM5GMP2651KWY",
+    "VP9CWNHV0Q3FTT4S",
+    "RAV96HPWT00B2B2V",
+    "RAV6M011Z7CQT318",
+    "66GRT8EYN0CWM8C0",
+    "66GRW72MNDQA4XV4",
+    "VEEN52FJ119S3460"
+   ],
+   "sweeps": []
+  },
+  "demo_10": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/crm-sync/2026-09/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550110",
+       "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+       "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+       "amara.n.lagos@example.net",
+       "amara.nwosu@example.com"
+      ],
+      "prefix": "demo/crm-sync/2026-09/contacts-batch-0388.json"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support, and crm-sync/2026-09; found one ghost copy in crm-sync/2026-09/contacts-batch-0388.json hidden by delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-09/contacts-batch-0388.json?versionId=7i8pr46tc2C_a1EYjwuEKNgbA0IueYng"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support, and crm-sync/2026-09; found one ghost copy in crm-sync/2026-09/contacts-batch-0388.json hidden by delete marker.",
+   "refused": [],
+   "request_ids": [
+    "51W56ZBHMNKHDCBV",
+    "71TXPGM4H4VWQCCS",
+    "71TQBXHMVRG37BDK",
+    "71TNBF11QC7A5PVZ",
+    "1NFCSYY52WNKAY1Q",
+    "7K5271NXX45H74JY",
+    "7K51MZXZYSMM778A",
+    "7K52A60EA563N6YW",
+    "D9MBQRWHRH0HEFFJ",
+    "3DAZBE7NQAA9AD7Q",
+    "3DASM601PP9WJ0VX",
+    "3DAP53QW4DNJBA2K",
+    "9C63BRKNYWJ5YGF8",
+    "9C63JXXZ7K8ENK56",
+    "C4JFHJ043A9GK9Q4",
+    "C4J3PBT2423BBJCC",
+    "FMJE42N7HTT65P9Z",
+    "FMJANVWQ4Y2GD788",
+    "FMJ2A058J7GB7PHV",
+    "FMJ5269HTQ9WVV7S",
+    "QS74T48HG9MHR4VS",
+    "8XR2WFWZ7M1PGGSV",
+    "8XR8M7E5XYSYSH53",
+    "8XR4JCVBKV9YBJ5K",
+    "KRCXE2WFQE7RYJQP",
+    "KRCH795TF8G51C91",
+    "KRCPGD974BGCWX70",
+    "KRCX632Y0ESM2YNS",
+    "G28GA2D3RV4HF8A6",
+    "G28JC23BKNRDNXVK",
+    "GX7C0ZKGEKK8R1E1",
+    "GX73GNR2AZ09A0DM",
+    "YHW3MS8BSTKZZWB3",
+    "YHW69BNSCY4N477T",
+    "YHWBF5R8JXEXP261",
+    "ECTVYQ7VDZWAJX49",
+    "ECTYXFF7HMTWR8ME"
+   ],
+   "sweeps": []
+  },
+  "demo_11": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550111",
+       "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+       "mateus.carvalho@example.net"
+      ],
+      "prefix": "demo/support/attachments/TKT-48377/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support including subfolder attachments/TKT-48377 with all given identifiers; found one noncurrent version hidden by delete marker in support/attachments/TKT-48377/invoice-question.txt."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48377/invoice-question.txt?versionId=cQn1TlGGJE3Z.GCrNWetnFaQGR.UOQHg"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support including subfolder attachments/TKT-48377 with all given identifiers; found one noncurrent version hidden by delete marker in support/attachments/TKT-48377/invoice-question.txt.",
+   "refused": [],
+   "request_ids": [
+    "1NF9FHD7WZRDGR1C",
+    "1NF7XNVHNDPWRV8Y",
+    "1NFFMC4QD2AJCGRK",
+    "7K50SZ1FWXT8T4DN",
+    "D9M8PK5PH8GNJP3Q",
+    "D9M21SY502FNS0WT",
+    "D9MBRBNQ756Q8A2C",
+    "3DAVHN6XP83HHKGW",
+    "9C64VCAWPS6ECX0P",
+    "9C645FD2NG6GVZ7V",
+    "9C607V232F1ED901",
+    "C4J95JTRBTQFBP0S",
+    "C4JAJZMK0KH75MXG",
+    "C4J40EE4ACHCKNXR",
+    "FMJEBTX5N45BKXPW",
+    "QS74NWJX6K8A3NYC",
+    "QS71J0KT4C3XSMZ9",
+    "QS72FBA9XWP3M7PN",
+    "8XR77FC075VJ2E25",
+    "8XRC2KB5ZFT5P1C0",
+    "8XR2DAJA1DJD5K5H",
+    "V6A785RJERR4ZSV2",
+    "KRCYFGH9H3SBV2M2",
+    "KRCHDK2FMNNYJEER",
+    "RHA9SATY9N0DJ9MK",
+    "RHABMX7CXG51AEX0",
+    "G28NS36YBWBGPW3F",
+    "G28Y7N904ZBWY3D7",
+    "GX74XP6BZHDPS8DM",
+    "YHW27VVDJF2J9KW8",
+    "RFQ5X2CNP336G6X7",
+    "RFQ0HHSXJDR1WSG0",
+    "RFQ9VJDNHFNGN5PR",
+    "K9X09HP09S5X3SFY",
+    "K9XFJ8PTKNP6JTNZ",
+    "ECTZMNZVT67ZKTJ4",
+    "F0XR2450V9QYFDHK"
+   ],
+   "sweeps": []
+  },
+  "demo_12": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in ml-features hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/ltv-features-part-0011.jsonl?versionId=9vUQLtKGpfEY0ARvWYmcHf.mSsnSbeTS"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in ml-features hidden by a delete marker.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550112",
+       "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+       "ingrid.solberg@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     },
+     "repeated call"
+    ]
+   ],
+   "request_ids": [
+    "1NFF7D9TKT2660NV",
+    "1NFBYYW8QPJ24KA2",
+    "1NF45D87B92Q8PG5",
+    "7K58YZYWAV35ESG5",
+    "D9M0CGCKG0HH74GJ",
+    "D9MDP1SF7FEQN650",
+    "D9M89XR27GBQ8VXV",
+    "3DAQCV5VE7578DHE",
+    "9C64R67GK59DSJY5",
+    "9C65VH5Y7DPW8A2A",
+    "9C60TWRM25N8KVJ1",
+    "C4JD7JXYY5NWT00A",
+    "C4JABZDC3B4GJJ7H",
+    "C4J9GZSXAPR45KEZ",
+    "FMJDZAR21MM3KQQV",
+    "QS793A2T9DXFVTMF",
+    "QS7FDTQJRGT9JH0J",
+    "QS7ASD4WKWJAD5J6",
+    "QS71ZXSS5QXBS136",
+    "8XR9GZ5DCCF3B098",
+    "8XR7XCYEWWCPBYVH",
+    "V6A869S2NQNGJEQB",
+    "V6AAZKPJNXS9Q1BE",
+    "V6A30Y11TK2M9E1G",
+    "RHABNEJWXE30G21K",
+    "RHA7MEBKWPAX1Z98",
+    "RHA9TNJ9C1WF5DNZ",
+    "RHA48W7HA3SKQQAC",
+    "GX76VBH05TVR1AER",
+    "GX71W1C43KGXFHPN",
+    "YHW9BYFSRS7SG9JY",
+    "RFQ748VNFD6EDACV",
+    "RFQ35HM34QR26ZBE",
+    "RFQEZ372J49JSSY4",
+    "K9XATRMDZVF1HBQ0"
+   ],
+   "sweeps": []
+  },
+  "demo_13": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550113",
+       "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+       "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+       "rafael.moreno@example.org",
+       "rmoreno.work@example.com"
+      ],
+      "prefix": "demo/backups/crm/2026-09-30/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support, and backups/crm/2026-09-30; found one ghost copy in backups/crm/2026-09-30/contacts-snapshot.json hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/crm/2026-09-30/contacts-snapshot.json?versionId=p7pFzTjDRNtKSUFvAkZg98Jv9I7TBr91"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support, and backups/crm/2026-09-30; found one ghost copy in backups/crm/2026-09-30/contacts-snapshot.json hidden by a delete marker.",
+   "refused": [],
+   "request_ids": [
+    "QS7FVAA7NFSQRVZM",
+    "QS7CNN11GBSWJXBJ",
+    "8XR65CPRAJW6P9AB",
+    "8XRDYY8XNRMVVF5C",
+    "V6AD6188MG1XJ4BP",
+    "V6A4YRBHBQMET5YY",
+    "KRCZS2568YP9E4JA",
+    "KRCKHM8H4V94E4GW",
+    "RHA5VY1VHP6C92AZ",
+    "G28S606SGPR1SHXJ",
+    "G28KH22VDFW11HA7",
+    "G28P3KVDYGPNEKNH",
+    "GX73HRY1WWPGQC5J",
+    "GX7A25CVHZVQG5JP",
+    "YHW5F4TMWG6B3VQX",
+    "YHW5DG5EDHQNDRW2",
+    "RFQ1E88Y182Y5585",
+    "RFQF7E2CNET9DKJP",
+    "RFQ1X8X05EABFV30",
+    "RFQ873KAEH8E71CD",
+    "K9X0QCZKSZXSMMM5",
+    "ECTZTN1EK44HK0DZ",
+    "ECTW19V7EEYK36X8",
+    "ECTW832Q3SM7FFC8",
+    "AGHFT6F98TVTTBZQ",
+    "AGHD6EQ829HXC6Q7",
+    "AGH4K65KDAWDEEEM",
+    "AGH401KMW8Q4SS9Q",
+    "JW120CTSXNBCP7DP",
+    "JW1FJ75PDFHNS5RX",
+    "6T7QY18E43CAG3KV",
+    "6T7S53EJS96RSPPF",
+    "FAG8M8TXZQS506MB",
+    "FAGFRZ6ABK3RSJP4",
+    "FAG6PBM4WNYKQ4NZ",
+    "MTKR541494DX74AX",
+    "3NRQN6HE2BPQXX1W"
+   ],
+   "sweeps": []
+  },
+  "demo_14": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550114",
+       "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+       "chloe.m.paris@example.org",
+       "chloe.martin@example.net",
+       "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "38dc13f77dc9fc3eddaf33d4b6a07546f6b5ca312595e4b8e33e80ff12b504dd",
+       "3deb9037a1e8c6f5ba33ba9b0411ec4700137d475dfca77819685020c14d590a",
+       "4645fc13aaaf5a68fcf65e3f8c17d4872b68a4f3d7c62382eac5b37a94f9a1d7",
+       "5de180f543429e2639d4b133079bb4b11ac0b35ec60fbfb24f06039c1abfa797",
+       "725b99a9aad331ebcd543ab54ecfa8de4fbf1756dcf30716d2541dcf899ca8f3",
+       "76bf51d0044823c380e023540416974763f3ba92dc558151ac1569d40b87edb1",
+       "d3650e32c2b9275679c408e25ae1d2af07f8db1f9ee864374be5905e7ee8e0ae"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with all input identifiers; one ghost copy found in demo/backups/ hidden by a delete marker, but follow-up search with linked identifiers was refused as they do not belong to the subject."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/marketing/2026-09-28/audience-hashes.json?versionId=CNbvXIQIvRoz8Mpt4zaPZb0ZSdrvsoec"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with all input identifiers; one ghost copy found in demo/backups/ hidden by a delete marker, but follow-up search with linked identifiers was refused as they do not belong to the subject.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     [
+      "38dc13f77dc9fc3eddaf33d4b6a07546f6b5ca312595e4b8e33e80ff12b504dd",
+      "3deb9037a1e8c6f5ba33ba9b0411ec4700137d475dfca77819685020c14d590a",
+      "4645fc13aaaf5a68fcf65e3f8c17d4872b68a4f3d7c62382eac5b37a94f9a1d7",
+      "5de180f543429e2639d4b133079bb4b11ac0b35ec60fbfb24f06039c1abfa797",
+      "725b99a9aad331ebcd543ab54ecfa8de4fbf1756dcf30716d2541dcf899ca8f3",
+      "76bf51d0044823c380e023540416974763f3ba92dc558151ac1569d40b87edb1",
+      "d3650e32c2b9275679c408e25ae1d2af07f8db1f9ee864374be5905e7ee8e0ae"
+     ],
+     "not this subject's identifiers"
+    ]
+   ],
+   "request_ids": [
+    "DXXC3FY60B4WJ15E",
+    "DXX79YKRKVSB3QWA",
+    "DXXA5BG7QEQ7FRD8",
+    "DXX7GST7V290QG0Y",
+    "JW1641YPF1DNADWW",
+    "6T7M5RHCFV5J69D9",
+    "6T7GR8TKJD7D971M",
+    "FAG5H07X026918MG",
+    "MTKZ9J1B9G19258H",
+    "MTKTXS6JBMK3Z9WQ",
+    "MTKKAT0QYHDNT1VC",
+    "3NRY0795NCPJ28J0",
+    "3NRSV6JFYRKG0T1R",
+    "3NRWQ4GW54TZQVHJ",
+    "X3T7K7S1E4B2RJXW",
+    "DBA9SRTTGQ1KH5TX",
+    "DBA64G8X1VKBJFXB",
+    "DBA71Z0HDES2QVFX",
+    "DBA675A6S666VF8T",
+    "5FGBEP30AJADGEGS",
+    "5FG21TSGRY1W37J9",
+    "D7MVTYV9RPEF4NEJ",
+    "D7MKJ61ZN8SPFHVE",
+    "N3PPVAW8TBSC178Q",
+    "J2NST80PFMY43Z70",
+    "J2NKE4JGD5V5RRYQ",
+    "J2NH21A6T31MGPTM",
+    "8YTVQ0C2Q9J2TW1J",
+    "FQ7P6X2Q985RVKSP",
+    "FQ7HNZ73A8RSWMM4",
+    "HGJ7FXBDRVSDWEN7",
+    "1TGDSAHQ0JC2AZ6F",
+    "1TG4VJ8EWQDGE7YH",
+    "SPFPR8G42SWRR70Z",
+    "SPFH7T6SXTVD8843"
+   ],
+   "sweeps": []
+  },
+  "demo_15": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in demo/exports/ hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/daniel-weiss-export.csv?versionId=c3mZIPAxOHK6tSbFljlaaYLhY3vJnJW0"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in demo/exports/ hidden by a delete marker.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550115",
+       "daniel.weiss@example.com",
+       "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+      ],
+      "prefix": "demo/exports/"
+     },
+     "repeated call"
+    ]
+   ],
+   "request_ids": [
+    "JW13PXXJY2ABWCD3",
+    "6T7PV4EWB6J5DMBJ",
+    "6T7KKMADTQYETM26",
+    "6T7WKY2KFV40M9YQ",
+    "FAGAQF12Z0B9HKTM",
+    "MTKJTF3WBVMGY1F7",
+    "MTKMEP7K8AXZ5E7S",
+    "MTKSCYQRK1TZQR2X",
+    "3NRR63Y2W3Y4ZY1Z",
+    "3NRVW2102WCM15TC",
+    "X3T71HTZR0S6M0EN",
+    "X3TA55Y3FNHNT165",
+    "X3T811R2Q97J7VA2",
+    "X3TCPSXR4N1EPZMD",
+    "5FG45PK1QM4VYKWQ",
+    "5FG8SMKD114S0V8D",
+    "5FG58DY91P43BQV0",
+    "D7MXH3ATHBYB7JFF",
+    "D7MW3DG1JCQ9QAWY",
+    "D7MRPD04GB2KGQQH",
+    "D7MKGHQEZ1E7GFM3",
+    "J2NSDVZG6XCMBSN2",
+    "J2NTB8KH57D0Z2Z6",
+    "J2NNKA3GA2BEWTA9",
+    "8YTJ7YQ1WWZNQA91",
+    "FQ7S49QBXH6GDQWK",
+    "FQ7W1ANG7VJ9SF11",
+    "FQ7XT17RMBPT4QYA",
+    "HGJA3AY895TD9HHR",
+    "1TGCKBRSY36PMJEF",
+    "SPFJRR6BQG9K6HDG",
+    "SPFQY7B77W50H6G2",
+    "3N7RN72EG410M4QW",
+    "3N7Z0VE3BF0WM3BT",
+    "3N7Y334HD6DW2MA7"
+   ],
+   "sweeps": []
+  },
+  "demo_16": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550116",
+       "aisha.rahman@example.org",
+       "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+      ],
+      "prefix": "demo/analytics/dumps/2026-10-20/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv?versionId=0jnMXGt23.HENOw6LhBZwCI3bvWtBguH"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv.",
+   "refused": [],
+   "request_ids": [
+    "6T7HYED32FG4BBME",
+    "6T7V12TQF05N0R7Z",
+    "6T7MSRKYA9C6Y46T",
+    "FAGBHSJV1XXN1F3S",
+    "MTKPRR4JQPA4756E",
+    "3NRGYXJ67R7A37Q3",
+    "3NRS71YAM7JKHKWA",
+    "3NRGABVXZBG1JR67",
+    "X3TF7SNC39J5JEYV",
+    "DBA07HK1K1ETVQXY",
+    "DBAFRC5WN3F56TTC",
+    "DBAEDZQF3WA3KZQ1",
+    "DBA6EXDDHFKNEQAW",
+    "5FG2KYNDB71K5JG9",
+    "D7MMFYXQK5QKF6HQ",
+    "D7MZK23H8KV8NXVY",
+    "D7MM0JHDSA2QYFRY",
+    "N3PQE3Y6Y1D404AJ",
+    "N3PNHKQTK466ADRQ",
+    "N3PZ6N40RHB46E2Q",
+    "N3PRY97SN9KXE9QM",
+    "8YTSTPN37TCRVTWQ",
+    "8YTTHG5YSN34YWTN",
+    "8YTNZVP9SA37JQ79",
+    "HGJD4F6K7ZR6CJXP",
+    "HGJ86RMRKX8GRCVG",
+    "HGJEP4M9YZ4EGGN7",
+    "HGJ8CG4P2GC2A6XJ",
+    "SPFT8CR3RWJQV6B1",
+    "SPFH3XCEMP39TJDS",
+    "3N7NNWADZ9SS5RSR",
+    "3N7TJKYYQ6DVBJ6J",
+    "940CRV6KQDG40FQ9",
+    "940C62HT30QJC84P",
+    "940EMN7N8HSWYM56",
+    "FZH68BWX21AVE4YX",
+    "FZHB3PHBANVAXKVZ"
+   ],
+   "sweeps": []
+  },
+  "demo_17": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550117",
+       "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+       "liam.oconnor@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with identifiers +14155550117, 11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350, and liam.oconnor@example.net; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with identifiers +14155550117, 11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350, and liam.oconnor@example.net; no copies found.",
+   "refused": [],
+   "request_ids": [
+    "N3PKEX7VPD6VAHCD",
+    "N3PVMD6NXF5Z9X32",
+    "N3PTB6S4BVCFZHGG",
+    "N3PTGB0TAP564JKM",
+    "J2NJQQHY26ENSGFC",
+    "8YTHYN8PCNXQQ5VS",
+    "8YTTPVM1YGNKDX3W",
+    "8YTPW775N0DP8A4F",
+    "FQ7K1P49JGW68QWP",
+    "HGJ09KTVFBQWVWQN",
+    "HGJ7VRCPNKXAC58J",
+    "HGJ72C9KY87R2ZS1",
+    "HGJBRF8R82MPYXTF",
+    "1TGABYWGSZYSME4N",
+    "SPFVGS2MGPYEFW6V",
+    "SPFQSTYNWNMA6CNM",
+    "3N7P749KP7800X98",
+    "3N7XVEV4M12FKTHN",
+    "3N7PW38DSCMA3DQ1",
+    "940A0DAMXGAXP19W",
+    "9405TRQD9QMAF2X5",
+    "MHHV58A5VY6BY6R8",
+    "MHHTSB6QZVAN0S6K",
+    "97M6SMFBPRHXDZP2",
+    "NXJMAA2V534G3RBY",
+    "NXJKVD14G2763CJT",
+    "NXJTXYWCV6K7AHPC",
+    "1HW42G1EGHZT3PRC",
+    "FZH1MFQQYQQKV1W4",
+    "FZH5QG2902TMJ83K",
+    "5PF0VC9WNHKTBC76",
+    "5PF7X6CBHFW4ZZC3",
+    "6VA0X5VV27C57YFG",
+    "6VAEZMZ7DWFHGMF3",
+    "6VA81GJEFH8VWR3S"
+   ],
+   "sweeps": []
+  },
+  "demo_18": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550118",
+       "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+       "yuki.morita@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched all folders (analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all given identifiers (phone +14155550118, email yuki.morita@example.com, email hash dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6); no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched all folders (analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all given identifiers (phone +14155550118, email yuki.morita@example.com, email hash dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6); no copies found.",
+   "refused": [],
+   "request_ids": [
+    "5PFAT5K5GPHXWD8G",
+    "5PF7GSS26MJ41D0A",
+    "6VA9V0VYBEWQB0KG",
+    "6VA7RNHNCXTA4YME",
+    "K8KQ58RFJYW2K4JZ",
+    "K8KTK400H42H0N16",
+    "67JPAVZYX3AZRXQN",
+    "67JXDFFJV25EGNF3",
+    "RPMRZ9DCC7D5P29J",
+    "RPMSMJSV9FPDSJPQ",
+    "H5S3GX23Y8JPV2D5",
+    "H5S15VFSCFG3QN20",
+    "H5SAD38BMCG3Y134",
+    "2S85PRJ70J3ASXYE",
+    "MSB74DE3VK80R85P",
+    "MSB0G3FADYF4215J",
+    "MSBB8JF0AM8Q9RWW",
+    "MSB21BJGAJZ1Q5MS",
+    "5ZN3TYZXA86WA18J",
+    "5ZN5Q616FHZ9GSFR",
+    "5ZN3Q5BNR5AWJQH7",
+    "3WDHY345KG20S1ZY",
+    "XXG3NE5BZT7H3AGJ",
+    "XXGA431QANCNSRYJ",
+    "R6TSRP80937H60TS",
+    "R6TQ0SA9VM59YCF5",
+    "W16DP2N0C5C9DR2T",
+    "W1668DP5W7NQ1K36",
+    "G1SKMTFJE0PC3THT",
+    "G1SYH2FRDXWEWV2R",
+    "G8CS7NNNGMJW2D3H",
+    "NGBM0YKKPQ4SC3KN",
+    "NGBKY789N7Y6215Z",
+    "NGBGJ3HTKXYW5HQE",
+    "TAZ9BJRE8HSTE7KE"
+   ],
+   "sweeps": []
+  },
+  "demo_19": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550119",
+       "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+       "grace.holloway@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with identifiers +14155550119, 4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886, grace.holloway@example.org; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with identifiers +14155550119, 4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886, grace.holloway@example.org; no copies found.",
+   "refused": [],
+   "request_ids": [
+    "97MFWDN9QP3RNYSH",
+    "NXJZQDD8F2J00R8P",
+    "NXJJ6QNWR1KV5R5S",
+    "NXJGKCBR7DZG1ZTH",
+    "1HW10HXDPH3P71W7",
+    "FZH0QMBWDWDSM21W",
+    "FZHDYEJF3RWMVF5C",
+    "FZH429VZ3K15RMYF",
+    "5PF6WG95D7FBJYHC",
+    "6VA8HC0S8Z5THBY6",
+    "6VA7B51BJS29ZWP9",
+    "6VA7G04VXAEHQVGD",
+    "6VA8SQ1VFQNQYSK4",
+    "K8KP3RVGTNEFVG0Y",
+    "67JRHRS05T9KXB7T",
+    "67JQWNGHBPBATDM3",
+    "67JSEHW9MVS62X1Q",
+    "RPMW35AN3XJV4VF4",
+    "RPMKZ1DKJKSP8K4J",
+    "RPMMB4XHTV42DXS0",
+    "RPMNA9MFFP988NHB",
+    "2S81K7DT7TAGDE7J",
+    "2S8A3BAX1SGYZ8N9",
+    "2S8DBT8YA7J0MJ0D",
+    "MSB1Z6CG0AGWFEE4",
+    "MSBE8MZ7J1TQB9QB",
+    "5ZNEBZBQ1MG1BJ68",
+    "5ZNCV32PAASHYR2C",
+    "3WDMFXZ3X9HNJGST",
+    "XXG0E4T4Z7BCAKF6",
+    "R6TZ7YGSWBYJVAMD",
+    "R6TPRGVHGEYWATY1",
+    "R6TXTEGDF548V9SS",
+    "W167SS11QGTA9WVW",
+    "W16CH2ED14JM2404"
+   ],
+   "sweeps": []
+  },
+  "demo_2": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550102",
+       "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+       "tobias.brandt@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched all folders (analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all given identifiers (phone +14155550102, email hash 08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a, email tobias.brandt@example.net); no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched all folders (analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, support) with all given identifiers (phone +14155550102, email hash 08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a, email tobias.brandt@example.net); no copies found.",
+   "refused": [],
+   "request_ids": [
+    "WN3Q5ZKKJ6BEJRSH",
+    "WN3RHCNVKFC8N0JK",
+    "PBQE9Y2Z2QE808TE",
+    "PBQ750FK22V2EETJ",
+    "9969PCQCH6AQY8NC",
+    "9965B0YZNEWQ91SH",
+    "C35W7GE4JT49QV0H",
+    "C35SZPNMPQA8WG6D",
+    "A4WHKMTPG3FH8YEB",
+    "A4WVRRGKZKAVSFJH",
+    "JGH4B0WVVMFYBVXJ",
+    "JGH18QSGWY4P8JS7",
+    "JGHFMABR0HSX7V6P",
+    "JGHA4QDKZ4ZJFGG2",
+    "DR7YBM8HVZ6EN0Q2",
+    "DR7G9KHZZFAKK8VV",
+    "DR7JNY04B7R0FG2M",
+    "5D792FCVJ7A5G5EH",
+    "5D75ENP6F35ZQ3C6",
+    "5D7BKWPKBPCK83TG",
+    "5D70PZBTMGRNJC9Q",
+    "C7DJDWRA8E238R9E",
+    "C7DNH8B2RJR3ST80",
+    "C7DQBKQ97VE11BCK",
+    "03JNGQEWWJM6BP8M",
+    "50C40RHQR21GTKFD",
+    "50C29YGX3JMP8YEP",
+    "50C8V3D3VCRHJWRN",
+    "4KVJ6WPDBQYV8DRW",
+    "VP90X0WTAN08FATB",
+    "RAVFBE3G0K7DPXGS",
+    "RAV66B0AFTTGCJE6",
+    "66GPEJM88MQ95DAR",
+    "VEERZNGCKE2B3J82",
+    "VEENPX3BA3B57VS3"
+   ],
+   "sweeps": []
+  },
+  "demo_20": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550120",
+       "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+       "jonas.berg@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550120, a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835, and jonas.berg@example.com; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550120, a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835, and jonas.berg@example.com; no copies found.",
+   "refused": [],
+   "request_ids": [
+    "67JNZPBZPDR1WTH8",
+    "RPMWDWRXT9ERBCS0",
+    "RPMS9E9DYFE64EZX",
+    "RPMKCXSXYEWYD7VF",
+    "H5SF2SFJBMYPSGRW",
+    "2S873FNNH51WBSKS",
+    "2S81B3JAVE9X6NEC",
+    "2S89HAFZQE97CT7J",
+    "MSB7W2QBZX9GGC1D",
+    "5ZNCB5FQ2ZQGWQE7",
+    "5ZN6P98VA1ZVBR84",
+    "5ZNDPNEJM8TE2MEC",
+    "5ZNDK96QSXFG5PSZ",
+    "3WDRW2N7TJ0RZF4V",
+    "XXGD8YFKM11BEGGF",
+    "XXG4B7E5GNGE9PQ9",
+    "XXGE9ZXFMVSTG09Y",
+    "R6TW5K64BCZK1DF1",
+    "R6TVZD2JM59T163X",
+    "R6TKD9RY1697EK2K",
+    "R6TT64F7M24HAE95",
+    "G1SGHJDDYX4T6450",
+    "G1SH6ZREX2E7G2DZ",
+    "G1SND50ZK82N7D1N",
+    "G8CXJC9Z3GHMKKY3",
+    "G8CT3HWB4QQ6MYT9",
+    "NGBZ6XW4N8CHYYM9",
+    "NGBSDG5H2Q1284KF",
+    "TAZ6BXD296FS6EQ8",
+    "TAZ5C34G25WTNCCT",
+    "A4EVJ544GA6NDKCF",
+    "A4EQ1DP9VAX4TRGX",
+    "A4EW58NCCAWWNAZ4",
+    "A4ENJH2RM91J36Q0",
+    "7QAH142EE22PB5Z9"
+   ],
+   "sweeps": []
+  },
+  "demo_21": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550121",
+       "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+       "nadia.petrova@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550121, 7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830, and nadia.petrova@example.net; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550121, 7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830, and nadia.petrova@example.net; no copies found.",
+   "refused": [],
+   "request_ids": [
+    "2S813TT88F8TF56J",
+    "2S8BY23QBDGERMG2",
+    "2S8BWBY58CREVGQF",
+    "2S87M7YN2K9G4GNV",
+    "5ZN26Z3TRD2KSWE7",
+    "5ZN8CVQMHBQNQ00X",
+    "5ZN5C7GNQ5P7AZQ2",
+    "5ZN6V66XC9DJ4TAD",
+    "XXGD371C62SGJAAW",
+    "XXGEGNTT2KYAFH6X",
+    "XXG2BMG1ZEFS4919",
+    "R6TX8WF500KEEWGD",
+    "R6TG22ZYQWRG0AKV",
+    "R6TYRE84MQSSSG9F",
+    "W16EQDZACH7SP7FF",
+    "W167N5QDZPAXE36B",
+    "G1SGANSSNSXCDNV5",
+    "G1SSC99V2PCAGCD3",
+    "G1SSKXGR2YN6CKM8",
+    "G1SQC1Q9FF6C3FSE",
+    "G8CHPV2VZBB9E71D",
+    "NGBKSVD83VNASMVV",
+    "NGBK5DAB9V3MTE1W",
+    "NGBVSA3ET7GSBNND",
+    "KSAYBC9N9BY2M22Q",
+    "KSASQNXPCK8AH5EY",
+    "KSAVY2SRYX3VF6A6",
+    "KSAH9YC79MC97RHT",
+    "TC6WNA98TWAXY3ZT",
+    "TC6R865FFH3Q92EE",
+    "C7HCXBZYW969S29C",
+    "C7HADVQ53FFGKMDS",
+    "K44N152HM84RSYZ6",
+    "K44PTK993DBDTX6P",
+    "K44Z3ZFAQY0P4FB6"
+   ],
+   "sweeps": []
+  },
+  "demo_22": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550122",
+       "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+       "noah.becker@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched all folders under demo/: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support using all provided identifiers; no ghost copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched all folders under demo/: analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support using all provided identifiers; no ghost copies found.",
+   "refused": [],
+   "request_ids": [
+    "TAZ4XRE4NDQ82V45",
+    "TAZ4FQAG84M9RPWV",
+    "KSAZTC14KEE93CQM",
+    "KSAQ8MCW61DVK46R",
+    "7QAV17S9CSSSS68S",
+    "7QAJQPK7F5FKDSJG",
+    "TC6V29NX5398ZSSV",
+    "TC6T1VQ5F0W3041H",
+    "C7H4DPSR7PYSMRTE",
+    "K44R93KYE76A51F3",
+    "K44K13JNAEGV558E",
+    "K44QP3KD02N8J2YY",
+    "K44SJD6JMT8FFYAD",
+    "M2R22HRXX6ATAT7B",
+    "Y4JZ444NJ7E5RCYY",
+    "Y4JHVVFVR2DW9ANC",
+    "Y4JKR4Q7KJ3JGC7T",
+    "QNZM9G2FHEVA5S38",
+    "QNZZ7K040FTH11ZH",
+    "QNZY8E8E2SEVTKF7",
+    "QNZHMG7DMQ9N0ZK8",
+    "1582FJ9DFSPWQ783",
+    "RTW9RZHQS5ZE8E5E",
+    "RTW2RF6W3ACSQPZH",
+    "YMHF5QCJSVRG48WG",
+    "YMH3GGJJFQZK6DSG",
+    "0G1KS9CGB6J769PR",
+    "0G1Y9N63WYDPEVA6",
+    "N2A5XP89THC3D8F3",
+    "N2A1NRK3VWS5G35P",
+    "DFYHQCWDE7NKX9M0",
+    "ATPJ7EBH7NZNFZEM",
+    "ATPTQS3KRW77DKMZ",
+    "ATPQMRWHWBKN4VYK",
+    "SQ3ZHKAGE5RVERNC"
+   ],
+   "sweeps": []
+  },
+  "demo_23": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550123",
+       "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+       "clara.jensen@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550123, 3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84, and clara.jensen@example.com; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550123, 3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84, and clara.jensen@example.com; no copies found.",
+   "refused": [],
+   "request_ids": [
+    "Y4JVXAD5V7EM0SCX",
+    "Y4JQS1752J7C6RXP",
+    "QNZT78RK89ANGZY9",
+    "QNZKCMPNPV5M5PBT",
+    "1588DF65K4MRRPD8",
+    "158DMXJT9BYQQN6B",
+    "RTW1ZTTCQJQ9J79Z",
+    "RTW8MB9C7W0DTRDP",
+    "YMH9HGQ7VNZJ3P32",
+    "YMHFJVJWC3XEPSG1",
+    "0G1QED0FDV66478Q",
+    "0G1JW2XR2CCVWD22",
+    "0G1PZAZHXK0BG7FV",
+    "0G1N858EKAJ9HHPG",
+    "DFYKYYFAKWPXCXWX",
+    "DFYT35AQ3WCX248F",
+    "DFYM1D85GPN146H9",
+    "DFYXT6SY9SKYWHRE",
+    "ATPRC7D9WF41GT2H",
+    "ATPSEBNQC27F8N6V",
+    "ATPJZB2CM0ZKC7Y0",
+    "SQ3MW9ZA9XPNBECH",
+    "1W8JX4BT0X792FGM",
+    "1W8GWXCRWQT6W47H",
+    "THH81DKSDM06G7GT",
+    "THH4GV9FDPZ0QM4H",
+    "W67MXYQ5X43RJ8Y0",
+    "W67WCWYR8GX9X0FW",
+    "CR9W1CDEZTFDE4N1",
+    "CR9G6C921RD8PQ0Z",
+    "YST856BF1M2GQBYG",
+    "YST91C72PTQN53DD",
+    "YSTB6R10NRPSB9WN",
+    "3VY1N9HDW855AKBG",
+    "3VY4RN3VAN48SAVF"
+   ],
+   "sweeps": []
+  },
+  "demo_24": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550124",
+       "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+       "marcus.hale@example.net"
+      ],
+      "prefix": "demo/legal-hold/LH-2026-014/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one copy in legal-hold/LH-2026-014/ protected by a legal hold."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/legal-hold/LH-2026-014/marcus-hale-chargeback-file.txt?versionId=Tch9dKAM5_1EUps3__ctI_eRap_1ZGBn"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one copy in legal-hold/LH-2026-014/ protected by a legal hold.",
+   "refused": [],
+   "request_ids": [
+    "M2R1MHVEBZBGXTM8",
+    "M2R6RGAJYVQ83XQD",
+    "M2RA5Y580XDX514N",
+    "M2R50XT9244DHNXE",
+    "QNZG7GPNF3DTE5SD",
+    "QNZMQWY7S2P78AS6",
+    "QNZYZZX1YFMDZTM0",
+    "QNZP93GZB4A3VQ2B",
+    "RTWC4FX9G8NPM5PG",
+    "RTW585KD4XTBTBZW",
+    "RTW080KPCXXPD21C",
+    "RTW0VYK83FNNZYS3",
+    "YMH1MGAR8ZEHJ595",
+    "YMH7AZEC3AY2PDR6",
+    "0G1NKY6TQ88R3HY3",
+    "0G1KS2VJP6FPB6K5",
+    "N2A1Z0QWVP1BTDXX",
+    "N2A66PMQ1DBJG27J",
+    "N2AF7SH94Z079X5N",
+    "N2ABZBN965A4KJ00",
+    "DFYXB0BSJE86ZS51",
+    "ATPV1JT5HC3FRPJ2",
+    "ATPRSE6VD6VQPA6P",
+    "SQ3RP9RPKDZ19H7S",
+    "1W8N614EBGX30QV1",
+    "1W8XKTQNWHA0HC2X",
+    "1W8HGC46RVPNV9DW",
+    "THH960XG7GV17K6M",
+    "W67R0EXZA5VGMCKY",
+    "W67MYH5CS6DAEHY8",
+    "CR9Y0PB2CV3JK6SG",
+    "CR9S0HJ9MRRX2A0J",
+    "ZYTSYT48P80E4N1T",
+    "ZYTKG9A22BR6GA4Q",
+    "ZYTSTBKKBKZQ4GH8",
+    "YST1583KEX9NDT92",
+    "3VY759NRJJ75BM4G"
+   ],
+   "sweeps": []
+  },
+  "demo_25": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550125",
+       "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+       "fatima.idrissi@example.org"
+      ],
+      "prefix": "demo/legal-hold/LH-2026-019/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in legal-hold/LH-2026-019/ containing phone and email, hidden by delete marker and under legal hold."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/legal-hold/LH-2026-019/fatima-idrissi-warranty-claim.txt?versionId=ahSXDynhmY0atYeNJKCs8y3_ju7yNbfd"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in legal-hold/LH-2026-019/ containing phone and email, hidden by delete marker and under legal hold.",
+   "refused": [],
+   "request_ids": [
+    "158E2TMVYN6RY4G1",
+    "RTW8DG4BTW9M0SDN",
+    "RTW50RS9EQWCRPH1",
+    "RTW8JKGFKC690EHT",
+    "YMH46V5EK8VFC0AH",
+    "YMH7T3PJ74VQXZVN",
+    "0G1HC2X0GQV6MMXY",
+    "0G1YRNDMX1WF3QR8",
+    "N2AE4Q4N2KN86JKP",
+    "N2A3XMBKSR22DWYF",
+    "DFYNR10WTJMTP9KD",
+    "DFYGGWPQXTJ0BFPQ",
+    "DFYQ59HNX62NPX7N",
+    "DFYJEDS3R7H865ZN",
+    "SQ3WQ398TEKJVNC4",
+    "SQ3T57XHXFMNSSXP",
+    "SQ3H7RQNB9K9TZ9N",
+    "SQ3SHMVRX55X96D9",
+    "1W8HXJHP3YP36PVB",
+    "1W8JYN3JBB4FETA8",
+    "1W8M45JQX6C1DY6Z",
+    "THH4HX65QC3SEHTV",
+    "THH6F6APQYH4K7PH",
+    "W67NN7A76Y9GS3EZ",
+    "CR9J5W3SD72DM0J3",
+    "ZYTPF3ZCN3QPZS0Q",
+    "ZYTN55JV0BACEWAS",
+    "ZYTKBERS6X0GCF1T",
+    "YST7HAVHERZPNMV5",
+    "3VYE6EP1VSFEVDJ2",
+    "WCAV5322DR8DG7WT",
+    "WCAQ4DBG8TRW767R",
+    "WCAG5BJH2TKTMDAQ",
+    "N7K6A7CTBD93Z6NP",
+    "N7K6ZFMJDDYWW8DP",
+    "0258RZDDQWWRA1QG",
+    "F8MXWXP7TVT8XDRM"
+   ],
+   "sweeps": []
+  },
+  "demo_27": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550127",
+       "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+       "lucas.ferreira@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "lucas.f.gaming@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550127, d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8, lucas.ferreira@example.com, and lucas.f.gaming@example.net; found ghost copies in demo/crm-sync/ and demo/newsletter/."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0433.json?versionId=7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA",
+    "s3://ghostdata-demo-960149837193/demo/newsletter/2026-09/weekly-digest-subscribers.csv?versionId=aqaU5mYCDOCn4pZrbm2PmIidsf9.h9p."
+   ],
+   "derived": {
+    "lucas.f.gaming@example.net": "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0433.json?versionId=7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550127, d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8, lucas.ferreira@example.com, and lucas.f.gaming@example.net; found ghost copies in demo/crm-sync/ and demo/newsletter/.",
+   "refused": [],
+   "request_ids": [
+    "W67WMNCVH0XXZDW6",
+    "CR9QPQREVHF060WH",
+    "CR9JGPZWZHVB22PW",
+    "CR9QPH30DVCA0VJN",
+    "ZYTZ19WSMYNC5C14",
+    "YST9ZEWBXHB633GG",
+    "YSTBM87N1BS4DN9S",
+    "YSTB7HGX6RFF4BX4",
+    "WCAVCFE5ANA269E4",
+    "WCAYVGKEHAC604Y0",
+    "WCAS97JBAPW2VDVG",
+    "N7K4ZPHM1TTNXE3A",
+    "N7K2V6KT317F1CRG",
+    "N7KFZ25GD5JMS7D6",
+    "F8MPVWB24Y37QDPY",
+    "F8MXC4JAWTXZ56GB",
+    "7A61PY5VSHM2GPCN",
+    "7A613G4RBY1NVHEQ",
+    "7A6EPQV98EHT0KEG",
+    "7A6E15PHXZ988FTC",
+    "GYJ4D14S0N92T8K0",
+    "WCKBEDX92G9ESH2Y",
+    "WCKD0A4A9J7ZKN2M",
+    "WCK7A9BER36DVQPH",
+    "AT384PF6N2DKFMDE",
+    "AT3F56JH0E0ZBTTS",
+    "AT35RFSCMNEM16H2",
+    "Q690T9FA66Q46YHQ",
+    "40CDEF7S2732JNK7",
+    "40C7MDFHVS5FVG47",
+    "WH1D9E36193K2X6T",
+    "WH17AHF6515EAV0T",
+    "DYABC59DE9MZGA6K",
+    "DYA5DJFKR4TPTYY5",
+    "DYA8BT1ZFN49Q8Y6",
+    "AQZR0F17C2XRK19E",
+    "96XMQ0VT6BE1PBC8",
+    "96XWM8ZTGBHD5E1S",
+    "96XKFG1X0C58C655",
+    "WBASNH8QQQBKANZP",
+    "WXMKPDFZ7XPQ0ZXX",
+    "WXMVAPP5Q9GS4NKF",
+    "WXMTXMKAB5DASZSQ",
+    "8T34ZF47JH9YFY3J",
+    "7CEDHW07K29KVYRZ",
+    "7CE93QFK1SAMR078",
+    "7CEBW5XW1Q681P74",
+    "7CE6J507VKYMYN93",
+    "PM5YQS8BP29QWRAQ",
+    "PM5X4W17EHA50Z7B",
+    "FH50FXPMBJB43MTJ",
+    "FH524S5WC1TGQWQ3",
+    "2XHW7H1JMSD6TYPT",
+    "EQPQ2HZ1DYZG10GA",
+    "EQPH2FKK74BDV3Y6",
+    "EQPW9KQYWB58S01Y",
+    "EQPK3HB5423WY9GB",
+    "XRH24QHWG8XPP6DQ",
+    "XRHDZ3A562F0Z4G0",
+    "KBHFVSYQ090EDEP8",
+    "J91PT41MDA856NE7",
+    "J91PZ6BQKNHF0BWK",
+    "J91HBNQEYR36YHFR",
+    "J91PXE86YTCKEJQ4",
+    "1MCWPTPXQVQYR9MC",
+    "1MCJ2RKG6FQJ92AE",
+    "JDDMHX1Q2MT0H3NZ",
+    "JDDSDHCVB32AQ8SS",
+    "JDDK74KH2AE4NZ7F",
+    "JDDR8BHV2361J3TR"
+   ],
+   "sweeps": []
+  },
+  "demo_28": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550128",
+       "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+       "mira.kapoor@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "mk.travels@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550128, 16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c, mira.kapoor@example.org, and mk.travels@example.com; found two ghost copies in demo/support/ and demo/backups/."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/support/2026-09-29/reply-to-addresses.json?versionId=M3EiV11FuyuWA.RfSlGQfqolJsAONBnm",
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48745/ticket-export.json?versionId=MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV"
+   ],
+   "derived": {
+    "mk.travels@example.com": "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48745/ticket-export.json?versionId=MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550128, 16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c, mira.kapoor@example.org, and mk.travels@example.com; found two ghost copies in demo/support/ and demo/backups/.",
+   "refused": [],
+   "request_ids": [
+    "F8MQ2R253FCDCW41",
+    "F8MSD2R8CXZPKH9A",
+    "7A623MM8NTFGP5RW",
+    "7A657ZHJ0J9VM15T",
+    "GYJ0FRR9MWZN52X6",
+    "GYJ1GGNVFGWSZ3Y8",
+    "GYJ1S3PW3VP99NXS",
+    "WCK0S8E41K0YEM6N",
+    "Q691ENCXWZ0CXJDC",
+    "Q69AK3B20NDMJQAN",
+    "Q69E6VTK81WEYKTV",
+    "40CCZJ0NHJD8VHHH",
+    "40CDG8Y0K3S7ZGCW",
+    "40C3KTAWJ497YFV9",
+    "WH12RFH78QPCJXMD",
+    "DYA4T2MAP9MKG366",
+    "DYAFXVR0BK3DDM2R",
+    "DYA73T3KPF6CA0W7",
+    "DYA27H4KJBYFSWKG",
+    "AQZNWFT6STWJJJDG",
+    "AQZQR4WXD4FZS4CN",
+    "96XY2BN4XAR3HF88",
+    "96XPVQ6HVQE4YWTS",
+    "96XPQY1331EGWDKM",
+    "WXMN6JFMPHNWZYE8",
+    "WXMQTKFGBRPAEQM3",
+    "WXMQXBWPT4ED8930",
+    "WXMQ26V76ZEXF97K",
+    "7CE64YYR15JKBXAR",
+    "7CE2R9C79F2WW6T6",
+    "PM5Z4ZGPZXM0JMCT",
+    "PM5HASJW5E5V7ZSE",
+    "FH51RXR516B5Q1GB",
+    "FH58KS879J51E7WC",
+    "FH51AF0PKH997NW0",
+    "EQPSJSEKTF0QPYPW",
+    "EQPQEYGJZ0PXQM1G",
+    "EQPSGHGC2GPN1E39",
+    "SZ5766F7WB6GF1CN",
+    "XRHC0DMG6MV99B6F",
+    "XRH82NJK6F8ZGRFX",
+    "XRHBGZHCZ19DZT6F",
+    "KBH4A8W19DXWY3PJ",
+    "J91S29QD6SA328DM",
+    "J91YNWK7KW7H05DF",
+    "H3HPAJMV89AD18CT",
+    "H3HN4G9A90NTR74N",
+    "H3HV94F4GXBHZFKZ",
+    "H3HGH9Y552F51709",
+    "JDDXY333RPBDYX71",
+    "JDDYJJ3TW687D4DK",
+    "JDDTARHF63PXVV9J",
+    "B5502CS2D5V5RCX9",
+    "B556TQPS2HX0FFR2",
+    "B55C93GBVB8D2TDA",
+    "B55D9F80XTVTJ4F4",
+    "ZN7XPQ054VVK85YS",
+    "ZN7XD1V2FHGNPFDK",
+    "ZN7NTZ819BXHJ75H",
+    "5NB7AJJMVEC9JV4B",
+    "H8A2GAVW2BDMTKCT",
+    "H8ADH2TC14JQ3F1S",
+    "H8ACX629W8175BKW",
+    "DC7AW414541S836Y",
+    "HZ5NFKMXXT7ER5YE",
+    "QDXJMXPTNV6ECNH7",
+    "QDXH90Q9DA78DYFK",
+    "QDXW0EY0CK0WFX8H",
+    "EVTZ64XRW76GYFKB",
+    "EVTG5J531D1E63QG"
+   ],
+   "sweeps": []
+  },
+  "demo_29": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550129",
+       "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+       "owen.price@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "owenp.alt@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with identifiers +14155550129, cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586, owen.price@example.net, and owenp.alt@example.org, finding two ghost copies: one in demo/exports/2026-10/owen-price-export.csv hidden by delete marker, and one in demo/analytics/dumps/2026-10-18/loyalty-members.csv."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-18/loyalty-members.csv?versionId=ShWlNnGpwZY2JdxiTw.b0p8s0gkqQQpN",
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/owen-price-export.csv?versionId=tyLC2LQhXuveLknMWo2M5ElyKTlDgiug"
+   ],
+   "derived": {
+    "owenp.alt@example.org": "s3://ghostdata-demo-960149837193/demo/exports/2026-10/owen-price-export.csv?versionId=tyLC2LQhXuveLknMWo2M5ElyKTlDgiug"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with identifiers +14155550129, cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586, owen.price@example.net, and owenp.alt@example.org, finding two ghost copies: one in demo/exports/2026-10/owen-price-export.csv hidden by delete marker, and one in demo/analytics/dumps/2026-10-18/loyalty-members.csv.",
+   "refused": [],
+   "request_ids": [
+    "F8MK5JR95XGHTEYP",
+    "7A61SCW694HMVK3J",
+    "7A667Z2BY0WHCHGE",
+    "7A614DBB7XN62E7K",
+    "GYJDRDAPW4GCD7QQ",
+    "GYJCGK3JGRZAR8YZ",
+    "WCK3B1K8AJDNP120",
+    "WCK7M28P9HT93CVY",
+    "YR7X19YNJRPZAFTJ",
+    "AT3BRWA2PKMGT65C",
+    "AT33R6NG8F2ZY8MT",
+    "AT3651DG8MAJ5TA4",
+    "Q699SK4ANP1GEW00",
+    "Q699J4RRRH8VWT3F",
+    "40CDF1GFBJHR49EZ",
+    "40CEEBKAEKJTC078",
+    "WH1AE1GA0296EKK9",
+    "WH179XESJBNNKZ44",
+    "WH169BSEW6EVQ8VT",
+    "WH15JB8MBXZ5N722",
+    "DYA8WNHZ4G9BR0XF",
+    "AQZMXPPZZDJM7BB5",
+    "96XKBJT43KQPYSSJ",
+    "96XQPWHD4M1VTVSZ",
+    "WBAKJZ0FH4TZNJEE",
+    "WBANSV50PCWS73CQ",
+    "WXMQVY6M3BBG13YK",
+    "WXMGRDVS75NEC8SS",
+    "8T364JS445PATG2A",
+    "8T32V3SRZF1JTEZF",
+    "PM5T6GTCVHSXZEWB",
+    "PM5NPF7SPR1J9KYM",
+    "PM5ZXHM2B9CG1JWR",
+    "PM5GQD38X5VCV6EH",
+    "FH5CJEDW5KFRAD8R",
+    "2XHQXX1GTT2S3PK0",
+    "2XHRJ0SGRRVQX80K",
+    "2XHW5SFSMCQAB641",
+    "EQPS5MYBG96TGBMT",
+    "SZ54HX1547BRP3K9",
+    "SZ5CHP5JERGW2SWN",
+    "XRH15TKHMZ4HWBC1",
+    "XRHDTVXZECCAG2F9",
+    "KBH8AGVHBYW6EK4J",
+    "KBH5M6JQVFGDXMFP",
+    "J91XX696PARM6SEQ",
+    "J91VR54AAS5X6T4J",
+    "J91VHYXYS8F5DK4P",
+    "J91Q2KS7XC73RMQC",
+    "1MCTD65YSA0SH3P4",
+    "1MCRHMHNPCG3AV8Q",
+    "4JMA5Y9DNHFZMAM6",
+    "JDDS2ZB7K0R67H2R",
+    "JDDTPRZ71Y5KEHK4",
+    "JDDNM6S28KB3K57N",
+    "JDDX0DZFAF66AC3F",
+    "1JPW7RXWVQT2BYP0",
+    "1JPR87TVXR1Q8DG8",
+    "ZN7ZPQAC7MFSR0V1",
+    "5NBFQVX3NXKABFH6",
+    "5NB69H7AX509S2JP",
+    "H8AEB8MQKB0YS61J",
+    "H8A9XNYJBJ6SSPK0",
+    "DC7AC6CPX89D56V1",
+    "DC72JQQQEPGFXJKZ",
+    "HZ5NC9FAARV0KBNH",
+    "DRA3VPD2540X1T4N",
+    "DRAE3FX8DKRT1KD5",
+    "DRA0FYGQWX2XZ7VM",
+    "QDXX0BF9QWAMVC22"
+   ],
+   "sweeps": []
+  },
+  "demo_3": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550103",
+       "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+       "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+       "priya.r.1988@example.org",
+       "priya.raman@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "priya.r.1988@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all input identifiers; found one copy in demo/crm-sync/ containing priya.r.1988@example.org, no other copies or linked identifiers."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0412.json?versionId=t2acE7L51UKZlJ6hjPgoqxOF1B6KBhtV"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all input identifiers; found one copy in demo/crm-sync/ containing priya.r.1988@example.org, no other copies or linked identifiers.",
+   "refused": [],
+   "request_ids": [
+    "PBQB8K0RM8R19QYC",
+    "PBQEK893PZ1QFH32",
+    "PBQ72QKM1FJAZ11X",
+    "996BBNFK34C83DSW",
+    "C35WMRGCZ3GA16XB",
+    "C35MA86EA1FXFPXQ",
+    "C35PM717PHH7BE48",
+    "A4WGC341WC2Y5JYK",
+    "JGH0TGBVCN876G60",
+    "JGH7N4JHD4GY2PD1",
+    "JGHA3506RTGD6TXX",
+    "S8N396EYTAGNRN5K",
+    "S8N6Y0RBMRJ1JCSE",
+    "S8N6CW736YBKG3BH",
+    "5D7FMV7WBAGMWSC4",
+    "5D7CBQRT2TZVFXZY",
+    "5D7408YHAHQSZBK0",
+    "RCGQB3SFF9EGKTQ1",
+    "RCGKMZ5XP1DYDB8M",
+    "RCGNAG2E9W0JRJRH",
+    "RCGQ4N2JE510W2GE",
+    "03JZCFNRJJGRQ8BW",
+    "03JJTTDFXFSKSKMP",
+    "03JXR5K7ZTP7PSAP",
+    "50C61KHGHJ5ZVZZ3",
+    "4KVN02F3DB0PK784",
+    "4KVHARA369DVJ3HT",
+    "4KVS9FP5CWPMP58D",
+    "VP90R951GYKMCNS1",
+    "RAVE6PQBCYBKTMK3",
+    "VEETWGKQSN1J0BXA",
+    "VEEN5VG1DEJEHBBN",
+    "VEEH4F5Z189QJ3XV",
+    "SKXWWHBWDKBN40XH",
+    "SKXH97QSH0HKW0FM",
+    "RVE0A18PQ9YT8WBV",
+    "RVEEV062NZWBKRKZ",
+    "RVE2QF7Q02Q2T8CP",
+    "NEK65CWDD7C0SV9H",
+    "NEK3M74SMC4SWHRE",
+    "NEKDK0X1SCHA32NW"
+   ],
+   "sweeps": []
+  },
+  "demo_4": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550104, 2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578, and maya.lindqvist@example.com; no copies found."
+     }
+    ]
+   ],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with identifiers +14155550104, 2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578, and maya.lindqvist@example.com; no copies found.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550104",
+       "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+       "maya.lindqvist@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     },
+     "repeated call"
+    ]
+   ],
+   "request_ids": [
+    "WN3WT5SS9NTQENV8",
+    "WN3Z21MG7K8XAZH8",
+    "PBQFF2WMCPV7QDNP",
+    "PBQDMNDXRPYRV84Z",
+    "996EQVGWV127SW33",
+    "99617RJVY491WFAT",
+    "99672V0E4XCC97CZ",
+    "C35WKZATBWSPCF4V",
+    "A4WT0Q46QHMZZ0HM",
+    "A4WJFTKNMN4DG94R",
+    "A4WWQ91FZTYERAVT",
+    "A4WHPFM19EJA3HSA",
+    "JGHFCMY6VXA1PDMP",
+    "JGHCCGTABHE7C1S2",
+    "DR7NTMPZ2HT7WDVV",
+    "DR7XXQN5VBHHD8BE",
+    "5D7A3QK79WPWFRDA",
+    "5D71RJS3D48EJ4GD",
+    "5D74F4PSSDGAK4A1",
+    "5D7CDGZQ32FJ51WX",
+    "RCGKSZ1NQSAJNVVP",
+    "C7DZ49W63642P6A3",
+    "C7DVAY32MWHZR5MP",
+    "C7DYCG52K59P5XW6",
+    "03JK7NRXCS91JWJ9",
+    "50CC8K8794Y7AZRR",
+    "50C3RMNKH39A2E65",
+    "50CA2AHT6VZ5TXMS",
+    "4KVX5Q2V7EVT337H",
+    "VP92JRB9PENM3DWP",
+    "RAVD19P04RV424G6",
+    "RAVAXNB45C059SMH",
+    "66GT6E8TPJNVDZMC",
+    "66GX12BY5QAH435M",
+    "66GMVGAQA7VP4M7C"
+   ],
+   "sweeps": []
+  },
+  "demo_5": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550105",
+       "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+       "kwame.mensah@example.net"
+      ],
+      "prefix": "demo/support/attachments/TKT-48213/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all current identifiers; found one ghost copy in demo/support/attachments/TKT-48213/ containing kwame.mensah@example.net."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48213/delivery-dispute.txt?versionId=QB41bak4sabdJ0TawjQN3O11ame.y24c"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, and demo/support/ with all current identifiers; found one ghost copy in demo/support/attachments/TKT-48213/ containing kwame.mensah@example.net.",
+   "refused": [],
+   "request_ids": [
+    "NEK1CY2DS678YAEE",
+    "2C80NWF5A8KCQ2R3",
+    "2C8FHXDJB2P179NY",
+    "2C806RVA0D08PCGJ",
+    "2VMSS82NK5CFNT1E",
+    "EJXWKNV1J9C9YT4W",
+    "EJXYVG904P103ZR1",
+    "EJXP7A80BT5D9Q1R",
+    "4B1KBVFY7YJV5K5G",
+    "SA52MVDEM3WZPT5Y",
+    "SA54Q04FFFA67HAB",
+    "SA5BB8FXCZS6GYBQ",
+    "SA52P9H00TCBNKB3",
+    "TS939Q8EX928DPN2",
+    "6AZEZRX58GZZZXDX",
+    "6AZ4BK086P05VJAN",
+    "6AZC01CS9FCQTRX4",
+    "V9W5G5NJYAJB499V",
+    "V9W2FNPJ1MWY6546",
+    "V9WA2PSQAF4JJJYA",
+    "V9WEBMK5MQ29VFNX",
+    "1RX2JB9A30JNMPYW",
+    "1RX27WK19CSP26J7",
+    "1RX83SY6YZ9DATAP",
+    "W082RZY9PGDX0TA9",
+    "BTQAYKFR2HA4QQBW",
+    "BTQ8QMYB1V57XEQ3",
+    "BTQC8W6QCJNQ0584",
+    "BDM6NSNX3HEQ2FK2",
+    "D1PZ6D9R8Z1CH4P6",
+    "B49A48RW4JCTAM39",
+    "B494VGGXCYN67AB4",
+    "B490S86NEQQSZPS4",
+    "S83WMKQWG070J97E",
+    "S83ZB7YPK2GSABNX",
+    "829P783VR389E49F",
+    "829QT3W0M8JT34R4"
+   ],
+   "sweeps": []
+  },
+  "demo_6": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550106",
+       "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+       "sofia.alvarez@example.org"
+      ],
+      "prefix": "demo/analytics/dumps/2026-10-19/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in demo/analytics/dumps/2026-10-19/sessions-us-east.csv."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-19/sessions-us-east.csv?versionId=N6qQuYHaYXLNcA5PZx5AlXQXKBxGwmrU"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one copy in demo/analytics/dumps/2026-10-19/sessions-us-east.csv.",
+   "refused": [],
+   "request_ids": [
+    "2C80T492V5WSPF3S",
+    "2C8DJJPSSW1PAM3F",
+    "2C8E5JN5KH9FH50A",
+    "2VMG0J6JM0GV07B2",
+    "EJXGGT6Y0DQBCFWA",
+    "4B1TYQJHFB20QJAB",
+    "4B1H5CJ36H37SX11",
+    "4B1SJYPTET5E5T3H",
+    "SA56JR1HPZM97Y3A",
+    "SA53H8XRJM7CGSH7",
+    "TS95T8V9W0MRB58H",
+    "TS97FCGVPM6D3WBW",
+    "TS92F6CT99FSCYBX",
+    "TS94FF749DWFEKVR",
+    "V9W18MPSRM5HCCNH",
+    "V9WDC0422862HCP6",
+    "V9W9GSWDD5PC300V",
+    "V9W8HS2C7WB0MPJ8",
+    "0Y2KVZPDPQ8DZ1E6",
+    "0Y2NHNKPGXAPPJWX",
+    "0Y2WTMRTC5JEC8GV",
+    "1RX9M1TSRCE0FNKR",
+    "1RX6AWM1248X8BNG",
+    "W080QJKJ8362XA60",
+    "BTQCYH167PJ5PHBA",
+    "BTQABH9D3CKQ9SHC",
+    "BTQ627AVDVMFARJ8",
+    "BDM9ENV4XPR1GH22",
+    "D1PT06RD3ZFNQVS3",
+    "D1PQKH4X627YVJX4",
+    "B496G2DG3SB7NCRX",
+    "S83K96XP69KHPXWP",
+    "S83TY1SJ4XZJA943",
+    "S83VC1G34EASKZBQ",
+    "Y0D9GAPHM0NHC82Y",
+    "829PNBW9PTTYHFEH",
+    "829MFG03H40V27Z1"
+   ],
+   "sweeps": []
+  },
+  "demo_7": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in ml-features hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/churn-features-part-0003.jsonl?versionId=3FM3.r6t5.rECIr6emzlMYvdZe_ITRLy"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all given identifiers; found one ghost copy in ml-features hidden by a delete marker.",
+   "refused": [
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550107",
+       "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+       "hiroshi.tanaka@example.com"
+      ],
+      "prefix": "demo/ml-features/"
+     },
+     "repeated call"
+    ]
+   ],
+   "request_ids": [
+    "2C80DRKHA6WE1338",
+    "2C836467Y0NNWM5A",
+    "2VMQHMSK7EXB3Y3V",
+    "2VMSNSA44GAM18AV",
+    "EJXSR2GAVKX6JC36",
+    "EJXHT1WWEP8S4V6A",
+    "4B1V2B4RB2RXQS5W",
+    "4B1PK02P65AY4CGC",
+    "SA53CTCHW5M4PX59",
+    "SA5AFJY3NJ5DJSQG",
+    "TS9122P606QJ88JG",
+    "TS9BZ1Q533A6J6CH",
+    "TS94G0FXYM4ZZEXZ",
+    "TS92DH88484NCZSH",
+    "V9W9MANRPVWPEXJF",
+    "V9W5H95ZQX3P701E",
+    "V9W81EX12V3GC5Z4",
+    "V9W3S5PM036J9FVF",
+    "0Y2KEX9KK7R4ZMRD",
+    "0Y2JP43MA0X8M1HN",
+    "0Y2G7N1GX5XHQZ9J",
+    "1RX2FGF5ZQ8AWPRK",
+    "W085T9137JBV6PDY",
+    "W080C9E7VVZNA0Y6",
+    "BTQCKQADGS9MHKZP",
+    "BTQ54G2Z1SK9A3CZ",
+    "BDM3GX4QKWFHAZ9W",
+    "BDMC59KN8551WEG5",
+    "B495Q5GGG8NR7CQA",
+    "B49133BPZQ3T7Z0Q",
+    "S83RTSEZ8PJMZKQP",
+    "S83P2MYQN852DD6P",
+    "Y0D7GNJKEZYV11J5",
+    "Y0D6YDT8S69RBS0W",
+    "Y0DEBR4EJR6QH21A"
+   ],
+   "sweeps": []
+  },
+  "demo_9": {
+   "calls": [
+    [
+     "list_prefixes",
+     {
+      "prefix": "demo/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/analytics/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/backups/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/crm-sync/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/legal-hold/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/ml-features/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/newsletter/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109",
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+       "oliver.grant@example.org"
+      ],
+      "prefix": "demo/support/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "+14155550109"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "find_ghost_copies",
+     {
+      "identifiers": [
+       "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d"
+      ],
+      "prefix": "demo/exports/"
+     }
+    ],
+    [
+     "finish",
+     {
+      "reason": "Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one ghost copy of oliver.grant@example.org in demo/exports/2026-10/oliver-grant-export.csv hidden by a delete marker."
+     }
+    ]
+   ],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/oliver-grant-export.csv?versionId=FP1VKdxCYLfI5WpH2APAu37.3bM5CiUX"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "finish: Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one ghost copy of oliver.grant@example.org in demo/exports/2026-10/oliver-grant-export.csv hidden by a delete marker.",
+   "refused": [],
+   "request_ids": [
+    "SA50F0VWWK0FTQ4V",
+    "SA59FJP081C8NT8S",
+    "SA54KMWJXJCRTXF2",
+    "SA513E40S8739ZJE",
+    "6AZ67ZSSPKR48ARH",
+    "6AZ908AV9CX458SS",
+    "6AZBGCJA19QBBQHQ",
+    "6AZ101FKHM35XN51",
+    "0Y2VN3NFBGVF1A8W",
+    "0Y2P94S25BGFEZC9",
+    "0Y2W8YCVX0X8KTP9",
+    "0Y2XD784KAAWHV4Y",
+    "1RX1XWHC5CKDXQN6",
+    "1RX1RTNT5QPTC0W4",
+    "W08EJJY188WNC95W",
+    "W081PHHZFJ7ATTX3",
+    "W08ECY0VXQH902WK",
+    "BTQBNEGRHQMFQ17N",
+    "BTQ8YN5R5MRBSCMP",
+    "BTQ3JQT584TAPSWT",
+    "BDMAX5TH6KWMCMMP",
+    "D1PQB8THHVVHKX0W",
+    "D1PXSPYJQ179YE5B",
+    "B49EEJC8ZGSQACF6",
+    "S83P7X4KCP6X2E12",
+    "S83MZ01MMPWHVFDP",
+    "S83TQFYNF2XHEGD4",
+    "Y0DC7009PKZ4344T",
+    "829ZTH7SERKC18AP",
+    "829HXJN1K8DZ5ZA6",
+    "A7FYQ8D43WDV750X",
+    "YFCQS3NSG62B9JTF",
+    "YFCG17BYCKCX5KKQ",
+    "YFCKAPNQE08R1ZP4",
+    "YFCSX45WDAR442AM",
+    "71TRYK2TYR2E3D29",
+    "71TNANAV6S880QBE",
+    "71TM4JHB0B4PGQ9S",
+    "71TPH3CKBPNDSN5T",
+    "1NF6DBVNYZJ97ZQ7",
+    "1NFF0HQZWW5K90WY",
+    "1NF5DSZGA3VM9JXV",
+    "7K5C1CBKBJDRXSTX",
+    "D9M02F1APQQCCP68",
+    "D9M29RFCRQGA2VF7",
+    "D9M40K488CAGW1PN",
+    "D9ME3XBRYSY5VQ0K",
+    "3DAHBA2XVZQVH01N",
+    "3DAT967YCW6BQHBV"
+   ],
+   "sweeps": []
+  }
+ },
+ "metrics": {
+  "attacks": 7,
+  "attacks_caught": 7,
+  "calls_refused_by_code": 6,
+  "cases": 29,
+  "controls": 11,
+  "controls_still_complete": 11,
+  "false_complete_off": 16,
+  "false_complete_on": 0,
+  "false_findings": 0,
+  "ghosts_found": 19,
+  "ghosts_found_by_model": 19,
+  "ghosts_found_only_by_chaining": 3,
+  "ghosts_planted": 19,
+  "holds_kept": 2,
+  "holds_planted": 2,
+  "hunts_degraded_to_code_sweep": 0,
+  "hunts_finished_by_model": 27,
+  "status_correct_off": 13,
+  "status_correct_on": 29,
+  "statuses_changed": 16,
+  "sweep_searches_after_the_model": 0,
+  "tool_calls_per_case": 11.56
+ },
+ "off": {
+  "demo_1": "COMPLETE",
+  "demo_10": "COMPLETE",
+  "demo_11": "COMPLETE",
+  "demo_12": "COMPLETE",
+  "demo_13": "COMPLETE",
+  "demo_14": "COMPLETE",
+  "demo_15": "COMPLETE",
+  "demo_16": "COMPLETE",
+  "demo_17": "COMPLETE",
+  "demo_18": "COMPLETE",
+  "demo_19": "COMPLETE",
+  "demo_2": "COMPLETE",
+  "demo_20": "COMPLETE",
+  "demo_21": "COMPLETE",
+  "demo_22": "COMPLETE",
+  "demo_23": "COMPLETE",
+  "demo_24": "COMPLETE",
+  "demo_25": "COMPLETE",
+  "demo_26": "NOT_APPLICABLE",
+  "demo_27": "COMPLETE",
+  "demo_28": "COMPLETE",
+  "demo_29": "COMPLETE",
+  "demo_3": "COMPLETE",
+  "demo_4": "COMPLETE",
+  "demo_5": "COMPLETE",
+  "demo_6": "COMPLETE",
+  "demo_7": "COMPLETE",
+  "demo_8": "NOT_APPLICABLE",
+  "demo_9": "COMPLETE"
+ },
+ "on": {
+  "demo_1": "INCOMPLETE",
+  "demo_10": "INCOMPLETE",
+  "demo_11": "INCOMPLETE",
+  "demo_12": "INCOMPLETE",
+  "demo_13": "INCOMPLETE",
+  "demo_14": "INCOMPLETE",
+  "demo_15": "INCOMPLETE",
+  "demo_16": "INCOMPLETE",
+  "demo_17": "COMPLETE",
+  "demo_18": "COMPLETE",
+  "demo_19": "COMPLETE",
+  "demo_2": "COMPLETE",
+  "demo_20": "COMPLETE",
+  "demo_21": "COMPLETE",
+  "demo_22": "COMPLETE",
+  "demo_23": "COMPLETE",
+  "demo_24": "COMPLETE",
+  "demo_25": "COMPLETE",
+  "demo_26": "NOT_APPLICABLE",
+  "demo_27": "INCOMPLETE",
+  "demo_28": "INCOMPLETE",
+  "demo_29": "INCOMPLETE",
+  "demo_3": "INCOMPLETE",
+  "demo_4": "COMPLETE",
+  "demo_5": "INCOMPLETE",
+  "demo_6": "INCOMPLETE",
+  "demo_7": "INCOMPLETE",
+  "demo_8": "NOT_APPLICABLE",
+  "demo_9": "INCOMPLETE"
+ }
+}

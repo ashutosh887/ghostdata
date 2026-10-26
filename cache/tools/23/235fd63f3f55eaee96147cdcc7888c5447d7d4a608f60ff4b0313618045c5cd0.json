@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8744443ae4a274f3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-95f8b07cadc4b7c3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8aba7a022bfedd90",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b226ae11e22ec8db",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8a456897964ad7af",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a06ddd719b64bcad",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9b0cb28b7bb20245",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   }
+  ]
+ }
+}

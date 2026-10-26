@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-ae422eff01b4b6e1",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-82cf3ecb81d76fbf",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b648b80ede7d3a71",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a92fca7894093ead",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-907021c03eae3992",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b7e0105f49bd2636",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ad6ef82abaa69680",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550102\", \"08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a\", \"tobias.brandt@example.net\"]}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a1a7ba79a83d5353",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bfdf08908634c940",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8d1e42972db846e3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8ef18832465cf788",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a767020c112979d3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a39f75c6f5475d14",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b063d81467cd9867",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550109\", \"8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d\", \"oliver.grant@example.org\"]}"
+   }
+  ]
+ }
+}

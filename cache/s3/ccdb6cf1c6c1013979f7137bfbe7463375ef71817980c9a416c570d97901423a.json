@@ -1,0 +1,36 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/newsletter/2026-09/weekly-digest-subscribers.csv",
+   "last_modified": "2026-10-26T04:36:28+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "lucas.f.gaming@example.net"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL",
+    "NAME"
+   ],
+   "version_id": "aqaU5mYCDOCn4pZrbm2PmIidsf9.h9p.",
+   "window": "est,subscribed,1623\npedro.saraiva@example.net,2026-09-13,loyalty,subscribed,336\nlucas.f.gaming@example.net,2026-04-11,weekly_digest,bounced,439\nruth.abernathy@example.net,2026-07-23,loya"
+  }
+ ],
+ "delete_markers": 1,
+ "identifiers": [
+  "lucas.f.gaming@example.net"
+ ],
+ "prefix": "demo/newsletter/",
+ "request_ids": [
+  "64DPQXPBSH3E0PZW",
+  "HBQX6M5RBXFWJ8SV"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 1
+}

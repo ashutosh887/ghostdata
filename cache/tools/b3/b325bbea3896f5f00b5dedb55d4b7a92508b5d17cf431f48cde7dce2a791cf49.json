@@ -1,0 +1,49 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-992f712344a89892",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/analytics/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-816267a87beefee0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bcae6fa493df00d3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a501f27593bcd90f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9b9bf973d7d33d8a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ace6b830f0089c85",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-af6356b6595048a3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a752ae1020c2891a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"owenp.alt@example.org\"]}"
+   }
+  ]
+ }
+}

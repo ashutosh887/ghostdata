@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-93d97e9ae8890c2c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/LH-2026-014/\", \"identifiers\": [\"+14155550124\", \"64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83\", \"marcus.hale@example.net\"]}"
+   }
+  ]
+ }
+}

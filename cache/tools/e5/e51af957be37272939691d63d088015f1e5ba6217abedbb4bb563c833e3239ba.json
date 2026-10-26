@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-bf65084efe1b9392",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-81eb7316bdc59f2d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-955fc8926e2e43c0",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a865ec20e5d7cc1b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9fe352bd59017d4e",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9444b23cf16972b1",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-93b1cf6fc80a23e3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550120\", \"a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835\", \"jonas.berg@example.com\"]}"
+   }
+  ]
+ }
+}

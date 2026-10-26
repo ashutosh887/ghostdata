@@ -1,0 +1,22 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550102",
+  "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+  "tobias.brandt@example.net"
+ ],
+ "prefix": "demo/crm-sync/",
+ "request_ids": [
+  "636Q8BS6JE6BQMVB",
+  "636NNMM5KKJD1RVS",
+  "C9DYM9GF6EJMW32B",
+  "C9DK6C4G818FA0JW",
+  "C9DS52Q3WY8291YD",
+  "C9DW81XCYWAJFW8D"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 5
+}

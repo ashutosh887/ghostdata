@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-843a3e312f83fb47",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9957fc12ccc6b0ca",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b7c8d4ba6a70de63",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ad62e4ae6eb83c67",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-90da9abd41cf375d",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-87b1231e05321889",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ad7ff7268baaedaf",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550128\", \"16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c\", \"mira.kapoor@example.org\"]}"
+   }
+  ]
+ }
+}

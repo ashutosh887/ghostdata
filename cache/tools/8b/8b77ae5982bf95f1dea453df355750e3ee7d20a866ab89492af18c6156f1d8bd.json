@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-acfd0d7bca800214",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-947a9fa0f031306c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bc5aceaf1b03efc1",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b69e1e0c706c66ad",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-98e3d9643b2e7cf3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-98ba68c5e0a6ec13",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-93d99c34cb27ad9f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550127\", \"d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8\", \"lucas.ferreira@example.com\"]}"
+   }
+  ]
+ }
+}

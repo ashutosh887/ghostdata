@@ -1,0 +1,23 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [],
+ "delete_markers": 5,
+ "identifiers": [
+  "+14155550104",
+  "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+  "maya.lindqvist@example.com"
+ ],
+ "prefix": "demo/exports/",
+ "request_ids": [
+  "X99STQ5ABX468M3C",
+  "X99TM2426MGGK6CS",
+  "8DYMM12NTGA0MJ9T",
+  "8DYZ6DX3RSZSC539",
+  "8DYH4ZK5QEWT2DK2",
+  "8DYV5SX0N8JY9DCT",
+  "S86WTXV1MZXDD9SY"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 6
+}

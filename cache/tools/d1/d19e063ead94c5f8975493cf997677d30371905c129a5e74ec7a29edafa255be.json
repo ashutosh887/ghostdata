@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a1ca119d5bdaf128",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-99184e09eaf08fe3",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-99c0c712b647b70c",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b102f5b36c9dcdbb",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-872eb8d5d425e685",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a385a0a3ae66ed48",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-82675011c94c3aae",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550129\", \"cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586\", \"owen.price@example.net\"]}"
+   }
+  ]
+ }
+}

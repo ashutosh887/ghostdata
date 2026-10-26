@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-a17be7d9a8e695ff",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8085b23120adf2ad",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ae6dcb321bc33708",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b50766989407e2d7",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a7f32f83a4461d11",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-86191737820865de",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a2c27ac736f4de16",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550107\", \"9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c\", \"hiroshi.tanaka@example.com\"]}"
+   }
+  ]
+ }
+}

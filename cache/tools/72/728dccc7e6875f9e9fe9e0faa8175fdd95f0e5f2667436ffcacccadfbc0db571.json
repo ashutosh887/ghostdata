@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-839be55ea034f1fc",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a6efc6621f75f785",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a67aa83374705a3a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-817937836084f889",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a721711a5aec2035",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9bcbb4832969e42a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9cf0a6b12dd0a07a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550119\", \"4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886\", \"grace.holloway@example.org\"]}"
+   }
+  ]
+ }
+}

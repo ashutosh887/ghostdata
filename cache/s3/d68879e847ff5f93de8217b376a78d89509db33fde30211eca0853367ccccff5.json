@@ -1,0 +1,39 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": false,
+   "is_latest": true,
+   "key": "demo/analytics/dumps/2026-10-19/sessions-us-east.csv",
+   "last_modified": "2026-10-26T04:36:19+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "+14155550106"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "PHONE"
+   ],
+   "version_id": "N6qQuYHaYXLNcA5PZx5AlXQXKBxGwmrU",
+   "window": "1:00Z,,+12125550155,CA,ios,25,checkout\nsess-63891818,2026-10-19T11:29:00Z,,+14155550106,GB,web,14,browse\nsess-14462593,2026-10-19T12:16:00Z,,+12125550161,US,ios,21,che"
+  }
+ ],
+ "delete_markers": 0,
+ "identifiers": [
+  "+14155550106",
+  "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+  "sofia.alvarez@example.org"
+ ],
+ "prefix": "demo/analytics/",
+ "request_ids": [
+  "ZW2BJRRY41Z84HJ3",
+  "ZW26VX3M9TFQETPT",
+  "ZW2C72D4B5C2PCZG",
+  "ZXQBB3AK5A8TS6HT"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

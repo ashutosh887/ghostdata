@@ -1,0 +1,36 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/backups/support/2026-09-29/reply-to-addresses.json",
+   "last_modified": "2026-10-26T04:36:30+00:00",
+   "legal_hold": false,
+   "linked": [],
+   "matched": [
+    "mk.travels@example.com"
+   ],
+   "pii_types": [
+    "EMAIL"
+   ],
+   "version_id": "M3EiV11FuyuWA.RfSlGQfqolJsAONBnm",
+   "window": "hy@example.net\"\n    },\n    {\n      \"ticket_id\": \"TKT-41029\",\n      \"reply_to\": \"mk.travels@example.com\"\n    },\n    {\n      \"ticket_id\": \"TKT-41945\",\n      \"reply_to\": \"zoe.whitaker@e"
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "mk.travels@example.com"
+ ],
+ "prefix": "demo/backups/",
+ "request_ids": [
+  "FG3E6VT07PH8B5Z3",
+  "FG33V45R94RNDXEJ",
+  "FG3ESEYVF2QN3N7V",
+  "FG33CK8T4XRBS6ES"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}

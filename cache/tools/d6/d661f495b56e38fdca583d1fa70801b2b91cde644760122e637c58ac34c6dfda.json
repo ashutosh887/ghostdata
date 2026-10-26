@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8674d2488020c6fe",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/attachments/TKT-48213/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   }
+  ]
+ }
+}

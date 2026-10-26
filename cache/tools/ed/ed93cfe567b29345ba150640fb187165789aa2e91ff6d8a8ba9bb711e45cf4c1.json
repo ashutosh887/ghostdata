@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-ba7971cd50fdec0a",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders analytics, backups, crm-sync, exports, legal-hold, ml-features, newsletter, and support with all provided identifiers; found one ghost copy of oliver.grant@example.org in demo/exports/2026-10/oliver-grant-export.csv hidden by a delete marker.\"}"
+   }
+  ]
+ }
+}

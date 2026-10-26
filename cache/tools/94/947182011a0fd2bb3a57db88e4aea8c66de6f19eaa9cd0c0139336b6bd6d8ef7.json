@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8acee11e6fdb0a82",
+    "name": "finish",
+    "arguments": "{\"reason\": \"Searched folders demo/analytics/, demo/backups/, demo/crm-sync/, demo/exports/, demo/legal-hold/, demo/ml-features/, demo/newsletter/, demo/support/ with all input identifiers; one ghost copy found in demo/backups/ hidden by a delete marker, but follow-up search with linked identifiers was refused as they do not belong to the subject.\"}"
+   }
+  ]
+ }
+}

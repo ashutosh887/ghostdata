@@ -1,0 +1,34 @@
+{
+ "demo/analytics/": {
+  "delete_markers": 0,
+  "versions": 3
+ },
+ "demo/backups/": {
+  "delete_markers": 3,
+  "versions": 3
+ },
+ "demo/crm-sync/": {
+  "delete_markers": 3,
+  "versions": 5
+ },
+ "demo/exports/": {
+  "delete_markers": 5,
+  "versions": 6
+ },
+ "demo/legal-hold/": {
+  "delete_markers": 1,
+  "versions": 2
+ },
+ "demo/ml-features/": {
+  "delete_markers": 3,
+  "versions": 3
+ },
+ "demo/newsletter/": {
+  "delete_markers": 1,
+  "versions": 1
+ },
+ "demo/support/": {
+  "delete_markers": 4,
+  "versions": 4
+ }
+}

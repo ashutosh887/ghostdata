@@ -1,0 +1,43 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/crm-sync/2026-10/contacts-batch-0433.json",
+   "last_modified": "2026-10-26T04:36:27+00:00",
+   "legal_hold": false,
+   "linked": [
+    "lucas.f.gaming@example.net"
+   ],
+   "matched": [
+    "lucas.ferreira@example.com"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "NAME"
+   ],
+   "version_id": "7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA",
+   "window": "\"contact_id\": \"crm-44011\",\n      \"full_name\": \"Lucas Ferreira\",\n      \"email\": \"lucas.ferreira@example.com\",\n      \"phone\": null,\n      \"lifecycle_stage\": \"customer\",\n      \"owner\": \"sal"
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550127",
+  "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+  "lucas.ferreira@example.com"
+ ],
+ "prefix": "demo/crm-sync/",
+ "request_ids": [
+  "YMNCBSVYDB96HXVY",
+  "YMNDRCPFXJGZDGST",
+  "6CVZKJB20BRZCK0Q",
+  "6CVSW2XCN7FP0PAP",
+  "6CVRQWBZW9D4RNCA",
+  "6CVXEBCSXDWZ14N7"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 5
+}

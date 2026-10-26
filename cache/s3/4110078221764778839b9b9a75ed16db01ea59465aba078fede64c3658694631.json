@@ -1,0 +1,42 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/support/attachments/TKT-48745/ticket-export.json",
+   "last_modified": "2026-10-26T04:36:29+00:00",
+   "legal_hold": false,
+   "linked": [
+    "mk.travels@example.com"
+   ],
+   "matched": [
+    "mira.kapoor@example.org"
+   ],
+   "pii_types": [
+    "EMAIL",
+    "NAME"
+   ],
+   "version_id": "MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV",
+   "window": "  \"status\": \"closed\",\n  \"requester\": {\n    \"name\": \"Mira Kapoor\",\n    \"email\": \"mira.kapoor@example.org\",\n    \"reply_to\": \"mk.travels@example.com\"\n  },\n  \"cc\": [\n    \"leila.haddad@exa"
+  }
+ ],
+ "delete_markers": 4,
+ "identifiers": [
+  "+14155550128",
+  "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+  "mira.kapoor@example.org"
+ ],
+ "prefix": "demo/support/",
+ "request_ids": [
+  "XXEDZQGCJAC7232W",
+  "XXE878ZARGEA55QM",
+  "SCQKWE9NDXVD4Q6H",
+  "SCQT8H4W93FTTVQR",
+  "SCQGJ59VDE1KM4PB"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 4
+}

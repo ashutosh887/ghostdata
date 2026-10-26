@@ -1,0 +1,43 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/exports/2026-10/owen-price-export.csv",
+   "last_modified": "2026-10-26T04:36:30+00:00",
+   "legal_hold": false,
+   "linked": [
+    "owen.price@example.net"
+   ],
+   "matched": [
+    "owenp.alt@example.org"
+   ],
+   "pii_types": [
+    "DATE_TIME",
+    "EMAIL",
+    "NAME"
+   ],
+   "version_id": "tyLC2LQhXuveLknMWo2M5ElyKTlDgiug",
+   "window": ",phone,detail,recorded_at\nprofile,acct-371811,Owen Price,owen.price@example.net,owenp.alt@example.org,,account holder,2026-10-02T11:14:00Z\naddress_book,addr-1369,Mei Chen,mei.chen@e"
+  }
+ ],
+ "delete_markers": 5,
+ "identifiers": [
+  "owenp.alt@example.org"
+ ],
+ "prefix": "demo/exports/",
+ "request_ids": [
+  "JTF8FZN35B96YBCB",
+  "JTF0QHBB162PNW0T",
+  "W3PH1VJXAAZEWX88",
+  "W3PXM79QZM5WC7P6",
+  "W3PRKSQQJRZ6F896",
+  "W3PZXF7QEAAAWGJ9",
+  "64DJJPT7NFHM99AM"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 6
+}

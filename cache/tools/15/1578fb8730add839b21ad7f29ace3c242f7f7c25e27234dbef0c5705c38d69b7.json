@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-8bc39a2c815989bd",
+    "name": "list_prefixes",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\"}"
+   }
+  ]
+ }
+}

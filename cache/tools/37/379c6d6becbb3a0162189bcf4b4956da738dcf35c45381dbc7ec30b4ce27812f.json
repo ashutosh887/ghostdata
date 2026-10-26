@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-80d615a4b964a72f",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-8ad2c8b65fc44e63",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a88e08400e364786",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b6c2155bbe5bf787",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bb42b2adac7f3acd",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-829514ce6e956273",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-b70767aad7396122",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550123\", \"3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84\", \"clara.jensen@example.com\"]}"
+   }
+  ]
+ }
+}

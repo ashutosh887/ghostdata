@@ -1,0 +1,44 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-ab4c98ba179db7b8",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/backups/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-9d2134d491d3464a",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/crm-sync/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-ae198df09d65adfe",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/exports/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-982473e2b11dabfa",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/legal-hold/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-947ee2757f920e66",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/ml-features/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-a6af6f15f8533e9e",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/newsletter/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   },
+   {
+    "id": "chatcmpl-tool-bc5ad2ed4346700b",
+    "name": "find_ghost_copies",
+    "arguments": "{\"prefix\": \"demo/support/\", \"identifiers\": [\"+14155550105\", \"50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080\", \"kwame.mensah@example.net\"]}"
+   }
+  ]
+ }
+}

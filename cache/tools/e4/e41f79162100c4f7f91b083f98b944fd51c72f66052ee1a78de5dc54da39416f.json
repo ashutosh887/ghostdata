@@ -1,0 +1,14 @@
+{
+ "role": "ghost_hunt",
+ "model": "qwen.qwen3-235b-a22b-2507",
+ "message": {
+  "content": "",
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-846076a78f502b9a",
+    "name": "list_prefixes",
+    "arguments": "{\"prefix\": \"demo/\"}"
+   }
+  ]
+ }
+}

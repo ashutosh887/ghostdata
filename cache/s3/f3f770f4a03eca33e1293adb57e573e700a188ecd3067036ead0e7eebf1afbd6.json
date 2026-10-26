@@ -1,0 +1,10 @@
+{
+ "demo/crm-sync/2026-09/": {
+  "delete_markers": 1,
+  "versions": 0
+ },
+ "demo/crm-sync/2026-10/": {
+  "delete_markers": 2,
+  "versions": 2
+ }
+}

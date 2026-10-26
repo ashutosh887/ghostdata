@@ -1,0 +1,3473 @@
+{
+ "audit_at": null,
+ "hunts": {
+  "demo_1": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/elena-marchetti-export.csv?versionId=OHFqoUG9Efq68MKoLVXkSwe593JXyDYW"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "XNHJ2B2A39WEERGS",
+    "XNHSBDVMBFC39HFA",
+    "BWM9R4CH5SGZ1DA4",
+    "BWM225AJN16T41ZT",
+    "9DVM261VVWEGZT1J",
+    "9DVR6HDH4GJ2WNE4",
+    "FA5GMQGM2K2V1JRH",
+    "FA5W5G32PS97X4WP",
+    "636PDHNH9WA3XBZG",
+    "636VKD4S6706RA2X",
+    "C9DRARMKR20P74PQ",
+    "C9DMHR37E8P6DKNJ",
+    "C9DHSE4R8XSGMJEF",
+    "C9DYD2BH5RTMQ12C",
+    "EJ30QFNP8BTXK4WE",
+    "T31KF042B982KS0H",
+    "T31Y0V5YKV6N332B",
+    "T31RSDM7H6X81BB8",
+    "MVNT1BNSQ7GEGKXA",
+    "MVNSJHY6CA9XB1AV",
+    "MVNKRGH6J5NXW89E",
+    "2K60WHQJY35P7VKY",
+    "2K6C8Q1HDJKQV20N",
+    "2K69STB9YD5PTQ1F",
+    "X99XR1KD0AG5DT5H",
+    "X99TWN2YHD6RT95D",
+    "8DYTVJBXEB6VHY2R",
+    "8DYWJ5DHBBRS81C6",
+    "87TT2TF5H9DWZ5W1",
+    "CPMYBNBE1MQQ627P",
+    "C5DMATB1EW98BY72",
+    "C5DZPK6EV1DGX62J",
+    "C5DSW16MNW5VBNG9",
+    "1TM5H9XGTYF80QKW",
+    "1TM64RZC6T5S2452"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550101",
+      "elena.marchetti@example.com",
+      "fa13223798e9c3ed3407d00f6c177eddac46dffda9899cd766d990fa8f86000c"
+     ]
+    ]
+   ]
+  },
+  "demo_10": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-09/contacts-batch-0388.json?versionId=7i8pr46tc2C_a1EYjwuEKNgbA0IueYng"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "P8T123RZRCPQ67H0",
+    "P8T4PNA7A0JS5P17",
+    "PCG05TVD9X2NE0EV",
+    "PCG1GS7FWTAE4KBW",
+    "AVFKHCMNMTRSZEH0",
+    "AVFKXQGH7CSKGHCW",
+    "AVFP6FV7WMW1FG2G",
+    "RTWHWNVQWBKVAX00",
+    "28WB6AN6ZPWH6K1Z",
+    "28WECJ27PPZFWDB8",
+    "YH93S3BCCQXTA3C1",
+    "YH9CTH84MFKSS3QM",
+    "YH95YZBZ9125S24B",
+    "DN3N6H3V90NXN99V",
+    "68BEBPE8267HEQYN",
+    "68BFSY0X6ZEXRXTG",
+    "68BC8D4R4PNWJ8YV",
+    "68B8B6SGVY2W5WDP",
+    "ZQJAA7SE2BSM2YC5",
+    "ZM9NBQMTVDHJCCFW",
+    "FEZKGYJ8E2K5HKHP",
+    "YD8WYC5PNKRP4HJ1",
+    "YD8N8EDHZDZE4SPP",
+    "YD8WF4CQTCM0F0VP",
+    "2E2Z70MHKPSGQD31",
+    "SFBZ4S5FE642K4Y5",
+    "J262CE3HPWQMDC0N",
+    "J263PX879EXCG2A2",
+    "C39663B0B20HG05C",
+    "J15DC2XNVTMEB6H6",
+    "9B6DBVEZ0X9KBJCS",
+    "9B63EWX43WRNK31R",
+    "9B6CQ9KVWBV9G5AG",
+    "9B6CYEDCEFBT6JPF",
+    "73PCK7C76CRJ3GFT"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550110",
+      "10abc03df66c7d621b18c1ed9011fed14ef4ff836994250b1fe5cac86fdd8821",
+      "55db5baa272bb904fe7f6a1f60038cd6789cad835c10014291829021ddffcc71",
+      "amara.n.lagos@example.net",
+      "amara.nwosu@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_11": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48377/invoice-question.txt?versionId=cQn1TlGGJE3Z.GCrNWetnFaQGR.UOQHg"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "P8TBG5P4M8VV5T51",
+    "P8T6E1PTF6S0H03K",
+    "P8T69YCSFQ62YV33",
+    "PCG7CYPR8HGXZTPW",
+    "BRF414VKQS4ASK8R",
+    "RTWNNWFQZK8ZDHTR",
+    "PVVKA2CNKSV6JYJT",
+    "PVVPNANHGP8PJVR3",
+    "ZYRCKYRCBKW13J5X",
+    "ZYR59BR7MK9YPEEW",
+    "4Z4Y9MTYC3G1VWEM",
+    "4Z4S6TJ7R736NFGP",
+    "YH910KXJMQ6T4Q3M",
+    "YH9AFRE3X2AEPGYJ",
+    "Z8W5TY1J6H9J3JW7",
+    "JHR7KYXC9XRAFR5Z",
+    "AK995HAJW1A1X791",
+    "AK91ADJ8GW2KXBBT",
+    "AK9B66CZ2EHD09GB",
+    "AK92ZQ84ZMX3ANW6",
+    "K2N60WXEJXE052XR",
+    "68BAR3B2YPRE7C3M",
+    "68B29JVBG9WDCQQS",
+    "68BC3NC9FWX8GN1M",
+    "ZM9KJ5WM08MTY87S",
+    "ZM9Q3AA0SV3C2HKT",
+    "ZM9TBX92PPM40F09",
+    "FEZNNNY5WZTPF3P6",
+    "PW84MY83M915RZTB",
+    "EHFPG0JX2YS1B7S0",
+    "YD8Q8TSZA271K88S",
+    "VYFEMZ86C2QSMRW9",
+    "VYFBGPCBS8DSS2GZ",
+    "6G0PKWQV11YG9GBA",
+    "6G0R7YB53CM9F4CE"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550111",
+      "007204cbe9862ebd3d585283b3b6bd1d3aecdfcd519aab200846bd288d38521a",
+      "mateus.carvalho@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_12": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/ltv-features-part-0011.jsonl?versionId=9vUQLtKGpfEY0ARvWYmcHf.mSsnSbeTS"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "JHRAM5GDG6P2X914",
+    "AK9D2EWPQJ52VJNN",
+    "AK9537WG4SH9AVD3",
+    "AK96PA8KPYGVBR0C",
+    "68BEZ42EB6X89G0N",
+    "9TYCP54HW8CYE5H9",
+    "9TYC2MAJG84AMRAJ",
+    "9TY2YMGW1QGHQJYX",
+    "EHP1MRP66A3NXVEX",
+    "EHP1YMB7K8ED2JXZ",
+    "EHPB9ZBA8S0K1MZX",
+    "EHPE9GKMDFJS9X29",
+    "ZGWFYSE3BPYV5ZA7",
+    "PW8657XH0N7DFZJ4",
+    "YD8VNPJPYGW17Z1X",
+    "YD8PZGGVAMCXJSA5",
+    "VYF00WSYB9RSDEZZ",
+    "VYF2F6HA5TDQJBH7",
+    "Y2BY6VBVEPXQS54R",
+    "Y2BGC0N9MPWW3XYX",
+    "Y2BS07F576KSF357",
+    "JF065ESV29ZHC7BV",
+    "JF06DHAQ6T52N5QE",
+    "9GPQ3BC1MJ6P107G",
+    "XD0FMNPTVDZ97VT9",
+    "XD0FZA1EK3JD841J",
+    "YRQG8QCJR627YVWW",
+    "YRQYWGFVJ5M01VRA",
+    "81PEAX3REGPR9QB0",
+    "81P8Z6P8B4ZF75AV",
+    "G3EFSP26KGC3ZXTG",
+    "VP232KXWKMX806M2",
+    "VP22SXXSSV6P3W4D",
+    "5F46DF93PBZ46B1A",
+    "5F4CYC5PZ6S8ZKFD"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550112",
+      "d02653c47e3ee62c5e9537bda6d163891bc594c3160c8072efb0f6b5097c38b4",
+      "ingrid.solberg@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_13": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/crm/2026-09-30/contacts-snapshot.json?versionId=p7pFzTjDRNtKSUFvAkZg98Jv9I7TBr91"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "ZQJDABCY70545Q6G",
+    "9TY2524WHQ4A7M9F",
+    "9TY5CH609FJSRQGB",
+    "9TY1AJQ1XTQM6FR7",
+    "QMFTFTHX1GKM60Z3",
+    "QMFX8MTDK93SEW8H",
+    "YD8Y76TYBC6ANSTQ",
+    "VYF0MPJSRSH0GJES",
+    "9GPNVVVAWYX9DG2C",
+    "2E2ZVEX0RJT6SVVD",
+    "SFBMFHV1N62PJG15",
+    "SFBNNFPK5MTDA4D0",
+    "SFBP8ZC4EPBTYGZG",
+    "674HRFGZ2PTBSP0D",
+    "JX23MQKH7D5R4AV2",
+    "JX2CSVWV44ZH285J",
+    "NJ1GHMPVHTKB1ZSW",
+    "TJA4409FR7FRXTY9",
+    "TJA9ENDJFAKZCYBZ",
+    "9B6CTS15717H7GK8",
+    "9B6BDSPP48T4HZDG",
+    "SV4RR6004A8YA0MZ",
+    "QTSA159XG6S7VRJ9",
+    "XD0ESY8BTXTPE75Z",
+    "81P5Q4ZMPBWD03AY",
+    "81P5P852D2X7FAHG",
+    "81P8P3TPYRGCS3CV",
+    "G3E683XH9SHQ9813",
+    "AMFWAZKEKMTYMC8E",
+    "AMFV992SDG170BWF",
+    "5F411HGJN058WV23",
+    "P0T7A20H9N61B0F9",
+    "P0T1P5TFDHZ1N06M",
+    "7Z9EXRQ3QSDMS562",
+    "7Z96MQ5FW3MW66ST"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550113",
+      "6a45fe7c4f5471a8f01b223709819ffee99108e5ab2395695d6df9e81a160e08",
+      "6d4eb9588e17605e24f193c8cb0ca7e9c30a42d3dda4e08141f2c9c6f8958f51",
+      "rafael.moreno@example.org",
+      "rmoreno.work@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_14": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/marketing/2026-09-28/audience-hashes.json?versionId=CNbvXIQIvRoz8Mpt4zaPZb0ZSdrvsoec"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "JX2B2VPAY1X1NA9J",
+    "JX22EDBADGWRYFWK",
+    "NJ1NR8Z78J78J0TW",
+    "TJA3CMVJXP24JHKT",
+    "9B665AFJF8Z1D38R",
+    "9B6D5AX5WSBJRKR4",
+    "73P63BVXH2FT8NCR",
+    "73P1YK6S0Z608VGK",
+    "H8888N34P3S1HMNB",
+    "H8818TRQVFYH2SXN",
+    "T4SK62QZ28PF2CGD",
+    "QTSCR42GN7G0C5M8",
+    "QTS05DSM8K2W9SRC",
+    "XD09HQKCW6PW7Z84",
+    "TGHRY3K1SMQ0PH8F",
+    "TGHVVTPR3BZSKHZF",
+    "QVZYNQBRQY9MF8E1",
+    "QVZRNFEHTVFDYYVQ",
+    "QVZKNCVQVKRVX2ZY",
+    "YZAETEZS85R93DS1",
+    "YZAENZSSK3BJY06S",
+    "7Z930V7KA0P8YPCB",
+    "7Z96CZCJR4A3ZFNC",
+    "YRWVC9XHV2RY0ZJZ",
+    "BW07W61SX72Z8M35",
+    "BW05AG9JEAV18FQR",
+    "BW03ZTFZW1DH0ENA",
+    "2KRRSCKSK1N5BG2D",
+    "ARRB0FSA2R4Q4GTA",
+    "49NVADNAHGV3QDB8",
+    "DE7K4G38BS49JG1S",
+    "DE7SVJV3BK93KB5Z",
+    "DE7WJDP8V65AV6EB",
+    "MXT6E6G547PC22MH",
+    "MXT3P9VH76V5KG27"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550114",
+      "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+      "chloe.m.paris@example.org",
+      "chloe.martin@example.net",
+      "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+     ]
+    ]
+   ]
+  },
+  "demo_15": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/daniel-weiss-export.csv?versionId=c3mZIPAxOHK6tSbFljlaaYLhY3vJnJW0"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "KQAZREKW878A4AMB",
+    "KQAMN1Y6NBM6ZH9P",
+    "EY2PF490RKRYXJH2",
+    "EY2RBJW7YHCA32Y9",
+    "C4WPTDMZ8CA03XH9",
+    "C4WGKDS7QNXZ2165",
+    "C4WMNR28GMB2K87W",
+    "C4WHHXNETG8BN0VW",
+    "CK916SBQTWMM5ZB5",
+    "CK97X88G8SG4HGPG",
+    "CK9A9GPTB24CKEFT",
+    "J1TDFREEEZ1G7971",
+    "J1TB72J1YQ39ZXVF",
+    "J1T4JSA3YHDXYC9J",
+    "6ZRZMG1P0PHCVP3F",
+    "NB3PDBABZPE8GZY3",
+    "NB3Q49GC4M980S4D",
+    "NB3ME38MNSKR2MCN",
+    "EC6K2E0GERQRABPR",
+    "EC6WB2RS1DE6DD21",
+    "EC6KJWCG2ZDYV1JR",
+    "V5HMMW1DD1SMPK75",
+    "M9NN9WY99Z3VDC2W",
+    "M9NHAD2HED15RDW6",
+    "4FXCEXN9XATV3YZT",
+    "T811S43C8V7HE23Z",
+    "T818715GG7HQABJS",
+    "T81CV43KFJNFTXX4",
+    "SCFG7HZTH1SXPKX4",
+    "SCFV7A12GVWRG0F3",
+    "74VBSRRPB1C7PZ38",
+    "74VBWHDNTMMKC3PP",
+    "74V06YVKQKPECFBZ",
+    "74V5MD7TGZQV8983",
+    "ARR7A7GYBXDXR67J"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550115",
+      "daniel.weiss@example.com",
+      "fff1f657e9776dd509e71fe7eec98819a3d6867c5b3f12a6d471d70aa089f2dd"
+     ]
+    ]
+   ]
+  },
+  "demo_16": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-20/checkout-funnel-eu.csv?versionId=0jnMXGt23.HENOw6LhBZwCI3bvWtBguH"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "BA7VVBBT7RD3FN89",
+    "85MP1TNRH396MKD7",
+    "85MQVDBBY7VR0TEJ",
+    "CAX838E0082WFR6G",
+    "7RX7WXWKJ1XXDEEJ",
+    "7RX507HN0252FWDR",
+    "7RXFE19Y33J6P1GA",
+    "JWRXNCYTAAAVV8JP",
+    "EC6HCMB8FSNX1T4V",
+    "EC6T8D78B171GBDN",
+    "EC6Z4KDGT1S2EP1K",
+    "V5HN9RRJGBHJA7A5",
+    "V5HWT6CMGHRZMNTM",
+    "V5HXJHB4W85K1RKQ",
+    "M9NVYY4F3E0E6AHN",
+    "4FXFZWPYPB2W1DCG",
+    "4FXAGFMH52AYQSE4",
+    "4FXDKXM3MNPKE520",
+    "4FXDQM24A3CZRBJS",
+    "T81BP46CP9VK4BSP",
+    "T810F7CAECF5N6GP",
+    "SCFSYCDBF4X9TPB4",
+    "SCFN8D1QDR4KH3XA",
+    "Z0XNNP99HC1AQP59",
+    "74V236ZE7WN7CZ9A",
+    "74V354JAS97YQHCE",
+    "74V75YXA5EMC154G",
+    "74V9Q41Z0EWA9PB9",
+    "49NT70NTNB1NXNPS",
+    "49NXV08PHBT3VY3B",
+    "DE7PR0Z34GRW5KWC",
+    "DE7RDVYR9SN69V57",
+    "MXT3XP8H33M1S9WY",
+    "MXT2TA5DP88JCMGS",
+    "MXT0QQQ8VND7910J"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550116",
+      "aisha.rahman@example.org",
+      "d3f4ce972e7318645f43543250704547ebe9c99d46d95f7dfa04d8d9fa95c622"
+     ]
+    ]
+   ]
+  },
+  "demo_17": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "MJRCX06YS07X4A14",
+    "WQ96RW1JN0VJ6229",
+    "C4WNKQEGV7CBD17G",
+    "C4WJSBFN8BA8BBEE",
+    "BA7TAZJA0WAPB5MW",
+    "J1T7GKVRF2KPRZG7",
+    "J1T0W88KHNN88KDX",
+    "J1T69K01A6KC8V12",
+    "AW90S7VNF45PS0D9",
+    "PH7GTAKPP8JC3MRB",
+    "PH7W07576C8EX0JZ",
+    "PH7GH28T9CJ5J765",
+    "PTX1K4863NKQ96PA",
+    "PTX4JQK3HGA0JJRE",
+    "M9NX2VV8SX1SCRSZ",
+    "M9NTE2T151Y6EVJM",
+    "M9NY5H201AZCRSB9",
+    "M9NZ594BD5NXZSA0",
+    "4FXAW4MJRJX1H6GM",
+    "4FXD1N9AWE026T53",
+    "4FX6CADMSQSWGT1V",
+    "SCFXMNAH2457C0EC",
+    "SCFPN5G4PX5K17AV",
+    "SCFX8TAFHAQEGCJN",
+    "Z0XMZQWRBTXQJFFK",
+    "Z0XZNMMBJHZA17MP",
+    "74VFS663A42V32EG",
+    "74VCY8CTY6BE9BEG",
+    "ARRFABRS4DGFPJTZ",
+    "49NQAN4WJTTQGP9F",
+    "DE7RQZGBPQJKN9QX",
+    "DE7N8EQJZNDMSC62",
+    "DE7KZZ2J8NYKRDGZ",
+    "DE7NA47JKA76PM03",
+    "MXT5PG7APW9CESK5"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550117",
+      "11698aea35cae4368263b7ec572eca66324ab79ba6f0a675e777cc2e33075350",
+      "liam.oconnor@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_18": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "DE7QH9KVJDWPC4QA",
+    "MXTB8Z57JGCKSFR6",
+    "MXTB7P1HMQ9BGXP1",
+    "MXT7NXS09FC3NVD9",
+    "QDY505R2SYDW7NGQ",
+    "QDY2039Q00JFTY0V",
+    "2J64TFN1C179N7AN",
+    "2J61AD39AF9EEQTM",
+    "V8EH9P6CBYA2BF3J",
+    "V8EP2S9W14ESBWSP",
+    "V8EXTEB1ESZ73EH0",
+    "VMBJY8QM6N5YHAMV",
+    "VMBM6XKZMREF874J",
+    "VMBVRS31V388GPNW",
+    "931BV51FKTVJVGQ1",
+    "9313ZAM2W8RT1N0W",
+    "TJHWVDP4A09MZVH5",
+    "TJHT3CABJPGS962V",
+    "TJHH09JY7WC36SEV",
+    "TJHJTSQDE1AS4F03",
+    "M2WAF0GT3DVZXJYF",
+    "SX6Q9PXWHW01ZT4V",
+    "SX6X486M2Z6C1B5M",
+    "SX6QDAHQA899TRZK",
+    "M7Z8DHF50HC8P670",
+    "M7Z3EJ7TDSJY9142",
+    "M7ZC2VVBCQAPJMHT",
+    "M7Z8TDS23K0KDDA8",
+    "HBR1N4TNRSTV66G5",
+    "HBRB61P5RCAMN8B1",
+    "GQV0NXW0BCXDNCEA",
+    "GQV7Z62PFSEFG797",
+    "9SME2QQ6RYBFAQSD",
+    "9SMCBHCV7QE0VEXX",
+    "9SM0EYW6MZBYNA5R"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550118",
+      "dafdfd26f20bca17e723d71786f6edd172242acf7ec55566f3a8236b618e60d6",
+      "yuki.morita@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_19": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "2J64RYBST0PSS41Y",
+    "V8EY696A0J6X0KNV",
+    "V8EHB8PT7F8FJE25",
+    "V8EKEQF17PTHEP8T",
+    "VMBNBQD1FVAHD3F9",
+    "931CVZ28PX58J62D",
+    "931091JZ4RX94HEG",
+    "9313S3P58QPTEDJH",
+    "TJHSVWEPQSY6RX9B",
+    "M2W1EQTV4XHN15PF",
+    "M2WBQXKD0FNHTDS4",
+    "M2W4Y1NNNKJE93VC",
+    "M2WA2WC2QXGEPYD8",
+    "SX6Y3JFR7K3E1WP1",
+    "9C4JC8Z86C5K1DNC",
+    "9C4KBPMXKHBTZ817",
+    "9C4WNPG54KBXX35W",
+    "M7Z5J493T7BMZGDP",
+    "M7ZDYYSY0F2A2DXV",
+    "M7ZC4FQHSYJ052P7",
+    "M7Z59JXBJ09XQWZD",
+    "HBR0W94JGCG4RB4V",
+    "HBRFEB779TP7PW4Z",
+    "HBR6P3RDZSNJA5WQ",
+    "GQV1Q0HWB0ZQRNBH",
+    "9SM2K3VMBYACMNGP",
+    "9SMCF3M9RGGCKMPE",
+    "9SME6BNVTN49Q19R",
+    "R610KJDXE7KD9ATW",
+    "937G92QADYNNBP1N",
+    "HTYR939RE3X38RZN",
+    "HTYPX7K21GQKDSK8",
+    "HTYTWJ5EZWG4HD11",
+    "W4D8FYYZB2B4KCDF",
+    "W4DFM38N9EW0GV4H"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550119",
+      "4191f0706472d0c16f5f551292891101a34cbea053957ef758805fbd632d8886",
+      "grace.holloway@example.org"
+     ]
+    ]
+   ]
+  },
+  "demo_2": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "XNHRBSMVJD62TJAN",
+    "XNHY5F3NNJ088R0W",
+    "BWM5J16JFPG27WXZ",
+    "BWM9Z57GQPC94GFD",
+    "9DVJZEQCNXTB20C2",
+    "9DVHF6GSNVDXACPN",
+    "FA5JWBYZX9G5SEJ9",
+    "FA5P0985PFWVM4TP",
+    "636Q8BS6JE6BQMVB",
+    "636NNMM5KKJD1RVS",
+    "C9DYM9GF6EJMW32B",
+    "C9DK6C4G818FA0JW",
+    "C9DS52Q3WY8291YD",
+    "C9DW81XCYWAJFW8D",
+    "T31M2FETH38CXW02",
+    "T31SG6J77CFS7D36",
+    "T31KX7YADK09VTHK",
+    "T31JG8NVKHXV7A48",
+    "MVNGG72JHCJWTK3J",
+    "MVNPMYBSQV0DYA2V",
+    "MVNHDQH51BP09JXA",
+    "0GC3ETXG612VD04A",
+    "2K61TM54R0P1NMR0",
+    "2K6FE5Q6TVH93S44",
+    "X99STY0JDP1TWAF8",
+    "X99JND5E4QATXQC8",
+    "8DYVVABMB56SHZPP",
+    "8DYXM41BX56SEHB1",
+    "S86NW0D8SCH9BKFJ",
+    "S86T8D0ABEJESN98",
+    "87TV21KF82T4NNZW",
+    "CPMR6AE5BS84DSE9",
+    "CPMVY6SCANT9H0J8",
+    "CPMJ73F6PF11RN5S",
+    "CPMSY25BZQMD7DVE"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550102",
+      "08225418204e1c5025b6a4b9e5ecb87a8ddbf472a8d78665196d79135243bf8a",
+      "tobias.brandt@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_20": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "V8EHB5P62APT4J0Q",
+    "V8EZXSRN76V60WHB",
+    "V8EZ8019WHP7GS6X",
+    "V8EMJGCQH2BGQTQM",
+    "VMBRJSN45EEF294Q",
+    "9317AMCQB2YJA3A8",
+    "931CPS3N2877GC5N",
+    "9311826K6MZ31PCZ",
+    "TJHVZG18DEDG1D4Q",
+    "M2W7NXQ62JTS1Z2H",
+    "M2W1CB28APV5TBQR",
+    "M2W5716V2XCRY2QZ",
+    "SX6QQ0EM9531MBZG",
+    "SX6J1KHTRD7NEWSN",
+    "9C4JJ46QQ9D6A9E4",
+    "9C4VTMRANRS8F52A",
+    "9C4P6JNZQR3613KG",
+    "M7Z87FPEHJYJ51CV",
+    "M7Z6WX3QEM5ND891",
+    "M7Z2RHHWJ4TG7XMM",
+    "M7Z6CG5AG7GPGQT7",
+    "HBR96653EFSNE7V7",
+    "HBR3ZMEXNV45WNEB",
+    "HBR7324XKRSRPXJ8",
+    "GQVDY7SCCJT2HDJX",
+    "9SMB3PEM12JAB0V6",
+    "9SM5ZJCYN7PS6Y2C",
+    "9SM56ATFGNVQ6PBJ",
+    "R618WX6ZZTPEMWV0",
+    "937R8T7S5Q1R0C2Y",
+    "HTYXFWAB1X2HPA34",
+    "HTYPHEDX98KR4W73",
+    "HTYK8Z9G479K7A25",
+    "W4D9DTYK2SMAD97V",
+    "W4D4C7AENZ291ZFE"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550120",
+      "a03179ab208b63ea7d1139c8d54672755dde593fd2fe069268fce78925eae835",
+      "jonas.berg@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_21": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "2J6AGS3CW6D4A9HR",
+    "V8EK8WEG4BTT9JV8",
+    "V8EJHY6NAZ9H828D",
+    "V8EW7C94RF1136AY",
+    "VMBHKM37D4TJ5EMM",
+    "9311JKW7909R362E",
+    "9317YQZYMHHSJZ28",
+    "93187VB8J23SHQ9C",
+    "TJHHM1S1ANDNV48M",
+    "M2W28Y5WWPS4CKN2",
+    "M2W6026G98GNEK0H",
+    "M2W44RBA9ZFCC37T",
+    "M2W7CH8V4XYWDQEM",
+    "SX6YZC2M906SRJME",
+    "9C4JKRR26NCQ3031",
+    "9C4ZJH2STPCP59CD",
+    "9C4QCQFX2J50C2FV",
+    "M7Z1FS7MVZM5QHD8",
+    "M7ZF8ZGV6ETRG5WC",
+    "M7Z37M3M77M0VEN6",
+    "M7ZEYBTQV9TMMZB3",
+    "HBRA9406MGTPZNQ3",
+    "HBR9C8A9Y4AV6VEZ",
+    "HBR8AKGXGSDX7QW9",
+    "GQV9148QM3TTPAR0",
+    "9SM0Y41P4FVZ9NCB",
+    "9SM28P97D8NH7BCJ",
+    "9SM8QEFQAFSD6SWA",
+    "R6155CX50JJWXKJH",
+    "937VB0J1GR34P9JC",
+    "HTYPHDV6BH5NN94F",
+    "HTYZKSY1NJE4C4RA",
+    "W4DCR41KYKXYG51R",
+    "W4DE5DCSNFVJSYET",
+    "W4D2N1GEHFDNJV4X"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550121",
+      "7bf36cadfe04df4a2847e1b2f833e348f2455a4c4e7ddc38e7d30680adfc0830",
+      "nadia.petrova@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_22": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "W4DB3KSR18JTGH0W",
+    "W4D9FJ9NH6916XTD",
+    "QMAT3FNQHQYVGC3C",
+    "QMAVX6V4PQJHBHXH",
+    "XRKT1S5BDJN4JGS7",
+    "XRKS5FAXVDYW1SSS",
+    "XRKK7ZVBDGTX735F",
+    "XRKNE08HXR7EASSP",
+    "F0H338F9066Q20RZ",
+    "GS7CXKB6KGHX5MPD",
+    "Y1TJA704M36MYNH0",
+    "Y1TNQ0XJ5BAHFRZF",
+    "Y1TTZ617P5T6CGQV",
+    "Y1TYCX3TQ4VJWEE5",
+    "522QAFWJRXERR6BE",
+    "522NRQ567W5ME9GD",
+    "522NVKZ5XVGZ16XM",
+    "522TT626W4AZ7XQ3",
+    "SK6SYR7GAP30K8GJ",
+    "SK6SP029QDRNXN6A",
+    "SK6KE7J0F0C03VB8",
+    "Q7EW13CGP5J81PRX",
+    "T9FMFNYZ2W5MPS12",
+    "T9FPHVKH30260KJH",
+    "R5T9NP49BSFW3QHJ",
+    "R5T5JXDR5AT9MNSN",
+    "6T8THDVHTYXSCPTD",
+    "6T8WVCVDFNMSH9RA",
+    "RD85DBSFSVPSAP9M",
+    "RD8F2NMH3A5925E7",
+    "DFSPMSDE6PJWKZ9N",
+    "7WWT50YS3AX37GVX",
+    "7WWYQC44QMVZ20QJ",
+    "7WWMVPKKRVB2C8MA",
+    "7WWKQ5RRQH12GFEW"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550122",
+      "e5ac427ee26e90b8c229376bdd44903983b2bde0281319072313b05f65c0e009",
+      "noah.becker@example.org"
+     ]
+    ]
+   ]
+  },
+  "demo_23": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "ETC7BEHTVP7DKQY5",
+    "ETC224FHVMX0HNN2",
+    "CK82C36C66B5S33A",
+    "CK81F1TMXKD06NX4",
+    "S2A7Q40W5WP5BGX8",
+    "8CNDG1M9CGZVSC97",
+    "8CNF40MZ275AWAY5",
+    "F0H9H4YVFWVAJ96N",
+    "SK6PQBPH586E5JB4",
+    "SK6ZNQBBY7F14JA9",
+    "SK6XXVG18QT1XG6S",
+    "SK6HBCYBKG1NJR5D",
+    "Q7ET6YFJD53RS9HF",
+    "Q7EHN08P7PN1BTCA",
+    "T9FT8S2JHWTZ2Y65",
+    "8HWVZZ8MDF259ZH0",
+    "8HWV2AS7FE9XZY26",
+    "8HWVNHWM4GD3GZRR",
+    "8HWNFXX055424N60",
+    "4R9HF5FPZK99D16J",
+    "R5TATNP98VN81YFC",
+    "6T8WG3MQ6N45WCXK",
+    "6T8N6KKR91F0WZFV",
+    "6T8JX1MA2KBGJ04S",
+    "RD82SH87ZW8P5DBK",
+    "DFSVW8Y59SFSDYD1",
+    "DFSKE6ZM8Q1FS8XC",
+    "7WWHJ7TCM2RVYD0B",
+    "7EAZWPS0PXMARQ6B",
+    "TBZ6ZS7RD10Z7HTZ",
+    "8E9VCB4K6JSTY6QC",
+    "8E9T4QH7KQY403SN",
+    "8E9YPDYP3R8TXEX9",
+    "0RH0V5TFMTZ5TE8M",
+    "0RH1YXZHW10C3PJ7"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550123",
+      "3d9abb1af7f9d8860929f9097007feb4397bb2d7fc2d37af7defa0a94dff3a84",
+      "clara.jensen@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_24": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/legal-hold/LH-2026-014/marcus-hale-chargeback-file.txt?versionId=Tch9dKAM5_1EUps3__ctI_eRap_1ZGBn"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "ETC8BNDDBAESQYRH",
+    "ETC4ZPPYP323VXJZ",
+    "CK8B7RYZNRTH2XR6",
+    "CK87GAH6X667G3VY",
+    "S2A8JTM4KCZVSDT4",
+    "8CND71ERH4DA21BH",
+    "F0H9TRRESMKKADHC",
+    "F0HDYNART5ZNFPEF",
+    "C9TJMY08TNKNT6KC",
+    "C9TNYS5VPJ4SF57W",
+    "GS703C8F2N1FW7PQ",
+    "GS77TWJ19F2SFECZ",
+    "GS72VC4D6306TGP2",
+    "GS79A24PJGVSG98X",
+    "DWA1GESH90H5RMEB",
+    "DWA32Y9WE1J5M9P9",
+    "DWAAD8DT0V69Q5PS",
+    "DWA2X1K5TCQKHR30",
+    "522TVMN3WMSSRTCD",
+    "522T0SY2EANXAG0G",
+    "522ZA13DWN8W398S",
+    "SK6VFAA78MKEJC4X",
+    "Q7EZB8R69B4PCFP8",
+    "Q7EYBQTEN39EV30X",
+    "4R9G42ZV21GZ3RJ1",
+    "4R9WEKGTKP1FKYD9",
+    "4R9GXCTKPT93KKFE",
+    "R5TCXXYRKQZZV25Y",
+    "6T8VSH7RVER64X8D",
+    "6T8J90HNGSYG0T8H",
+    "8E9TWFM6W80MWXYN",
+    "8E9XATD6SEKMX2A0",
+    "8E9VPARSDZV1PZ0X",
+    "0RH0VAWTEE0ZRC7F",
+    "0RH9ZM18MZVZNB3Y"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550124",
+      "64c682a83bdae0d6e41f34db19faf25e0f6bafc5cef0e6fb364562401a153a83",
+      "marcus.hale@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_25": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/legal-hold/LH-2026-019/fatima-idrissi-warranty-claim.txt?versionId=ahSXDynhmY0atYeNJKCs8y3_ju7yNbfd"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "CK86JB3N1DVGXFD7",
+    "CK852424BPZ8JZ60",
+    "CK8CPT7NMRBMYB8J",
+    "Z03BTY2A2F5WA8TY",
+    "S2AB1Q84SNMAEYE4",
+    "8CNAVYGAQZ1KX520",
+    "8CN1WZFB09A4539N",
+    "F0HDQDKS8NS67MC0",
+    "522JRTDCDZPKS509",
+    "522JW9TSMGBF47VN",
+    "522YWFZDPRWEYXGQ",
+    "522NQJC7TTPN7PE0",
+    "SK6KDCZMET7Y3HWS",
+    "SK6XV3Y7W3AYAT8T",
+    "Q7ENCDGG53BSPDNT",
+    "T9FJNPTH85HR9H0A",
+    "T9FSRXFXKX2J0KD3",
+    "T9FXHYTTFB56KCY9",
+    "T9FKWXT9GFY12E7C",
+    "8HWRQ4BCVEE8MP64",
+    "4R9WQ1V4H818334Z",
+    "6T8VDAW8GNMWYYK8",
+    "6T8X3YVE0RHQFTZZ",
+    "6T8VE49FQ2GFJE04",
+    "7EAXNY2ZEED00GB4",
+    "7EAZC5AWTN4F0NC5",
+    "7EAG78EEKBNJ5HAH",
+    "TBZCJDZEH0JJN4KW",
+    "8E9G4W8WHTJ3P0AX",
+    "8E9VCBT2PX1JFGJE",
+    "PVMED2Y7MGE77TZ9",
+    "ZT46J4JPZ51TVP01",
+    "YMN3W66KZ2ZF37XF",
+    "YMN27JKH9KYJWBWX",
+    "YMNDB3GW2SNCE4YJ"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550125",
+      "3381ca4adc6fcc714c41e9d922b9a42e05d2667c7d3f810e724fe0d97260a7f2",
+      "fatima.idrissi@example.org"
+     ]
+    ]
+   ]
+  },
+  "demo_27": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0433.json?versionId=7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA",
+    "s3://ghostdata-demo-960149837193/demo/newsletter/2026-09/weekly-digest-subscribers.csv?versionId=aqaU5mYCDOCn4pZrbm2PmIidsf9.h9p."
+   ],
+   "derived": {
+    "lucas.f.gaming@example.net": "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0433.json?versionId=7.UAZhb.F9ce_bisePtyGWOjEHV.cWoA"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "8E9SHPQGDR4QQ5A0",
+    "8E9STCYSMCHN0354",
+    "0RH7P5ZM7XMKEAD9",
+    "0RH6KKBE3G1CM2A5",
+    "PVM6Z1ACJ89D2437",
+    "PVM9ZKFNM2F9FN5E",
+    "ZT498824ZP51VBSB",
+    "ZT45NSGX2Z9SF6DA",
+    "YMNCBSVYDB96HXVY",
+    "YMNDRCPFXJGZDGST",
+    "6CVZKJB20BRZCK0Q",
+    "6CVSW2XCN7FP0PAP",
+    "6CVRQWBZW9D4RNCA",
+    "6CVXEBCSXDWZ14N7",
+    "4F2R22JPPATAN1NP",
+    "4F2MK8THSCSV8NJZ",
+    "RZYBFTXTP40YTFE8",
+    "RZY2826TNPX3RCK9",
+    "RZYBPA3MMKYWKWHJ",
+    "RZY83RWZBN0E9NFS",
+    "HSN88X05WE5DMTCM",
+    "3J6M04D5YAQY78YY",
+    "3J6R2H8XQHAH0VNE",
+    "3J6M0ED74BKP3NGT",
+    "23D3C05W4WZPY660",
+    "B0RAR17TRCRVWBQ3",
+    "B0R66C09AACT04GM",
+    "B0RAZHZAWPYHHQAQ",
+    "5QB9SMWRP7D63CEX",
+    "D7ZJMYEM23AQKFDH",
+    "HE9WT5NW6NTFCZQE",
+    "HE9MCXFNZCXSHYJP",
+    "NWCE7AN8MZZY31CA",
+    "NWCAP83H01PE6RHD",
+    "NWCE33P7P557MFZN",
+    "CZNBPPDXE8GGFJZV",
+    "CZN6HZE0BK62VNB5",
+    "RBT3PD6RTXZB47S1",
+    "RBT9J0753FC5BWEM",
+    "V1RBVS7MZ5QZ6NW1",
+    "V1RF7QTA8GJW0YB1",
+    "K7WX2JMKQSHWQ431",
+    "K7WS19MMX6NM1VQX",
+    "QEP5ACXPMGEHGK5P",
+    "BHE2T7H5AQ2QC8KG",
+    "BHEBCBB6YKFJXCGZ",
+    "BHE0A70FE1VNBB9H",
+    "BHE5DA20S80X5N1R",
+    "XXECVJD2T34AWYN0",
+    "SCQSD33T6MZ9KS52",
+    "VK2JV2RRQ9KN9Q7X",
+    "VK2J16B21AZHMK8V",
+    "FG3FM5Q9BCB57CZY",
+    "FG38115ATRECBDFK",
+    "FG33E8CX2XAVKTD8",
+    "FG38B9984918D4CH",
+    "7C4QKGV2TPG8AK20",
+    "Z5H88G7ZHV1F8TC7",
+    "Z5H19AN26ZNH4FV5",
+    "JTF7EQZV6MZ39TCK",
+    "W3PN49PPHX6WMECG",
+    "W3PQAQ2TXRMB9AH3",
+    "W3PS5G2KHC3V2FZJ",
+    "64DPQXPBSH3E0PZW",
+    "HBQX6M5RBXFWJ8SV",
+    "F1ADSYFVEC84THE6",
+    "F1AB1VP5EAXTSPFX",
+    "QYZMD66NEVX3J1SY",
+    "QYZWJRQ3P8HXKKD9",
+    "QYZZ69XG1WYVXXBB"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550127",
+      "d3ea57713ddde1cbafba9be7d3c5380144d6a005d10211139acfa056bab476c8",
+      "lucas.ferreira@example.com"
+     ]
+    ],
+    [
+     "demo/analytics/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "lucas.f.gaming@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_28": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/backups/support/2026-09-29/reply-to-addresses.json?versionId=M3EiV11FuyuWA.RfSlGQfqolJsAONBnm",
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48745/ticket-export.json?versionId=MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV"
+   ],
+   "derived": {
+    "mk.travels@example.com": "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48745/ticket-export.json?versionId=MlEFNfUPt1qm2PztfOeQg80PRa2ksLkV"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "YMNDGATRPE355YJT",
+    "YMN5A65XJ8QHJWQK",
+    "6CVK1Y69KN7EDS03",
+    "6CVGWH47AGDA98KX",
+    "RZY78ZXVNGNQBKWW",
+    "3J6MPZBKRCZ7FJ7F",
+    "3J6Q11849R58TN9V",
+    "3J6JZEM7KGGWWFYS",
+    "B0RB4S2CQX1M3M4W",
+    "B0R1H0QV6BZGKFC0",
+    "B0RAHG94GDY6EEYP",
+    "B0RAV6M132CKZCHA",
+    "5QB3G0A906TH1BTS",
+    "5QB3PMKEHNBF7GY8",
+    "HE9TGWXSRKSEMC5Z",
+    "HE9YQQZWJVWNHPRR",
+    "NWC9W25X67YPG860",
+    "NWC5MJVTYCHP5KZ6",
+    "NWCA9RHVKRHX25PH",
+    "NWCFNS4VX3HC0YMT",
+    "CZNA0TD4XABSTSRR",
+    "RBTASWRP3VYA4HB4",
+    "RBTFDKBVYVA3YG87",
+    "RBT32N86JSK4Q6HR",
+    "K7WX229H0TB5VHGS",
+    "K7WGFXRJFSGFX4DX",
+    "K7WGDTABEYPY663V",
+    "QEP7MSFJ7G96AJEE",
+    "BHE73W49DZTYJGZV",
+    "BHE8GNE495MMB938",
+    "XXEDZQGCJAC7232W",
+    "XXE878ZARGEA55QM",
+    "SCQKWE9NDXVD4Q6H",
+    "SCQT8H4W93FTTVQR",
+    "SCQGJ59VDE1KM4PB",
+    "MBYHJM0GAMXDQ3DR",
+    "MBYVM8SZCZR04WFM",
+    "MBYZHPWM6SMKH6RS",
+    "VK2G9Y1PZP8Z2BXY",
+    "FG3E6VT07PH8B5Z3",
+    "FG33V45R94RNDXEJ",
+    "FG3ESEYVF2QN3N7V",
+    "FG33CK8T4XRBS6ES",
+    "Z5H9PZX214052KNJ",
+    "Z5H5R0GT6PZEDZHE",
+    "JTF7Y5V1CV3486R1",
+    "JTF6PYTMV4X0JAWA",
+    "JTF6R4CQB8800JCY",
+    "JTF9XE19NMV81R8J",
+    "64DXSTJQTF74YV5T",
+    "64DVSFMPK3TY4FX0",
+    "64DWZZ8BXQ148R7V",
+    "64DV1NWPF9DBCXNC",
+    "HBQJ3FCF473Z93BQ",
+    "HBQJCYFDR2KQ7W6D",
+    "7BPBA56DP7CBDS7W",
+    "F1A29ZYM1HQMTGDQ",
+    "F1AAC595ZG6RYNPH",
+    "QYZXQ894TSXGNNQQ",
+    "DPS71HQ75NXD7ZWE",
+    "DPSFSD7HB36T3E8K",
+    "DPS9JZFGK1AZ4X3G",
+    "NSHZHVV59CG964VD",
+    "XJW1YHFM844E4KKS",
+    "XJW2E6Q56KM3XKM3",
+    "52J2ZWJQ4Q82SQSQ",
+    "P90DR3AQFQYK04KZ",
+    "P907R6V6R5YCD7MS",
+    "P903VQ64DC5X2660",
+    "P907MPJC8B2KJ8A9"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550128",
+      "16119096678e1c464f54441b03601f4a73f419bb171682b261aa378a417f839c",
+      "mira.kapoor@example.org"
+     ]
+    ],
+    [
+     "demo/analytics/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "mk.travels@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "mk.travels@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_29": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-18/loyalty-members.csv?versionId=ShWlNnGpwZY2JdxiTw.b0p8s0gkqQQpN",
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/owen-price-export.csv?versionId=tyLC2LQhXuveLknMWo2M5ElyKTlDgiug"
+   ],
+   "derived": {
+    "owenp.alt@example.org": "s3://ghostdata-demo-960149837193/demo/exports/2026-10/owen-price-export.csv?versionId=tyLC2LQhXuveLknMWo2M5ElyKTlDgiug"
+   },
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "YMN7VSVY4GQBHAJ7",
+    "YMN32XSEQ8EK9SM8",
+    "YMNBEB10XZTGAWVZ",
+    "YMN99F25V750V78F",
+    "1DGNJN5GF1JB8XYP",
+    "1DGXCQZS8JF6TGY9",
+    "1DGVJDQ8V5226MFJ",
+    "AF006MBE0BYY08RG",
+    "4F2WFKVH1Y10AV5R",
+    "4F2ZDBMXQ8ZNB5HN",
+    "4F2KACSVJYBHXCB1",
+    "4F2YXS49FK61SBED",
+    "RZYD7HCESX6Z8XWJ",
+    "RZY8DHBN7ADN7VVW",
+    "HSNE89P2Z6BV6FHK",
+    "23DBQCJFZH9N7P8K",
+    "23D96EZYWNAR0EVV",
+    "23DFKZA47MWK8ZEP",
+    "B0R75HJRKR2Y58YK",
+    "B0R9A4DPZXJQ2NX8",
+    "B0R2AWXZ1Z12P2D6",
+    "D7ZGM7RMGFEWATEM",
+    "D7ZYGWCMZ7752HWY",
+    "D7ZR95DK0AP2KFC6",
+    "NWC7PS1SH7ZG3VZX",
+    "NWCEDK2MR275M5B7",
+    "NWCFZ0YFREPX9GJ2",
+    "NWC2NZ2AXNRT9SSF",
+    "RBT4P9KQVW1Z55C9",
+    "RBT143HBZR79S9TR",
+    "V1R4WZASYTW3PP01",
+    "K7WYN1YYG0QAQR8Z",
+    "QEPE3YBRSES7FCY7",
+    "BHEDNDPBWMBHEWHK",
+    "BHECBR9S4Y138M48",
+    "XXEF3K9Z5GYH6BJN",
+    "XXE1H3T4D1JSE784",
+    "SCQYFP3YV9JWD5EN",
+    "SCQHGVBKQF4CX2PX",
+    "1A7BJ7P1FPAW0M2E",
+    "MBYYWPFPK697TVCH",
+    "MBYWKGHW7AZFQG07",
+    "MBYJ1YY0KDWVBCTZ",
+    "VK2S8NVAA01VHZKQ",
+    "FG30XDAWF65TXNV1",
+    "FG372XA7Y6HDYAPQ",
+    "FG343B00GHJMWQEK",
+    "Z5H37XB10H9P6VTJ",
+    "Z5H3C3212EHKMMR8",
+    "JTF8FZN35B96YBCB",
+    "JTF0QHBB162PNW0T",
+    "W3PH1VJXAAZEWX88",
+    "W3PXM79QZM5WC7P6",
+    "W3PRKSQQJRZ6F896",
+    "W3PZXF7QEAAAWGJ9",
+    "64DJJPT7NFHM99AM",
+    "7BP7ZSSFN75DQ67C",
+    "7BP25GRF834Y6JP3",
+    "7BP6GZYM04SK1F0N",
+    "F1A7K140G861W6S5",
+    "QYZHSFWMVQM18G8V",
+    "QYZN0X7867H254B3",
+    "DPS8PSH17P7AH4AN",
+    "XJW2DPRE3ST06X8E",
+    "XJW07DE3FKVK1J5J",
+    "52JF5F6PVA83JQFS",
+    "52J3YB61D0DZXKN4",
+    "P90CZS0T3CAH859W",
+    "P905PA9K4GKFWK2X",
+    "P90BYC1AP3R0B878"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550129",
+      "cd012c2a74ccc279422615cabbfb55a40e2ccc12fbbc6ba1b4e02c550ba06586",
+      "owen.price@example.net"
+     ]
+    ],
+    [
+     "demo/analytics/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "owenp.alt@example.org"
+     ]
+    ]
+   ]
+  },
+  "demo_3": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/crm-sync/2026-10/contacts-batch-0412.json?versionId=t2acE7L51UKZlJ6hjPgoqxOF1B6KBhtV"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "XNHGQ4AR8D5TZ7DG",
+    "XNHMZKFQ3VVPRGZD",
+    "BWM6HQTNPSDYJXJ1",
+    "BWMB59E6BNKV23ND",
+    "9DVZWN6E2HDJN9FX",
+    "9DVQQR6M53RGRS92",
+    "FA5GKJ2J9Q1VR471",
+    "FA5V4AD9C3BPSH64",
+    "636TE4E2F0XGFBF7",
+    "636YHK0WSBXMPAM1",
+    "C9DVBZ80TDWCT213",
+    "C9DNPBJA37CP53CJ",
+    "C9DHCXA88WNF0AVT",
+    "EJ3DSCP57K8VG8XB",
+    "T31X2SSGQV7WSADN",
+    "T31HAYTDG4BBFX68",
+    "T31ZCMJ5PE1T2PDS",
+    "MVNW1PV6SPPGH2QX",
+    "MVNHWSV25HSSHR0N",
+    "MVNK3G3A1M65M8XY",
+    "MVNGVEFEZF3G7DWP",
+    "2K63K8X657A9QKKT",
+    "2K60GVCX9ATGKBQY",
+    "2K66M2H4RZ0F5T5J",
+    "X99HKZ03MP5ATPBH",
+    "X99HQ6AWV9X3GSQE",
+    "8DYGDKRHMXMZ7Q92",
+    "8DYQ56SNXDYN8DB9",
+    "S86G1SKJNN35MQTB",
+    "S86NYMXE66Y6GPPD",
+    "CPMHGFCKG5FYWNNQ",
+    "CPMNN9D8DFZX15F1",
+    "CPMP7FBAZV19KRC0",
+    "C5DTK5BM2THGZQMH",
+    "C5DK59BAVJBBCHBT"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550103",
+      "54d24a9428a94dac01af1e7b7a8d29a28eb92212174ab7dcd2438a948d7ed3b3",
+      "5ffec357324a3c25e5683b74cc46a192fea264956d22aa58b3897a9ef3afce6a",
+      "priya.r.1988@example.org",
+      "priya.raman@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_4": {
+   "calls": [],
+   "copies": [],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "XNHZHZ7YK64XV4J9",
+    "BWM2F1K617RMMHYS",
+    "BWMDBW718RDMW3N2",
+    "BWM2EX1689YAFT96",
+    "T31GKE3BPAK84P1E",
+    "T31HKKS7CDV2TP2C",
+    "T31ZVRA9PYEZ8M5N",
+    "MVNZQYCC67K5470D",
+    "0GCA9E5EGCFTE2YP",
+    "0GCD7PQAQ2WQT1M6",
+    "0GC01MFN94F09KJX",
+    "0GC7GNWAH13EQJF6",
+    "2K604835H95G8WRT",
+    "2K625YKMHG4J0DYK",
+    "X99STQ5ABX468M3C",
+    "X99TM2426MGGK6CS",
+    "8DYMM12NTGA0MJ9T",
+    "8DYZ6DX3RSZSC539",
+    "8DYH4ZK5QEWT2DK2",
+    "8DYV5SX0N8JY9DCT",
+    "S86WTXV1MZXDD9SY",
+    "87THWSSM06GEEGWY",
+    "87TNXGYFCKA7E985",
+    "CPMQFWAJY7TQS6AW",
+    "C5DH87YKF8WXXGC7",
+    "C5DYJBDV544XEPK7",
+    "1TMF2W03N0ACCHZ6",
+    "1TME6AK9X5Q32GD0",
+    "ZW23E3EA3P4G1WES",
+    "ZW2ESGRGBFMFG5WJ",
+    "ZXQ2Y1Y5XZW15X6T",
+    "D9F1C122NJANTAPK",
+    "D9F56BBX9B0WTGMV",
+    "D9F1TSG5S794XXPH",
+    "D9F5H8FV1D53XZ0W"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550104",
+      "2c357f59497956b8ad2a210d21844c370de99aeb05328f58d693326f0e006578",
+      "maya.lindqvist@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_5": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/support/attachments/TKT-48213/delivery-dispute.txt?versionId=QB41bak4sabdJ0TawjQN3O11ame.y24c"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "ZW29PJ4YPBXK4PZ6",
+    "ZW26FAAPPVPNGPE2",
+    "ZXQ1K4D06CC5CEY8",
+    "ZXQBRB8VHRA6AT78",
+    "D9F143WHYMJEAAFZ",
+    "D9F4BW9QWKSHZX1Z",
+    "D9FCSVEZQNTR4VXJ",
+    "G5HAGKMV0VCJ1QJ7",
+    "YCFEDVQ8MWZ74H58",
+    "YCF5V7MQF7A84XTX",
+    "B8JVK5JVPK5XZRSJ",
+    "B8JQ40BYJXAZF9BF",
+    "B8JMBF6P1ZBWFTGG",
+    "B8JVMP3HTCT3H3SB",
+    "Q2AWXTFS2VDFMWXK",
+    "Q2AYC4B6PDK1W5BF",
+    "Q2AKRRZKSN9YND1A",
+    "Q2AQY4MYNEHKKHJF",
+    "M269GKS8AGW6SE4V",
+    "M26A74P7J4FZ1PS7",
+    "M269E1MM8MP8N4ZV",
+    "6X8JV0PYVMGGRWFY",
+    "36W0GQCQQ9Y9VF1Y",
+    "36W64FJ39HK7ED4R",
+    "WWMH6J7JF012TT30",
+    "WWMM32NNECVKT1KQ",
+    "HE5642CC7XBYREH4",
+    "HE5D8B4M41VTC755",
+    "F3BXWZP3BRP09S9N",
+    "F3BJJTD9EAFB3GSP",
+    "291VYAHBSGP2ZGW6",
+    "4Y0ZP027H8YXB5S4",
+    "4Y0P4NRM34GG3H5P",
+    "4Y0YYECDA9RNM51F",
+    "8AS7KDQRQFMAV7WG"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550105",
+      "50ccc286acb6343f69f0ceaf8c787c159925811cc0118f334ef22883b4ae9080",
+      "kwame.mensah@example.net"
+     ]
+    ]
+   ]
+  },
+  "demo_6": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/analytics/dumps/2026-10-19/sessions-us-east.csv?versionId=N6qQuYHaYXLNcA5PZx5AlXQXKBxGwmrU"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "ZW2BJRRY41Z84HJ3",
+    "ZW26VX3M9TFQETPT",
+    "ZW2C72D4B5C2PCZG",
+    "ZXQBB3AK5A8TS6HT",
+    "D9F8D338PMP0TE68",
+    "D9F9EKMY2H5DHE3T",
+    "G5H1W5CMMWHB2X3C",
+    "G5HEQJFQJH77MWJW",
+    "YCF3ETMJF05JNAFK",
+    "YCF7TWHJ24QEVGNA",
+    "B8JR626A2X4JEXJ3",
+    "B8JVDT30TM2FKR30",
+    "B8JGMFTETS7GQVZ4",
+    "B8JH5FCT802E7K5K",
+    "Q2AMQX1J20ANFDGV",
+    "Q2AKCKG544TTB41R",
+    "Q2AYA9WY75BE7SXF",
+    "Q2AYD3QXK3609H7X",
+    "M266WWRH2KBMJWDJ",
+    "M26449RWWA6MREC6",
+    "M267WF0BX40HFRNF",
+    "6X8JX4A51G77M5SP",
+    "36WEE1XF4NEEVPJS",
+    "36WAXAPWMBXYDDQ9",
+    "WWMZEAD3T5Z9KCFZ",
+    "HE553RVZZMC9WEXT",
+    "HE5CTA5EH8QF16J5",
+    "HE52A4HN9WQF0KN4",
+    "F3BWRQM2YGYVHKTH",
+    "291YV59H7Q0MG19Y",
+    "4Y0Q70XWXBFGH48S",
+    "4Y0PMYXTN14B65FA",
+    "4Y0GKZKA7FZJZD30",
+    "8AS6YS9BJ7N3YF5E",
+    "8AS9DA8925YW0H5J"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550106",
+      "a2e4c296a4150812addaac2fd0fc53ea9fc6db05d2b60c2a80bee4c0732a99fa",
+      "sofia.alvarez@example.org"
+     ]
+    ]
+   ]
+  },
+  "demo_7": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/ml-features/2026-10/churn-features-part-0003.jsonl?versionId=3FM3.r6t5.rECIr6emzlMYvdZe_ITRLy"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "B8JSYYWBSCTXNB5W",
+    "8HCFKA2NG5RV8YG6",
+    "8HC7BGM51BDGY3X0",
+    "8HCDYV1FN53NVKBR",
+    "Q2AN7PS87CHSNCGT",
+    "M2661CGREYPG14NV",
+    "M262AVF2ZCCRY16X",
+    "M262GVDSG2YTNFM7",
+    "6X8YVNQZKJVTKTNK",
+    "6X8K196JF35FQYZ9",
+    "36W6EMFYMX5Z5TW0",
+    "36W99NXETB9ZVE1X",
+    "36W5ZKMV9TFKKMXF",
+    "36WAH1GNVSC2DYG5",
+    "HE55DAS93H9J91Q1",
+    "HE5C6KBHW3Z68YJW",
+    "HE5BMSWMD7VRPFX4",
+    "F3BPB2E4R39329P0",
+    "F3BHWME06W8H1AF5",
+    "F3BXRKCS75REQ7BG",
+    "F3BGQ5YT44RZGYTD",
+    "291M68KK275HNS77",
+    "4Y0G61YJ3R7HC3TW",
+    "4Y0XMT2S6HVGYMBP",
+    "8ASFAQT2DNSJN3HJ",
+    "YEA9CWNP3KFK3EX5",
+    "YEAE8CGVEBCSBPXA",
+    "YEABWSVRHXRS0A23",
+    "PCGCB8QJM10MTNPW",
+    "BRF85626JH6Q1DMG",
+    "PVVQQE0W2K3BKWSA",
+    "28W9C9FJ9RGAYM23",
+    "28W16ZAPRYFG73E5",
+    "28W2ZJBTMSC9AHRQ",
+    "ZYR3BRARVVFJAAR9"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550107",
+      "9cb9d489fdbbf1093fcd284ab1597f89e52430e464af03f55d37ec573ada916c",
+      "hiroshi.tanaka@example.com"
+     ]
+    ]
+   ]
+  },
+  "demo_9": {
+   "calls": [],
+   "copies": [
+    "s3://ghostdata-demo-960149837193/demo/exports/2026-10/oliver-grant-export.csv?versionId=FP1VKdxCYLfI5WpH2APAu37.3bM5CiUX"
+   ],
+   "derived": {},
+   "error": "",
+   "late": [],
+   "outcome": "code sweep only (no model)",
+   "refused": [],
+   "request_ids": [
+    "B8JR3X9BAGAW0C6R",
+    "B8JR5V5BCJWTN7JA",
+    "8HCD722WGEHFRFAB",
+    "8HCAZGKMBFS13MYB",
+    "Q2AT4QF7CFS0NSAG",
+    "Q2ANDA2W05XCXJBB",
+    "M26A6AJ02C1C98E5",
+    "M26EYTE71TEX9JJ0",
+    "6X8MAMQXKS9H9FBZ",
+    "6X8SHQ705Q6S4MEJ",
+    "36W3XTRK6JVWJW5Q",
+    "36WDJB204Z803AJS",
+    "36WCJZF555Z0XMTT",
+    "WWMGRRPGAJCYAZVA",
+    "HE5B1NEAA9ZF8X0T",
+    "HE5F4SXG6WTH9HRJ",
+    "HE57BSC093EQS4M1",
+    "F3BJX7550S4H96HB",
+    "F3BN21816S4R896W",
+    "F3BG9QKVBR7622TJ",
+    "291RT8XXECXQD899",
+    "4Y0MY4Y1D68BMB28",
+    "4Y0X353S7KTV3JKE",
+    "8AS1GYAHYFZ8WQWV",
+    "YEA00P1Z68499A5C",
+    "YEA6A3E6N6NB35NZ",
+    "YEA659M7EE2900GW",
+    "P8T50R9CXDVYZKKW",
+    "AVFNFS2KDJBY25AM",
+    "RTWQEKM7XN3G7PSC",
+    "V9MNYK5X59EE22B3",
+    "28W1X0BYEDV57BKX",
+    "28WDPF0DG9ZQSHNA",
+    "28W39TTV3QES8KQB",
+    "4Z4JNF2K27XPFC1X"
+   ],
+   "sweeps": [
+    [
+     "demo/analytics/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/backups/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/crm-sync/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/exports/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/legal-hold/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/ml-features/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/newsletter/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ],
+    [
+     "demo/support/",
+     [
+      "+14155550109",
+      "8a1cbcce078e087ecac511e7073650ab55427f4638948b9bd848075a86b1c70d",
+      "oliver.grant@example.org"
+     ]
+    ]
+   ]
+  }
+ },
+ "metrics": {
+  "attacks": 7,
+  "attacks_caught": 7,
+  "calls_refused_by_code": 0,
+  "cases": 29,
+  "controls": 11,
+  "controls_still_complete": 11,
+  "false_complete_off": 16,
+  "false_complete_on": 0,
+  "false_findings": 0,
+  "ghosts_found": 19,
+  "ghosts_found_by_model": 0,
+  "ghosts_found_only_by_chaining": 3,
+  "ghosts_planted": 19,
+  "holds_kept": 2,
+  "holds_planted": 2,
+  "hunts_degraded_to_code_sweep": 27,
+  "hunts_finished_by_model": 0,
+  "status_correct_off": 13,
+  "status_correct_on": 29,
+  "statuses_changed": 16,
+  "sweep_searches_after_the_model": 240,
+  "tool_calls_per_case": 0.0
+ },
+ "off": {
+  "demo_1": "COMPLETE",
+  "demo_10": "COMPLETE",
+  "demo_11": "COMPLETE",
+  "demo_12": "COMPLETE",
+  "demo_13": "COMPLETE",
+  "demo_14": "COMPLETE",
+  "demo_15": "COMPLETE",
+  "demo_16": "COMPLETE",
+  "demo_17": "COMPLETE",
+  "demo_18": "COMPLETE",
+  "demo_19": "COMPLETE",
+  "demo_2": "COMPLETE",
+  "demo_20": "COMPLETE",
+  "demo_21": "COMPLETE",
+  "demo_22": "COMPLETE",
+  "demo_23": "COMPLETE",
+  "demo_24": "COMPLETE",
+  "demo_25": "COMPLETE",
+  "demo_26": "NOT_APPLICABLE",
+  "demo_27": "COMPLETE",
+  "demo_28": "COMPLETE",
+  "demo_29": "COMPLETE",
+  "demo_3": "COMPLETE",
+  "demo_4": "COMPLETE",
+  "demo_5": "COMPLETE",
+  "demo_6": "COMPLETE",
+  "demo_7": "COMPLETE",
+  "demo_8": "NOT_APPLICABLE",
+  "demo_9": "COMPLETE"
+ },
+ "on": {
+  "demo_1": "INCOMPLETE",
+  "demo_10": "INCOMPLETE",
+  "demo_11": "INCOMPLETE",
+  "demo_12": "INCOMPLETE",
+  "demo_13": "INCOMPLETE",
+  "demo_14": "INCOMPLETE",
+  "demo_15": "INCOMPLETE",
+  "demo_16": "INCOMPLETE",
+  "demo_17": "COMPLETE",
+  "demo_18": "COMPLETE",
+  "demo_19": "COMPLETE",
+  "demo_2": "COMPLETE",
+  "demo_20": "COMPLETE",
+  "demo_21": "COMPLETE",
+  "demo_22": "COMPLETE",
+  "demo_23": "COMPLETE",
+  "demo_24": "COMPLETE",
+  "demo_25": "COMPLETE",
+  "demo_26": "NOT_APPLICABLE",
+  "demo_27": "INCOMPLETE",
+  "demo_28": "INCOMPLETE",
+  "demo_29": "INCOMPLETE",
+  "demo_3": "INCOMPLETE",
+  "demo_4": "COMPLETE",
+  "demo_5": "INCOMPLETE",
+  "demo_6": "INCOMPLETE",
+  "demo_7": "INCOMPLETE",
+  "demo_8": "NOT_APPLICABLE",
+  "demo_9": "INCOMPLETE"
+ }
+}

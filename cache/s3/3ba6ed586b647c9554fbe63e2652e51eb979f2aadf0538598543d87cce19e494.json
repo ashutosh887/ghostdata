@@ -1,0 +1,46 @@
+{
+ "bucket": "ghostdata-demo-960149837193",
+ "copies": [
+  {
+   "bucket": "ghostdata-demo-960149837193",
+   "hidden_by_delete_marker": true,
+   "is_latest": false,
+   "key": "demo/backups/marketing/2026-09-28/audience-hashes.json",
+   "last_modified": "2026-10-26T04:36:22+00:00",
+   "legal_hold": false,
+   "linked": [
+    "38dc13f77dc9fc3eddaf33d4b6a07546f6b5ca312595e4b8e33e80ff12b504dd",
+    "3deb9037a1e8c6f5ba33ba9b0411ec4700137d475dfca77819685020c14d590a",
+    "4645fc13aaaf5a68fcf65e3f8c17d4872b68a4f3d7c62382eac5b37a94f9a1d7",
+    "5de180f543429e2639d4b133079bb4b11ac0b35ec60fbfb24f06039c1abfa797",
+    "725b99a9aad331ebcd543ab54ecfa8de4fbf1756dcf30716d2541dcf899ca8f3",
+    "76bf51d0044823c380e023540416974763f3ba92dc558151ac1569d40b87edb1",
+    "d3650e32c2b9275679c408e25ae1d2af07f8db1f9ee864374be5905e7ee8e0ae"
+   ],
+   "matched": [
+    "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+   ],
+   "pii_types": [],
+   "version_id": "CNbvXIQIvRoz8Mpt4zaPZb0ZSdrvsoec",
+   "window": "\",\n    \"76bf51d0044823c380e023540416974763f3ba92dc558151ac1569d40b87edb1\",\n    \"ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5\",\n    \"5de180f543429e2639d4b133079bb4b11ac0b35ec60fbfb24f06039c1abfa797\",\n    \""
+  }
+ ],
+ "delete_markers": 3,
+ "identifiers": [
+  "+14155550114",
+  "3bc00daa629ab37a90c9edf72c4cd0ee95b8ea874b5eca850f3612aeeda7b441",
+  "chloe.m.paris@example.org",
+  "chloe.martin@example.net",
+  "ea1088c197a59a163a382cbf63ece216b6d746697546fe679b2ff6659463c1f5"
+ ],
+ "prefix": "demo/backups/",
+ "request_ids": [
+  "9B665AFJF8Z1D38R",
+  "9B6D5AX5WSBJRKR4",
+  "73P63BVXH2FT8NCR",
+  "73P1YK6S0Z608VGK"
+ ],
+ "skipped": [],
+ "truncated": false,
+ "versions_seen": 3
+}
