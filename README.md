@@ -14,7 +14,7 @@ A workflow that reports "deleted" is a claim, and Ghost Data doesn't trust it. I
 
 <p align="center"><img src="docs/assets/diagram.png" alt="A deletion request goes to the agent on Amazon Bedrock, which searches evidence files and S3 versions. Code checks the bytes and writes the verdict and steps." width="820"></p>
 
-**Demo video (64 seconds):** https://youtu.be/5rgZfy8bcYA
+**[Watch the 64-second demo](https://youtu.be/5rgZfy8bcYA)**
 
 ## Features
 
