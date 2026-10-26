@@ -6,6 +6,13 @@ code.zip
 .DS_Store
 output.csv
 log.txt
-code/cache/
+/cache/
 /notes/
 /submission/
+
+# Organiser files and private agent instructions: kept locally, not published (v2.0.0)
+/dataset/
+/AGENTS.md
+/problem_statement.md
+/agent_trace_instructions.md
+/CLAUDE.md
