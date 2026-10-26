@@ -92,3 +92,10 @@ Each entry: wrong behaviour, root cause, fix, and the measured effect.
 - Cause: recordings are written with sorted keys but live tool results kept S3's order, so the replayed tool result differed by key order and the turn's cache key changed.
 - Fix: every tool result is serialised with sorted keys and folder listings are sorted, so live and replay produce the same bytes.
 - Effect: the recorded replay reproduces the live report.
+
+## F-014. The ablation table showed an old validator verdict
+
+- Wrong: `evaluation/ablations.md` said the "no identity history" and "no time cut" arms passed the contract validator.
+- Cause: the table was written before late citations became a validator error, and it was not rerun after that change.
+- Fix: `ablations.py` and `report.py --offline --holdout` rerun. Both arms now show FAILED, which is right, because each one cites evidence captured after `audit_at`.
+- Effect: 2 of 9 rows changed, from passed to FAILED. No score changed, and the 518-case replay is byte-identical.

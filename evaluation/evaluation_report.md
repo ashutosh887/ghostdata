@@ -122,8 +122,8 @@ held_out: n=12 model 12/12, keywords 9/12
 |---|---|---|---|---|---|---|---|---|
 | full agent | 0 | 22/22 (1.000) | 14/22 (0.636) | 0.958 | 6/6 | 0 | 0 | passed |
 | no model: keyword intent, no document reading | 0 | 22/22 (1.000) | 14/22 (0.636) | 0.958 | 6/6 | 5 | 4 | FAILED |
-| no identity history: current email, phone and hash only | 2 | 20/22 (0.909) | 12/22 (0.545) | 0.897 | 5/6 | 71 | 49 | passed |
-| no time cut: evidence after audit_at counts | 0 | 21/22 (0.955) | 14/22 (0.636) | 0.913 | 5/6 | 15 | 0 | passed |
+| no identity history: current email, phone and hash only | 2 | 20/22 (0.909) | 12/22 (0.545) | 0.897 | 5/6 | 71 | 49 | FAILED |
+| no time cut: evidence after audit_at counts | 0 | 21/22 (0.955) | 14/22 (0.636) | 0.913 | 5/6 | 15 | 0 | FAILED |
 | no request-time bound on discovery | 0 | 22/22 (1.000) | 13/22 (0.591) | 0.951 | 6/6 | 2 | 0 | passed |
 | replica tables ignored | 0 | 22/22 (1.000) | 13/22 (0.591) | 0.950 | 6/6 | 11 | 2 | passed |
 | document readings swapped between screenshots | 0 | 22/22 (1.000) | 14/22 (0.636) | 0.958 | 6/6 | 7 | 6 | FAILED |
@@ -147,6 +147,7 @@ Full entries, each with cause, fix and before-and-after numbers, are in `docs/FA
 - F-011. Cut-off tool-call arguments broke every second turn of the S3 hunt. Effect: 27 of 27 hunts end with the model calling `finish`, 0 degrade, and 19 of 19 copies come from the model's own searches.
 - F-012. Email hashes written inside a line were not matched. Effect: 19 of 19 found; 518-case replay byte-identical.
 - F-013. A recorded demo could not replay its own run. Effect: the recorded replay reproduces the live report.
+- F-014. The ablation table showed an old validator verdict. Effect: 2 of 9 rows changed, from passed to FAILED. No score changed, and the 518-case replay is byte-identical.
 
 ## Score history on the development split
 
