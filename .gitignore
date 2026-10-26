@@ -2,15 +2,11 @@
 .venv/
 __pycache__/
 *.pyc
-code.zip
 .DS_Store
 output.csv
 log.txt
 /cache/
 /notes/
-/submission/
-
-# Organiser files and private agent instructions: kept locally, not published (v2.0.0)
 /dataset/
 /AGENTS.md
 /problem_statement.md
