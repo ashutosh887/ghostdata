@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEMO = ROOT / "demo"
 os.environ.setdefault("GHOST_DATASET", str(DEMO / "dataset"))
 os.environ.setdefault("GHOSTDATA_S3_PREFIX", "demo/")
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
 
 from ghostdata.config import load_env  # noqa: E402
 from ghostdata.dataset import DATASET_DIR, load_requests  # noqa: E402

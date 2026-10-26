@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 DATASET_DIR = Path(os.environ.get("GHOST_DATASET", REPO_ROOT / "dataset")).resolve()
 
 

@@ -62,7 +62,7 @@ What the model is worth on the 518 test cases: reading the screenshots turns 4 C
 
 ## v2.0.0: the S3 ghost-copy tool
 
-Deleting an object in a versioned S3 bucket adds a delete marker. The older versions stay, and a normal listing no longer shows them. v1.0.0 could only read the files it was handed, so it certified those cases COMPLETE. v2.0.0 gives the model three native tools on the Bedrock chat endpoint (`audit/agent/ghost_hunt.py`, prompt `audit/agent/prompts/ghost_hunt.md`):
+Deleting an object in a versioned S3 bucket adds a delete marker. The older versions stay, and a normal listing no longer shows them. v1.0.0 could only read the files it was handed, so it certified those cases COMPLETE. v2.0.0 gives the model three native tools on the Bedrock chat endpoint (`src/ghostdata/agent/ghost_hunt.py`, prompt `src/ghostdata/agent/prompts/ghost_hunt.md`):
 
 | Tool | What it does |
 |---|---|
@@ -70,7 +70,7 @@ Deleting an object in a versioned S3 bucket adds a delete marker. The older vers
 | `find_ghost_copies(prefix, identifiers)` | Lists every version and delete marker under the prefix, reads each version's bytes, and returns the versions that hold one of the identifiers: key, version id, last modified, whether a delete marker hides it, whether an S3 Object Lock legal hold protects it, the other identifiers written in the same record, and the PII types Amazon Comprehend finds around the match |
 | `finish(reason)` | Ends the hunt with one sentence of reason |
 
-The model chooses folders and identifiers. Code (`audit/agent/tools/s3_ghosts.py`, `audit/resolver.py` `s3_decisions`) decides what counts:
+The model chooses folders and identifiers. Code (`src/ghostdata/agent/tools/s3_ghosts.py`, `src/ghostdata/resolver.py` `s3_decisions`) decides what counts:
 
 | Check | Rule |
 |---|---|
@@ -109,7 +109,7 @@ Between `find` and `prove`, a person ran the 19 proposed deletes (`demo/results/
 
 **IAM role.** The tool assumes `ghostdata-agent` when `GHOSTDATA_ROLE_ARN` is set: `s3:ListBucket`, `s3:ListBucketVersions`, `s3:GetObject`, `s3:GetObjectVersion`, `s3:GetObjectLegalHold` on one bucket, and `comprehend:DetectPiiEntities`. Writes are denied. Each case gets its own role session, `ghostdata-<case_id>`, so CloudTrail names the case on every read (`demo/results/cloudtrail.json`, D-021). Without the variable the tool uses the default boto3 credentials.
 
-**Reuse.** `integrations/strands/` wraps the same function as a Strands Agents `@tool`, with a 16-line example agent.
+**Reuse.** `examples/strands/` wraps the same function as a Strands Agents `@tool`, with a 16-line example agent.
 
 ## Quick start
 
@@ -121,7 +121,7 @@ sh scripts/get_dataset.sh       # copies the upstream dataset/ folder into ./dat
 
 ```
 <repo root>/
-├── ghostdata/     the agent package
+├── src/ghostdata/ the agent package
 ├── cli/           audit.py, demo.py, explain.py, validate.py
 ├── demo/          the synthetic S3 demo world and its recorded results
 ├── dataset/       the fetched data (not committed)
@@ -169,7 +169,7 @@ Keys can also go in an uncommitted `.env` file at the repo root (`KEY=value` lin
 | `GHOSTDATA_RUN` | `default` | Label the S3 answers are recorded under, so `find` and `prove` replay separately. `cli/demo.py --run` sets it |
 | `AWS_PROFILE` | boto3 default | Standard boto3 profile for S3, Comprehend and STS. Seed and delete with a scoped profile, never root keys |
 
-Models, prices, timeouts and limits live in `audit/config.py`:
+Models, prices, timeouts and limits live in `src/ghostdata/config.py`:
 
 | Setting | Value |
 |---|---|
@@ -180,7 +180,7 @@ Models, prices, timeouts and limits live in `audit/config.py`:
 | Investigator round limit | 6 tool calls per case |
 | Ghost hunt | `qwen.qwen3-235b-a22b-2507`, 8 rounds, 2,000 output tokens per turn, 4 cases in parallel |
 | S3 read limits | 1 MB per version, 400 versions per search |
-| Spend caps | `audit/limits.py`: $2.00, 5,000 calls, 5,000,000 tokens per run |
+| Spend caps | `src/ghostdata/limits.py`: $2.00, 5,000 calls, 5,000,000 tokens per run |
 | Temperature | 0 |
 
 ## Commands
@@ -260,16 +260,16 @@ request ─► intent (model) ─► deletion or not, with the quoted words that
 
 | Component | File | Responsibility |
 |---|---|---|
-| Readers | `audit/ingest/sql.py`, `logs.py`, `json_records.py`, `documents.py`, `activity.py`, `records.py` | One reader per format. 94 files become 2,642 dated observations and 204 full-capture snapshots. The 4,011 activity rows stay claims |
-| Identity | `audit/identity.py` | Current snapshot plus the audit log of changes. Emails match without regard to case or surrounding spaces; identifiers match exactly, never by similar names |
-| Resolver | `audit/resolver.py` | Scope per case: identifier links in the request-to-audit window, the account, unowned anonymisations when the match is forced |
-| State | `audit/state.py` | Present, exposed and active for each record at `audit_at`, with the proofs behind each value |
-| Policy | `audit/policy.py` | Data category for each record and the action `deletion_rules.csv` requires |
-| Planner | `audit/planner.py`, `audit/schema.py` | Decisions to steps, citations, ordering, serialisation |
+| Readers | `src/ghostdata/ingest/sql.py`, `logs.py`, `json_records.py`, `documents.py`, `activity.py`, `records.py` | One reader per format. 94 files become 2,642 dated observations and 204 full-capture snapshots. The 4,011 activity rows stay claims |
+| Identity | `src/ghostdata/identity.py` | Current snapshot plus the audit log of changes. Emails match without regard to case or surrounding spaces; identifiers match exactly, never by similar names |
+| Resolver | `src/ghostdata/resolver.py` | Scope per case: identifier links in the request-to-audit window, the account, unowned anonymisations when the match is forced |
+| State | `src/ghostdata/state.py` | Present, exposed and active for each record at `audit_at`, with the proofs behind each value |
+| Policy | `src/ghostdata/policy.py` | Data category for each record and the action `deletion_rules.csv` requires |
+| Planner | `src/ghostdata/planner.py`, `src/ghostdata/schema.py` | Decisions to steps, citations, ordering, serialisation |
 | Validator | `cli/validate.py` | The output contract as code. Runs after every `cli/audit.py` |
-| Model layer | `audit/agent/` | Client and cache, intent, document reader, investigator, ghost hunt, injection guard |
-| S3 tool | `audit/agent/tools/s3_ghosts.py` | Lists versions and delete markers, reads bytes, reads legal holds, calls Comprehend, records answers for replay |
-| Spend caps | `audit/limits.py` | Per-run ceilings on dollars, calls and tokens |
+| Model layer | `src/ghostdata/agent/` | Client and cache, intent, document reader, investigator, ghost hunt, injection guard |
+| S3 tool | `src/ghostdata/agent/tools/s3_ghosts.py` | Lists versions and delete markers, reads bytes, reads legal holds, calls Comprehend, records answers for replay |
+| Spend caps | `src/ghostdata/limits.py` | Per-run ceilings on dollars, calls and tokens |
 
 Evidence formats: 28 JSON, 26 logs, 24 SQL snapshot exports, 11 screenshots, 4 PDFs, 1 text record. SQL files are executed with SQLite, and primary, regional, reporting and failover replicas are compared table by table. Log lines that share a trace id are joined, so an identifier on one line and a state on another become one observation.
 
@@ -295,7 +295,7 @@ Evidence formats: 28 JSON, 26 logs, 24 SQL snapshot exports, 11 screenshots, 4 P
 
 The routing is by modality and by need. Text goes to the text model, images and PDFs go to the vision model, and the investigator runs only where code flags uncertainty. Both choices were measured (D-008: the 32B model gave the same intent verdicts but needed a fallback; D-010: the vision reading changes 5 test answers).
 
-The investigator is a bounded tool loop (`audit/agent/investigator.py`). On each turn the model picks one tool and code runs it:
+The investigator is a bounded tool loop (`src/ghostdata/agent/investigator.py`). On each turn the model picks one tool and code runs it:
 
 | Tool | Returns |
 |---|---|
@@ -313,7 +313,7 @@ The ghost hunt is the second loop, and the one that changes answers: 16 of 29 de
 
 ## Prompts
 
-`audit/agent/prompts/` holds one Markdown prompt per role: `intent.md`, `document.md`, `investigator.md` and `ghost_hunt.md`. Each one states the role, marks the input as untrusted data inside tags, lists the decision rules, and fixes the JSON output with a strict schema. Every model call uses `response_format: json_schema` with `strict: true` and temperature 0. A reply that is not valid JSON is repaired once, and the repair is counted in the usage report. The ghost hunt uses native tool calls instead, and its turns are cached the same way under `cache/tools/`.
+`src/ghostdata/agent/prompts/` holds one Markdown prompt per role: `intent.md`, `document.md`, `investigator.md` and `ghost_hunt.md`. Each one states the role, marks the input as untrusted data inside tags, lists the decision rules, and fixes the JSON output with a strict schema. Every model call uses `response_format: json_schema` with `strict: true` and temperature 0. A reply that is not valid JSON is repaired once, and the repair is counted in the usage report. The ghost hunt uses native tool calls instead, and its turns are cached the same way under `cache/tools/`.
 
 ## Evaluation
 
@@ -375,7 +375,7 @@ Every mechanism that ships changes at least one answer when it is removed. The s
 
 ## Cost
 
-A full live run reads the 398 distinct request texts, the 12 linked documents and the flagged cases. It costs about $0.19 for all 518 requests, under $0.001 per request. The exact calls, tokens and cost of the final run are in `evaluation/usage_report.md`, written by `cli/audit.py --fresh --usage-report`. Prices are the Bedrock on-demand list prices in `audit/config.py`. A cached or offline run costs nothing.
+A full live run reads the 398 distinct request texts, the 12 linked documents and the flagged cases. It costs about $0.19 for all 518 requests, under $0.001 per request. The exact calls, tokens and cost of the final run are in `evaluation/usage_report.md`, written by `cli/audit.py --fresh --usage-report`. Prices are the Bedrock on-demand list prices in `src/ghostdata/config.py`. A cached or offline run costs nothing.
 
 ## Design decisions
 
@@ -474,7 +474,7 @@ A new rule goes in `docs/CONTRACT.md`, a choice in `docs/DECISIONS.md`, and a fi
 ## Project layout
 
 ```
-ghostdata/                   the agent package
+src/ghostdata/               the agent package
 ├── config.py                models, prices, timeouts, paths, ablation switch
 ├── limits.py                per-run spend caps
 ├── dataset.py               requests and paths
@@ -518,6 +518,6 @@ demo/
 ├── dataset/                 the synthetic world, same schema as dataset/
 └── results/                 find, find-no-model and prove reports, cloudtrail.json, manifest.json
 
-integrations/strands/        find_ghost_copies as a Strands Agents @tool, with an example agent
+examples/strands/            find_ghost_copies as a Strands Agents @tool, with an example agent
 scripts/                     get_dataset.sh, demo_manifest.py
 ```

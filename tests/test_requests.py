@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from ghostdata.dataset import Request, load_requests, parse_time  # noqa: E402
 from ghostdata.ingest import load_corpus  # noqa: E402

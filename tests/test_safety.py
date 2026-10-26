@@ -4,7 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from ghostdata.agent.guard import fence, injection_hits  # noqa: E402
 from ghostdata.agent.intent import ModelIntent  # noqa: E402

@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from ghostdata.dataset import DATASET_DIR, evidence_times, load_requests, read_csv  # noqa: E402
 from ghostdata.validate import validate_output  # noqa: E402

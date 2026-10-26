@@ -117,7 +117,7 @@ class Ledger:
             f"  on the {flagged} cases the resolver flagged, at most 6 rounds each.",
             "",
             "Costs are estimates: the endpoint returns token counts but no price, so the table applies the Amazon Bedrock",
-            "on-demand prices listed in `ghostdata/config.py`.",
+            "on-demand prices listed in `src/ghostdata/config.py`.",
         ]
         return "\n".join(lines) + "\n"
 

@@ -6,7 +6,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from ghostdata.dataset import DATASET_DIR, REPO_ROOT, evidence_times, load_requests  # noqa: E402
 from ghostdata.schema import OUTPUT_HEADER, case_number  # noqa: E402

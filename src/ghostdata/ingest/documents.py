@@ -10,7 +10,7 @@ from pathlib import Path
 
 from ..observations import Evidence, Observation, identifier_keys, system_for
 
-CACHE_DIR = Path(__file__).resolve().parents[2] / "cache" / "ocr"
+CACHE_DIR = Path(__file__).resolve().parents[3] / "cache" / "ocr"
 LOOSE_ID_RE = re.compile(
     r"\b(account|search|analytics|support|export|backup|data[_ .]flow|audit[_ ]record|legal[_ ]hold|tombstone|"
     r"marketing|object)[_ .](\d{2,6})\b"
