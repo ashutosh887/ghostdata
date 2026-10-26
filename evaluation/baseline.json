@@ -1,0 +1,16 @@
+{
+ "exact_match": 0.6363636363636364,
+ "false_complete": 0,
+ "field_accuracy": {
+  "evidence_id": 0.94,
+  "operation": 0.873,
+  "phase": 0.948,
+  "resource_id": 0.858,
+  "state": 0.873,
+  "system_id": 0.873
+ },
+ "sequence_order_ok": 1.0,
+ "sequence_similarity": 0.927,
+ "status_accuracy": 1.0,
+ "step_f1": 0.9578544061302682
+}
