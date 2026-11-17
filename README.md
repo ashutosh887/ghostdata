@@ -16,6 +16,9 @@ A workflow that reports "deleted" is a claim, and Ghost Data doesn't trust it. I
 
 **[Watch the 64-second demo](https://youtu.be/5rgZfy8bcYA)** · [See the project on AWS Builder Center](https://builder.aws.com/project/3LDl8cdqQUMh8oajft5zMkeLOtJ/ghost-data-one-s3-tool-took-my-deletion-audit-agent-from-16-false-completes-to-0) · [Read the write-up](https://builder.aws.com/content/3LDlI6anQhBJkmtq0CnRX25Flsl/ghost-data-how-s3-versioning-cloudtrail-and-bedrock-let-an-agent-prove-a-deletion)
 
+**Winner, [AWS Builder Center Weekend Challenge: Give your Agent a Tool](https://builder.aws.com/build/hackathons/2e275689-b202-316e-93b8-10cd6d6d1e4a/weekend-challenge-give-your-agent-a-tool)**, one of five winning
+projects from 252 participants. Built by [@ashutosh887](https://github.com/ashutosh887).
+
 ## Features
 
 - **Finds copies hidden behind delete markers.** `find_ghost_copies` lists every object version under a prefix and reads each one.
