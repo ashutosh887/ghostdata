@@ -18,6 +18,7 @@ A workflow that reports "deleted" is a claim, and Ghost Data doesn't trust it. I
 
 **Winner, [AWS Builder Center Weekend Challenge: Give your Agent a Tool](https://builder.aws.com/build/hackathons/2e275689-b202-316e-93b8-10cd6d6d1e4a/weekend-challenge-give-your-agent-a-tool)**, one of five winning
 projects from 252 participants. Built by [@ashutosh887](https://github.com/ashutosh887).
+Release [`v2.0.0`](https://github.com/ashutosh887/ghostdata/releases/tag/v2.0.0) is the code as judged.
 
 ## Features
 
